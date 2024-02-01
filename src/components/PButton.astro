@@ -1,0 +1,27 @@
+---
+const { text } = Astro.props
+---
+
+<div>
+  <button class="button">{ text }</button>
+</div>
+
+<style lang="sass">
+  .button
+    cursor: pointer
+    padding: 1rem 1.8rem
+    font-family: Inter
+    font-size: 1.1rem
+    border: 1px solid #008080
+    background-color: transparent
+    border-radius: 5rem
+    text-decoration: none
+    color: #008080
+    transition: all 0.2s ease-in-out
+
+  .button:hover
+    border: 2px solid #008080
+    box-shadow: 0px 0px 4rem 4rem rgba(0, 125, 125, 0.6)
+    font-size: 1.4rem
+    // transition: all 0.2s ease-in-out
+</style>
