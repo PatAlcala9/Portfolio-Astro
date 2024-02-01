@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+
+<svg
+   width="800"
+   height="800"
+   viewBox="0 -3.5 32 32"
+   version="1.1"
+   id="svg1"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+  <title
+     id="title1">mail</title>
+  <desc
+     id="desc1">Created with Sketch Beta.</desc>
+  <defs
+     id="defs1" />
+  <g
+     id="Page-1"
+     stroke="none"
+     stroke-width="1"
+     fill="none"
+     fill-rule="evenodd"
+     sketch:type="MSPage"
+     style="fill:#aeb6c2;fill-opacity:1">
+    <g
+       id="Icon-Set-Filled"
+       sketch:type="MSLayerGroup"
+       transform="translate(-414,-261)"
+       fill="#000000"
+       style="fill:#aeb6c2;fill-opacity:1">
+      <path
+         d="m 430,275.916 -3.316,-2.749 -11.569,11.843 h 29.476 l -11.356,-11.863 z m 4.89,-4.026 11.002,11.439 c 0.063,-0.222 0.108,-0.452 0.108,-0.695 V 262.862 Z M 414,262.816 v 19.818 c 0,0.243 0.045,0.473 0.108,0.695 l 11.039,-11.402 z M 445,261 h -30 l 15,12.019 z"
+         id="mail"
+         sketch:type="MSShapeGroup"
+         style="fill:#aeb6c2;fill-opacity:1" />
+    </g>
+  </g>
+</svg>
