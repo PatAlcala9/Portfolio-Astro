@@ -3,7 +3,6 @@ import MainLayout from '../layouts/MainLayout.astro'
 import PButton from '../components/PButton.astro'
 import PButtonWide from '../components/PButtonWide.astro'
 
-
 import '../css/main.sass'
 // import '../css/variables.sass'
 
@@ -11,327 +10,315 @@ let name = 'Patrick Alvin Alcala'
 ---
 
 <script>
-import Typed from 'typed.js'
+  import Typed from 'typed.js'
 
-const showPenName = () => {
-  const typed1 = new Typed('.text--intro', {
-    strings: ['Hello, my pen name is'],
-    typeSpeed: 11,
-    showCursor: false
+  const showPenName = () => {
+    const typed1 = new Typed('.text--intro', {
+      strings: ['Hello, my pen name is'],
+      typeSpeed: 11,
+      showCursor: false,
+    })
+
+    const typed2 = new Typed('#text--name', {
+      strings: ['Pat Alcala'],
+      typeSpeed: 20,
+      showCursor: false,
+    })
+  }
+
+  const showRealName = () => {
+    const typed1 = new Typed('.text--intro', {
+      strings: ['Hello, my name is'],
+      typeSpeed: 11,
+      showCursor: false,
+    })
+
+    const typed2 = new Typed('#text--name', {
+      strings: ['Patrick Alvin Alcala'],
+      typeSpeed: 5,
+      // backSpeed: 14,
+      showCursor: false,
+    })
+  }
+
+  const showGithubName = () => {
+    const typed1 = new Typed('.text--intro', {
+      strings: ['Hello, my username is'],
+      typeSpeed: 11,
+      showCursor: false,
+    })
+
+    const typed2 = new Typed('#text--name', {
+      strings: ['PatAlcala9'],
+      typeSpeed: 14,
+      showCursor: false,
+    })
+  }
+
+  const toGithub = document.getElementById('to-github')
+  toGithub.addEventListener('mouseover', () => {
+    showGithubName()
+  })
+  toGithub.addEventListener('mouseleave', () => {
+    showRealName()
   })
 
-  const typed2 = new Typed('#text--name', {
-    strings: ['Pat Alcala'],
-    typeSpeed: 20,
-    showCursor: false
+  const toMedium = document.getElementById('to-medium')
+  toMedium.addEventListener('mouseover', () => {
+    showPenName()
   })
-}
-
-const showRealName = () => {
-  const typed1 = new Typed('.text--intro', {
-    strings: ['Hello, my name is'],
-    typeSpeed: 11,
-    showCursor: false
+  toMedium.addEventListener('mouseleave', () => {
+    showRealName()
   })
-
-  const typed2 = new Typed('#text--name', {
-    strings: ['Patrick Alvin Alcala'],
-    typeSpeed: 5,
-    // backSpeed: 14,
-    showCursor: false
-  })
-}
-
-const showGithubName = () => {
-  const typed1 = new Typed('.text--intro', {
-    strings: ['Hello, my username is'],
-    typeSpeed: 11,
-    showCursor: false,
-  })
-
-  const typed2 = new Typed('#text--name', {
-    strings: ['PatAlcala9'],
-    typeSpeed: 14,
-    showCursor: false,
-  })
-}
-
-const toGithub = document.getElementById('to-github')
-toGithub.addEventListener('mouseover', () => {
-  showGithubName()
-})
-toGithub.addEventListener('mouseleave', () => {
-  showRealName()
-})
-
-const toMedium = document.getElementById('to-medium')
-toMedium.addEventListener('mouseover', () => {
-  showPenName()
-})
-toMedium.addEventListener('mouseleave', () => {
-  showRealName()
-})
 </script>
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>Pat Alcala</title>
-  </head>
+<MainLayout title="Pat Alcala">
+  <div class="grid">
+    <section class="texts">
+      <span class="text--intro" id="text--intro">Hello, my name is</span>
+      <span class="text--name" id="text--name">{name}</span>
+      <span class="text--description">I'm a Computer Engineer and Writer based on Philippines</span>
+    </section>
 
-  <MainLayout>
-    <body>
-      <div class="grid">
-        <section class="texts">
-          <span class="text--intro" id="text--intro">Hello, my name is</span>
-          <span class="text--name" id="text--name">{name}</span>
-          <span class="text--description">I'm a Computer Engineer and Writer based on Philippines</span>
-        </section>
+    <section class="images">
+      <img class="image" src="../images/pat.webp" alt="Pat Alcala" />
+    </section>
 
-        <section class="images">
-          <img class="image" src="../images/pat.webp" alt="Pat Alcala" />
-        </section>
+    <!-- <section class="logos"> -->
+    <!-- <img class="logo" src="../images/logo.webp" alt="Pat Alcala logo"> -->
+    <!-- </section> -->
 
-        <!-- <section class="logos"> -->
-        <!-- <img class="logo" src="../images/logo.webp" alt="Pat Alcala logo"> -->
-        <!-- </section> -->
-
-        <section class="buttons">
-          <div class="showOnDesktop" id="to-github">
-            <PButton text="Projects" />
-          </div>
-
-          <div class="showOnMobile">
-            <PButtonWide text="Projects" />
-          </div>
-
-          <a href="articles">
-            <div class="showOnDesktop" id="to-medium">
-              <PButton text="Articles" @mouseover="showPenName()" @mouseleave="showRealName()" />
-            </div>
-
-            <div class="showOnMobile">
-              <PButtonWide text="Articles" />
-            </div>
-          </a>
-        </section>
-
-        <section class="minilogos">
-          <div class="logo-and-name">
-            <img class="minilogo--logo" src="../images/facebook_logo3.svg" alt="facebook logo" @click="openWebsite('https://facebook.com/patrick.alcala')" />
-            <span v-if="viewport.isGreaterThan('tablet')" class="minilogo--name">Facebook</span>
-          </div>
-
-          <div class="logo-and-name">
-            <img class="minilogo--logo" src="../images/github_logo3.svg" alt="github logo" @click="openWebsite('https://github.com/PatAlcala9')" />
-            <span v-if="viewport.isGreaterThan('tablet')" class="minilogo--name">Github</span>
-          </div>
-
-          <div class="logo-and-name">
-            <img class="minilogo--logo" src="../images/mail_black_logo2.svg" alt="email logo" />
-            <span v-if="viewport.isGreaterThan('tablet')" class="minilogo--name">Email</span>
-          </div>
-        </section>
+    <section class="buttons">
+      <div class="showOnDesktop" id="to-github">
+        <PButton text="Projects" />
       </div>
-    </body>
-  </MainLayout>
 
-  <style lang="sass">
-    $title: #aeb6c2
-    $sub-title: #8296b7
+      <div class="showOnMobile">
+        <PButtonWide text="Projects" />
+      </div>
 
-    .page
-      padding: 4rem
-      display: flex
-      flex-direction: column
-      flex-wrap: wrap
-      justify-content: flex-start
-      align-items: flex-start
-      align-content: flex-start
-      height: 100vh
-      height: 100svh
+      <a href="articles">
+        <div class="showOnDesktop" id="to-medium">
+          <PButton text="Articles" @mouseover="showPenName()" @mouseleave="showRealName()" />
+        </div>
 
+        <div class="showOnMobile">
+          <PButtonWide text="Articles" />
+        </div>
+      </a>
+    </section>
+
+    <section class="minilogos">
+      <div class="logo-and-name">
+        <img class="minilogo--logo" src="../images/facebook_logo3.svg" alt="facebook logo" @click="openWebsite('https://facebook.com/patrick.alcala')" />
+        <span v-if="viewport.isGreaterThan('tablet')" class="minilogo--name">Facebook</span>
+      </div>
+
+      <div class="logo-and-name">
+        <img class="minilogo--logo" src="../images/github_logo3.svg" alt="github logo" @click="openWebsite('https://github.com/PatAlcala9')" />
+        <span v-if="viewport.isGreaterThan('tablet')" class="minilogo--name">Github</span>
+      </div>
+
+      <div class="logo-and-name">
+        <img class="minilogo--logo" src="../images/mail_black_logo2.svg" alt="email logo" />
+        <span v-if="viewport.isGreaterThan('tablet')" class="minilogo--name">Email</span>
+      </div>
+    </section>
+  </div>
+</MainLayout>
+
+<style lang="sass">
+  $title: #aeb6c2
+  $sub-title: #8296b7
+
+  .page
+    padding: 4rem
+    display: flex
+    flex-direction: column
+    flex-wrap: wrap
+    justify-content: flex-start
+    align-items: flex-start
+    align-content: flex-start
+    height: 100vh
+    height: 100svh
+
+  .grid
+    display: grid
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr
+    grid-template-rows: 1fr 1fr 1fr
+    gap: 0px 0px
+    grid-template-areas: "texts texts texts texts images" "minilogos logos logos logos logos" "buttons buttons buttons buttons buttons" "articles articles articles articles articles"
+
+  .blank
+    grid-area: blank
+
+  .buttons
+    grid-area: buttons
+    display: flex
+    flex-direction: row
+    flex-wrap: wrap
+    justify-content: space-around
+    align-items: center
+    align-content: center
+    margin-top: -25rem
+
+  .texts
+    grid-area: texts
+    padding: 4rem 0 0 4rem
+    display: flex
+    flex-direction: column
+    flex-wrap: wrap
+    justify-content: flex-start
+    align-items: flex-start
+    align-content: flex-start
+
+  .text--intro
+    font-family: Inter
+    font-size: 2rem
+    color: $sub-title
+
+  .text--name
+    font-family: 'Open Sans'
+    font-weight: bold
+    font-size: 5.8rem
+    color: $title
+
+  .text--description
+    padding: 1rem 0 0 0
+    font-family: Inter
+    font-size: 1.2rem
+    color: $title
+
+  .images
+    grid-area: images
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-content: center
+    align-items: center
+    flex-wrap: wrap
+    padding: 4rem 0 0 0
+
+  .image
+    border-radius: 50%
+    width: 18rem
+    height: auto
+
+  .image--hidden
+    @extend .image
+
+  .image--text
+    font-family: Inter
+    font-size: 1.1rem
+    padding: 1rem 0 0 0
+    color: #8296b7
+
+  .logos
+    grid-area: logos
+    justify-self: center
+    align-self: center
+    margin-top: -4rem
+
+  .logo
+    width: 500px
+    opacity: 0.1
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+    align-items: center
+    align-content: center
+    z-index: -50
+
+  .sample
+    color: white
+    padding: 2rem 0 0 0
+
+    .glow
+      height: 50rem
+      width: 50rem
+      background: rgb(18,45,85)
+      background: radial-gradient(circle, rgba(18,45,85,1) 0%, rgba(10,25,48,0) 70%)
+      background-size: 100%
+      background-repeat: no-repeat
+      background-position: center
+      z-index: -1
+      position: absolute
+
+  .minilogos
+    display: flex
+    flex-direction: column
+    margin: 0 0 0 4rem
+
+  .minilogo--logo
+    cursor: pointer
+    width: 2.4rem
+    height: auto
+    background: transparent
+    background-blend-mode: soft-light
+    transition: width 0.4s ease
+
+  .minilogo--logo:hover
+    width: 3rem
+    transition: width 0.4s ease
+
+  .logo-and-name
+    display: flex
+    flex-direction: row
+    align-content: center
+    align-items: center
+    margin: 1rem 0 0 0
+
+  .minilogo--name
+    font-family: Inter
+    color: $title
+    padding: 0 0 0 1rem
+
+  .showOnDesktop
+    display: block
+
+  .showOnMobile
+    display: none
+
+  @media screen and (max-width: 1366px)
+    .image
+      width: 15rem
+      height: auto
+
+    .name
+      font-size: 4rem
+
+  @media screen and (max-width: 1024px)
     .grid
       display: grid
-      grid-template-columns: 1fr 1fr 1fr 1fr 1fr
+      grid-template-columns: 1.4fr 0.6fr
       grid-template-rows: 1fr 1fr 1fr
       gap: 0px 0px
-      grid-template-areas: "texts texts texts texts images" "minilogos logos logos logos logos" "buttons buttons buttons buttons buttons" "articles articles articles articles articles"
+      grid-template-areas: "images minilogos" "texts texts" "buttons buttons"
 
-    .blank
-      grid-area: blank
+    .minilogos
+      padding: 4rem 2rem 0 0
+    .images
+      grid-area: images
+      display: inline
+      padding: 2rem 0 0 2rem
 
     .buttons
       grid-area: buttons
       display: flex
-      flex-direction: row
+      flex-direction: column
       flex-wrap: wrap
       justify-content: space-around
       align-items: center
       align-content: center
-      margin-top: -25rem
+      margin-top: 0rem
 
     .texts
       grid-area: texts
-      padding: 4rem 0 0 4rem
-      display: flex
-      flex-direction: column
-      flex-wrap: wrap
-      justify-content: flex-start
-      align-items: flex-start
-      align-content: flex-start
-
-    .text--intro
-      font-family: Inter
-      font-size: 2rem
-      color: $sub-title
-
-    .text--name
-      font-family: 'Open Sans'
-      font-weight: bold
-      font-size: 5.8rem
-      color: $title
-
-    .text--description
-      padding: 1rem 0 0 0
-      font-family: Inter
-      font-size: 1.2rem
-      color: $title
-
-    .images
-      grid-area: images
-      display: flex
-      flex-direction: column
-      justify-content: center
-      align-content: center
-      align-items: center
-      flex-wrap: wrap
-      padding: 4rem 0 0 0
-
-    .image
-      border-radius: 50%
-      width: 18rem
-      height: auto
-
-    .image--hidden
-      @extend .image
-
-    .image--text
-      font-family: Inter
-      font-size: 1.1rem
-      padding: 1rem 0 0 0
-      color: #8296b7
-
-    .logos
-      grid-area: logos
-      justify-self: center
-      align-self: center
-      margin-top: -4rem
-
-    .logo
-      width: 500px
-      opacity: 0.1
-      display: flex
-      flex-wrap: wrap
-      justify-content: center
-      align-items: center
-      align-content: center
-      z-index: -50
-
-    .sample
-      color: white
-      padding: 2rem 0 0 0
-
-      .glow
-        height: 50rem
-        width: 50rem
-        background: rgb(18,45,85)
-        background: radial-gradient(circle, rgba(18,45,85,1) 0%, rgba(10,25,48,0) 70%)
-        background-size: 100%
-        background-repeat: no-repeat
-        background-position: center
-        z-index: -1
-        position: absolute
-
-    .minilogos
-      display: flex
-      flex-direction: column
-      margin: 0 0 0 4rem
-
-    .minilogo--logo
-      cursor: pointer
-      width: 2.4rem
-      height: auto
-      background: transparent
-      background-blend-mode: soft-light
-      transition: width 0.4s ease
-
-    .minilogo--logo:hover
-      width: 3rem
-      transition: width 0.4s ease
-
-    .logo-and-name
-      display: flex
-      flex-direction: row
-      align-content: center
-      align-items: center
-      margin: 1rem 0 0 0
-
-    .minilogo--name
-      font-family: Inter
-      color: $title
-      padding: 0 0 0 1rem
+      padding: 0 0 0 0
 
     .showOnDesktop
-      display: block
-
-    .showOnMobile
       display: none
 
-    @media screen and (max-width: 1366px)
-      .image
-        width: 15rem
-        height: auto
-
-      .name
-        font-size: 4rem
-
-    @media screen and (max-width: 1024px)
-      .grid
-        display: grid
-        grid-template-columns: 1.4fr 0.6fr
-        grid-template-rows: 1fr 1fr 1fr
-        gap: 0px 0px
-        grid-template-areas: "images minilogos" "texts texts" "buttons buttons"
-
-      .minilogos
-        padding: 4rem 2rem 0 0
-      .images
-        grid-area: images
-        display: inline
-        padding: 2rem 0 0 2rem
-
-      .buttons
-        grid-area: buttons
-        display: flex
-        flex-direction: column
-        flex-wrap: wrap
-        justify-content: space-around
-        align-items: center
-        align-content: center
-        margin-top: 0rem
-
-      .texts
-        grid-area: texts
-        padding: 0 0 0 0
-
-      .showOnDesktop
-        display: none
-
-      .showOnMobile
-        display: block
-  </style>
-</html>
+    .showOnMobile
+      display: block
+</style>

@@ -49,209 +49,196 @@ import '../css/main.sass'
   })
 </script>
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="description" content="Portfolio of Patrick Alvin Alcala - Articles" />
-    <meta name="generator" content={Astro.generator} />
-    <title>Articles - Pat Alcala</title>
-  </head>
+<MainLayout title="Articles - Pat Alcala">
+  <div class="grid">
+    <div class="page-title">
+      <span>My Articles</span>
+    </div>
 
-  <MainLayout>
-    <body>
-      <div class="grid">
-        <div class="page-title">
-          <span>My Articles</span>
+    <div class="articles">
+      <section class="one" id="one">
+        <div class="article">
+          <img class="picture" src="../articles/1.webp" />
+          <span class="title">Don’t Pay the Ransom: Ransomware Awareness Part 1 - Identification</span>
+          <span class="sub-title">A guide on how to prevent and fight ransomware for non-technical people</span>
         </div>
+      </section>
 
-        <div class="articles">
-          <section class="one" id="one">
-            <div class="article">
-              <img class="picture" src="../articles/1.webp" />
-              <span class="title">Don’t Pay the Ransom: Ransomware Awareness Part 1 - Identification</span>
-              <span class="sub-title">A guide on how to prevent and fight ransomware for non-technical people</span>
-            </div>
-          </section>
-
-          <section class="two" id="two">
-            <div class="article">
-              <img class="picture" src="../articles/2.webp" />
-              <span class="title">Don’t Pay the Ransom: Ransomware Awareness Part 2 - Prevention</span>
-              <span class="sub-title">A guide on how to prevent and fight ransomware for non-technical people</span>
-            </div>
-          </section>
-
-          <section class="three" id="three">
-            <div class="article">
-              <img class="picture" src="../articles/3.webp" />
-              <span class="title">Don’t Pay the Ransom: Ransomware Awareness Part 3 — Fixing</span>
-              <span class="sub-title">A guide on how to prevent and fight ransomware for non-technical people</span>
-            </div>
-          </section>
-
-          <section class="four" id="four">
-            <div class="article">
-              <img class="picture" src="../articles/4.webp" />
-              <span class="title">The Park Lights Up</span>
-              <span class="sub-title">Moment of 2023 — sweet.pub writing contest</span>
-            </div>
-          </section>
-
-          <section class="five" id="five">
-            <div class="article">
-              <img class="picture" src="../articles/5.webp" />
-              <span class="title">5 Helpful Free-to-Use Websites You May Not Know About</span>
-              <span class="sub-title">Free-to-use websites that would help you in various situations</span>
-            </div>
-          </section>
-
-          <section class="six" id="six">
-            <div class="article">
-              <img class="picture" src="../articles/6.webp" />
-              <span class="title">Why Linux is Best for Most People</span>
-              <span class="sub-title">Linux isn’t just for experts. Some Linux flavors are specifically designed for average users</span>
-            </div>
-          </section>
-
-          <section class="seven" id="seven">
-            <div class="article">
-              <img class="picture" src="../articles/7.webp" />
-              <span class="title">Noises to Help you Focus</span>
-              <span class="sub-title">Listening to these noises will help in your focus-needed tasks</span>
-            </div>
-          </section>
-
-          <section class="eight" id="eight">
-            <div class="article">
-              <img class="picture" src="../articles/8.webp" />
-              <span class="title">Little Things that Make us Smile</span>
-              <span class="sub-title">Summon your biggest smile</span>
-            </div>
-          </section>
+      <section class="two" id="two">
+        <div class="article">
+          <img class="picture" src="../articles/2.webp" />
+          <span class="title">Don’t Pay the Ransom: Ransomware Awareness Part 2 - Prevention</span>
+          <span class="sub-title">A guide on how to prevent and fight ransomware for non-technical people</span>
         </div>
-      </div>
-    </body>
-  </MainLayout>
+      </section>
 
-  <style lang="sass">
-    $title: #aeb6c2
-    $sub-title: #8296b7
+      <section class="three" id="three">
+        <div class="article">
+          <img class="picture" src="../articles/3.webp" />
+          <span class="title">Don’t Pay the Ransom: Ransomware Awareness Part 3 — Fixing</span>
+          <span class="sub-title">A guide on how to prevent and fight ransomware for non-technical people</span>
+        </div>
+      </section>
 
-    .article
-      cursor: pointer
-      border: 1px solid #008080
-      width: 23rem
-      display: flex
-      flex-direction: column
-      align-content: center
-      justify-content: center
-      align-items: center
-      border-radius: 2rem
-      transition: all 0.2s ease-in-out
+      <section class="four" id="four">
+        <div class="article">
+          <img class="picture" src="../articles/4.webp" />
+          <span class="title">The Park Lights Up</span>
+          <span class="sub-title">Moment of 2023 — sweet.pub writing contest</span>
+        </div>
+      </section>
 
-    .article:hover
-      box-shadow: 0px 0px 3rem 3rem rgba(0, 125, 125, 0.6)
+      <section class="five" id="five">
+        <div class="article">
+          <img class="picture" src="../articles/5.webp" />
+          <span class="title">5 Helpful Free-to-Use Websites You May Not Know About</span>
+          <span class="sub-title">Free-to-use websites that would help you in various situations</span>
+        </div>
+      </section>
 
-    .picture
-      width: 100%
-      border-radius: 2rem 2rem 0 0
+      <section class="six" id="six">
+        <div class="article">
+          <img class="picture" src="../articles/6.webp" />
+          <span class="title">Why Linux is Best for Most People</span>
+          <span class="sub-title">Linux isn’t just for experts. Some Linux flavors are specifically designed for average users</span>
+        </div>
+      </section>
 
-    .title
-      font-family: Open Sans
-      font-size: 1rem
-      color: $title
-      padding: 2rem 0 2rem 0
-      width: 100%
-      text-align: center
+      <section class="seven" id="seven">
+        <div class="article">
+          <img class="picture" src="../articles/7.webp" />
+          <span class="title">Noises to Help you Focus</span>
+          <span class="sub-title">Listening to these noises will help in your focus-needed tasks</span>
+        </div>
+      </section>
 
-    .sub-title
-      font-family: Inter
-      font-size: 0.9rem
-      color: $title
-      padding: 0 0 2rem 0
-      width: 100%
-      text-align: center
+      <section class="eight" id="eight">
+        <div class="article">
+          <img class="picture" src="../articles/8.webp" />
+          <span class="title">Little Things that Make us Smile</span>
+          <span class="sub-title">Summon your biggest smile</span>
+        </div>
+      </section>
+    </div>
+  </div>
+</MainLayout>
 
+<style lang="sass">
+  $title: #aeb6c2
+  $sub-title: #8296b7
+
+  .article
+    cursor: pointer
+    border: 1px solid #008080
+    width: 23rem
+    display: flex
+    flex-direction: column
+    align-content: center
+    justify-content: center
+    align-items: center
+    border-radius: 2rem
+    transition: all 0.2s ease-in-out
+
+  .article:hover
+    box-shadow: 0px 0px 3rem 3rem rgba(0, 125, 125, 0.6)
+
+  .picture
+    width: 100%
+    border-radius: 2rem 2rem 0 0
+
+  .title
+    font-family: Open Sans
+    font-size: 1rem
+    color: $title
+    padding: 2rem 0 2rem 0
+    width: 100%
+    text-align: center
+
+  .sub-title
+    font-family: Inter
+    font-size: 0.9rem
+    color: $title
+    padding: 0 0 2rem 0
+    width: 100%
+    text-align: center
+
+  .grid
+    display: grid
+    grid-template-columns: 1fr
+    grid-template-rows: 0.2fr 1.8fr
+    gap: 0px 0px
+    grid-auto-flow: row
+    grid-template-areas: "page-title" "articles"
+
+  .page-title
+    grid-area: page-title
+    @extend .title
+    font-size: 2rem
+    padding: 2rem 0 0 0
+
+  .articles
+    grid-area: articles
+    display: grid
+    grid-template-columns: 1fr 1fr 1fr 1fr
+    grid-template-rows: 1fr 1fr
+    gap: 4rem 0px
+    grid-auto-flow: row
+    grid-template-areas: "one two three four" "five six seven eight"
+    justify-content: space-around
+    justify-items: center
+    align-items: center
+    padding: 0 0 2rem 0
+
+  // .articles > section
+  //   margin: 0 0 2rem 0
+
+  .one
+    grid-area: one
+
+  .two
+    grid-area: two
+
+  .three
+    grid-area: three
+
+  .four
+    grid-area: four
+
+  .five
+    grid-area: five
+
+  .six
+    grid-area: six
+
+  .seven
+    grid-area: seven
+
+  .eight
+    grid-area: eight
+
+  @media screen and (max-width: 1024px)
     .grid
       display: grid
       grid-template-columns: 1fr
-      grid-template-rows: 0.2fr 1.8fr
-      gap: 0px 0px
-      grid-auto-flow: row
+      grid-template-rows: 0.1fr 1.9fr
+      gap: 1.2rem 0px
       grid-template-areas: "page-title" "articles"
 
     .page-title
       grid-area: page-title
       @extend .title
       font-size: 2rem
-      padding: 2rem 0 0 0
+      padding: 3rem 0 0 0
 
     .articles
       grid-area: articles
-      display: grid
-      grid-template-columns: 1fr 1fr 1fr 1fr
-      grid-template-rows: 1fr 1fr
-      gap: 4rem 0px
-      grid-auto-flow: row
-      grid-template-areas: "one two three four" "five six seven eight"
-      justify-content: space-around
-      justify-items: center
+      display: flex
+      flex-direction: column
+      flex-wrap: wrap
+      justify-content: center
       align-items: center
-      padding: 0 0 2rem 0
+      align-content: center
 
-    // .articles > section
-    //   margin: 0 0 2rem 0
-
-    .one
-      grid-area: one
-
-    .two
-      grid-area: two
-
-    .three
-      grid-area: three
-
-    .four
-      grid-area: four
-
-    .five
-      grid-area: five
-
-    .six
-      grid-area: six
-
-    .seven
-      grid-area: seven
-
-    .eight
-      grid-area: eight
-
-    @media screen and (max-width: 1024px)
-      .grid
-        display: grid
-        grid-template-columns: 1fr
-        grid-template-rows: 0.1fr 1.9fr
-        gap: 1.2rem 0px
-        grid-template-areas: "page-title" "articles"
-
-      .page-title
-        grid-area: page-title
-        @extend .title
-        font-size: 2rem
-        padding: 3rem 0 0 0
-
-      .articles
-        grid-area: articles
-        display: flex
-        flex-direction: column
-        flex-wrap: wrap
-        justify-content: center
-        align-items: center
-        align-content: center
-
-      .articles > section
-        margin: 1rem
-  </style>
-</html>
+    .articles > section
+      margin: 1rem
+</style>
