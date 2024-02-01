@@ -52,7 +52,7 @@ import '../css/main.sass'
 <MainLayout title="Articles - Pat Alcala">
   <div class="grid">
     <div class="page-title">
-      <span>My Articles</span>
+      <span class="page-title--text">My Articles</span>
     </div>
 
     <div class="articles">
@@ -173,8 +173,10 @@ import '../css/main.sass'
   .page-title
     grid-area: page-title
     @extend .title
+    padding: 2rem 0 2rem 0
+
+  .page-title--text
     font-size: 2rem
-    padding: 2rem 0 0 0
 
   .articles
     grid-area: articles
@@ -221,14 +223,15 @@ import '../css/main.sass'
       display: grid
       grid-template-columns: 1fr
       grid-template-rows: 0.1fr 1.9fr
-      gap: 1.2rem 0px
+      gap: 1rem 0px
       grid-template-areas: "page-title" "articles"
 
     .page-title
       grid-area: page-title
-      @extend .title
-      font-size: 2rem
-      padding: 3rem 0 0 0
+      margin: 3rem 0 0 0
+
+    .page-title--text
+      font-size: 1.4rem
 
     .articles
       grid-area: articles
@@ -240,7 +243,7 @@ import '../css/main.sass'
       align-content: center
 
     .articles > section
-      margin: 1rem
+      margin: 0px
 
     .article
       width: 16rem
