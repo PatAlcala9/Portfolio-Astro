@@ -12,6 +12,7 @@
   "dependencies": {
     "astro": "^4.2.8",
     "astro-compressor": "^0.4.1",
-    "sass": "^1.70.0"
+    "sass": "^1.70.0",
+    "typed.js": "^2.1.0"
   }
 }

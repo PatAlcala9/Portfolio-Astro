@@ -1,13 +1,77 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro'
 import PButton from '../components/PButton.astro'
-// import { Picture } from 'astro-imagetools/components'
+import PButtonWide from '../components/PButtonWide.astro'
+
 
 import '../css/main.sass'
 // import '../css/variables.sass'
 
 let name = 'Patrick Alvin Alcala'
 ---
+
+<script>
+import Typed from 'typed.js'
+
+const showPenName = () => {
+  const typed1 = new Typed('.text--intro', {
+    strings: ['Hello, my pen name is'],
+    typeSpeed: 11,
+    showCursor: false
+  })
+
+  const typed2 = new Typed('#text--name', {
+    strings: ['Pat Alcala'],
+    typeSpeed: 20,
+    showCursor: false
+  })
+}
+
+const showRealName = () => {
+  const typed1 = new Typed('.text--intro', {
+    strings: ['Hello, my name is'],
+    typeSpeed: 11,
+    showCursor: false
+  })
+
+  const typed2 = new Typed('#text--name', {
+    strings: ['Patrick Alvin Alcala'],
+    typeSpeed: 5,
+    // backSpeed: 14,
+    showCursor: false
+  })
+}
+
+const showGithubName = () => {
+  const typed1 = new Typed('.text--intro', {
+    strings: ['Hello, my username is'],
+    typeSpeed: 11,
+    showCursor: false,
+  })
+
+  const typed2 = new Typed('#text--name', {
+    strings: ['PatAlcala9'],
+    typeSpeed: 14,
+    showCursor: false,
+  })
+}
+
+const toGithub = document.getElementById('to-github')
+toGithub.addEventListener('mouseover', () => {
+  showGithubName()
+})
+toGithub.addEventListener('mouseleave', () => {
+  showRealName()
+})
+
+const toMedium = document.getElementById('to-medium')
+toMedium.addEventListener('mouseover', () => {
+  showPenName()
+})
+toMedium.addEventListener('mouseleave', () => {
+  showRealName()
+})
+</script>
 
 <html lang="en">
   <head>
@@ -22,17 +86,13 @@ let name = 'Patrick Alvin Alcala'
     <body>
       <div class="grid">
         <section class="texts">
-          <span class="text--intro">Hello, my name is</span>
+          <span class="text--intro" id="text--intro">Hello, my name is</span>
           <span class="text--name" id="text--name">{name}</span>
           <span class="text--description">I'm a Computer Engineer and Writer based on Philippines</span>
         </section>
 
         <section class="images">
           <img class="image" src="../images/pat.webp" alt="Pat Alcala" />
-          <!-- <Picture
-            src="../images/pat.webp"
-            alt="Pat Alcala"
-          /> -->
         </section>
 
         <!-- <section class="logos"> -->
@@ -40,12 +100,22 @@ let name = 'Patrick Alvin Alcala'
         <!-- </section> -->
 
         <section class="buttons">
-          <PButton text="Projects" @mouseover="showGithubName()" @mouseleave="showRealName()"/>
-          <!-- <PButton-wide v-else text="Projects" /> -->
-          
+          <div class="showOnDesktop" id="to-github">
+            <PButton text="Projects" />
+          </div>
+
+          <div class="showOnMobile">
+            <PButtonWide text="Projects" />
+          </div>
+
           <a href="articles">
-            <PButton text="Articles" @mouseover="showPenName()" @mouseleave="showRealName()"/>
-            <!-- <p-button-wide v-else text="Articles" /> -->
+            <div class="showOnDesktop" id="to-medium">
+              <PButton text="Articles" @mouseover="showPenName()" @mouseleave="showRealName()" />
+            </div>
+
+            <div class="showOnMobile">
+              <PButtonWide text="Articles" />
+            </div>
           </a>
         </section>
 
@@ -68,7 +138,6 @@ let name = 'Patrick Alvin Alcala'
       </div>
     </body>
   </MainLayout>
-
 
   <style lang="sass">
     $title: #aeb6c2
@@ -216,6 +285,12 @@ let name = 'Patrick Alvin Alcala'
       color: $title
       padding: 0 0 0 1rem
 
+    .showOnDesktop
+      display: block
+
+    .showOnMobile
+      display: none
+
     @media screen and (max-width: 1366px)
       .image
         width: 15rem
@@ -252,5 +327,11 @@ let name = 'Patrick Alvin Alcala'
       .texts
         grid-area: texts
         padding: 0 0 0 0
+
+      .showOnDesktop
+        display: none
+
+      .showOnMobile
+        display: block
   </style>
 </html>
