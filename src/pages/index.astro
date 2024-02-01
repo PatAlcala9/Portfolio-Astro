@@ -2,9 +2,7 @@
 import MainLayout from '../layouts/MainLayout.astro'
 import PButton from '../components/PButton.astro'
 import PButtonWide from '../components/PButtonWide.astro'
-
 import '../css/main.sass'
-// import '../css/variables.sass'
 
 let name = 'Patrick Alvin Alcala'
 ---
@@ -36,7 +34,6 @@ let name = 'Patrick Alvin Alcala'
     const typed2 = new Typed('#text--name', {
       strings: ['Patrick Alvin Alcala'],
       typeSpeed: 5,
-      // backSpeed: 14,
       showCursor: false,
     })
   }
@@ -70,6 +67,15 @@ let name = 'Patrick Alvin Alcala'
   toMedium.addEventListener('mouseleave', () => {
     showRealName()
   })
+
+  const images = document.getElementById('images')
+  const image = document.getElementById('image')
+  images.addEventListener('mouseenter', () => {
+    image.setAttribute('src', '../images/pat2.webp')
+  })
+  images.addEventListener('mouseleave', () => {
+    image.setAttribute('src', '../images/pat.webp')
+  })
 </script>
 
 <MainLayout title="Pat Alcala">
@@ -80,13 +86,9 @@ let name = 'Patrick Alvin Alcala'
       <span class="text--description">I'm a Computer Engineer and Writer based on Philippines</span>
     </section>
 
-    <section class="images">
-      <img class="image" src="../images/pat.webp" alt="Pat Alcala" />
+    <section class="images" id="images">
+      <img class="image" src="../images/pat.webp" alt="Pat Alcala" id="image"/>
     </section>
-
-    <!-- <section class="logos"> -->
-    <!-- <img class="logo" src="../images/logo.webp" alt="Pat Alcala logo"> -->
-    <!-- </section> -->
 
     <section class="buttons">
       <div class="showOnDesktop" id="to-github">
@@ -111,17 +113,17 @@ let name = 'Patrick Alvin Alcala'
     <section class="minilogos">
       <div class="logo-and-name">
         <img class="minilogo--logo" src="../images/facebook_logo3.svg" alt="facebook logo" @click="openWebsite('https://facebook.com/patrick.alcala')" />
-        <span v-if="viewport.isGreaterThan('tablet')" class="minilogo--name">Facebook</span>
+        <span class="minilogo--name showOnDesktop">Facebook</span>
       </div>
 
       <div class="logo-and-name">
         <img class="minilogo--logo" src="../images/github_logo3.svg" alt="github logo" @click="openWebsite('https://github.com/PatAlcala9')" />
-        <span v-if="viewport.isGreaterThan('tablet')" class="minilogo--name">Github</span>
+        <span class="minilogo--name showOnDesktop">Github</span>
       </div>
 
       <div class="logo-and-name">
         <img class="minilogo--logo" src="../images/mail_black_logo2.svg" alt="email logo" />
-        <span v-if="viewport.isGreaterThan('tablet')" class="minilogo--name">Email</span>
+        <span class="minilogo--name showOnDesktop">Email</span>
       </div>
     </section>
   </div>
@@ -198,6 +200,7 @@ let name = 'Patrick Alvin Alcala'
     align-items: center
     flex-wrap: wrap
     padding: 4rem 0 0 0
+    cursor: pointer
 
   .image
     border-radius: 50%
