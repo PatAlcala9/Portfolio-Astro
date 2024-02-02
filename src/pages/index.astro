@@ -18,79 +18,79 @@ const lastname = 'Alcala'
 ---
 
 <script>
-  import Typed from 'typed.js'
+  // import Typed from 'typed.js'
 
-  const openWebsite = (url: any) => {
-    window.open(url, '_blank')
-  }
+  // const openWebsite = (url: any) => {
+  //   window.open(url, '_blank')
+  // }
 
-  const showPenName = () => {
-    const typed1 = new Typed('.text--intro', {
-      strings: ['Hello, my pen name is'],
-      typeSpeed: 11,
-      showCursor: false,
-    })
+  // const showPenName = () => {
+  //   const typed1 = new Typed('.text--intro', {
+  //     strings: ['Hello, my pen name is'],
+  //     typeSpeed: 11,
+  //     showCursor: false,
+  //   })
 
-    const typed2 = new Typed('#text--name', {
-      strings: ['Pat Alcala'],
-      typeSpeed: 20,
-      showCursor: false,
-    })
-  }
+  //   const typed2 = new Typed('#text--name', {
+  //     strings: ['Pat Alcala'],
+  //     typeSpeed: 20,
+  //     showCursor: false,
+  //   })
+  // }
 
-  const showRealName = () => {
-    const typed1 = new Typed('.text--intro', {
-      strings: ['Hello, my name is'],
-      typeSpeed: 11,
-      showCursor: false,
-    })
+  // const showRealName = () => {
+  //   const typed1 = new Typed('.text--intro', {
+  //     strings: ['Hello, my name is'],
+  //     typeSpeed: 11,
+  //     showCursor: false,
+  //   })
 
-    const typed2 = new Typed('#text--name', {
-      strings: ['Patrick Alvin Alcala'],
-      typeSpeed: 5,
-      showCursor: false,
-    })
-  }
+  //   const typed2 = new Typed('#text--name', {
+  //     strings: ['Patrick Alvin Alcala'],
+  //     typeSpeed: 5,
+  //     showCursor: false,
+  //   })
+  // }
 
-  const showGithubName = () => {
-    const typed1 = new Typed('.text--intro', {
-      strings: ['Hello, my username is'],
-      typeSpeed: 11,
-      showCursor: false,
-    })
+  // const showGithubName = () => {
+  //   const typed1 = new Typed('.text--intro', {
+  //     strings: ['Hello, my username is'],
+  //     typeSpeed: 11,
+  //     showCursor: false,
+  //   })
 
-    const typed2 = new Typed('#text--name', {
-      strings: ['PatAlcala9'],
-      typeSpeed: 14,
-      showCursor: false,
-    })
-  }
+  //   const typed2 = new Typed('#text--name', {
+  //     strings: ['PatAlcala9'],
+  //     typeSpeed: 14,
+  //     showCursor: false,
+  //   })
+  // }
 
-  const toGithub = document.getElementById('to-github')
-  toGithub.addEventListener('mouseover', () => {
-    showGithubName()
-  })
-  toGithub.addEventListener('mouseleave', () => {
-    showRealName()
-  })
+  // const toGithub = document.getElementById('to-github')
+  // toGithub.addEventListener('mouseover', () => {
+  //   showGithubName()
+  // })
+  // toGithub.addEventListener('mouseleave', () => {
+  //   showRealName()
+  // })
 
-  const toMedium = document.getElementById('to-medium')
-  toMedium.addEventListener('mouseover', () => {
-    showPenName()
-  })
-  toMedium.addEventListener('mouseleave', () => {
-    showRealName()
-  })
+  // const toMedium = document.getElementById('to-medium')
+  // toMedium.addEventListener('mouseover', () => {
+  //   showPenName()
+  // })
+  // toMedium.addEventListener('mouseleave', () => {
+  //   showRealName()
+  // })
 
-  const facebook = document.getElementById('facebook')
-  facebook.addEventListener('click', () => {
-    openWebsite('https://facebook.com/patrick.alcala')
-  })
+  // const facebook = document.getElementById('facebook')
+  // facebook.addEventListener('click', () => {
+  //   openWebsite('https://facebook.com/patrick.alcala')
+  // })
 
-  const github = document.getElementById('github')
-  github.addEventListener('click', () => {
-    openWebsite('https://github.com/PatAlcala9')
-  })
+  // const github = document.getElementById('github')
+  // github.addEventListener('click', () => {
+  //   openWebsite('https://github.com/PatAlcala9')
+  // })
 
   // const images = document.getElementById('images')
   // const image = document.getElementById('image')
@@ -132,7 +132,7 @@ const lastname = 'Alcala'
 
       <a href="articles">
         <div class="showOnDesktop" id="to-medium">
-          <PButton text="Articles" @mouseover="showPenName()" @mouseleave="showRealName()" />
+          <PButton text="Articles" />
         </div>
 
         <div class="showOnMobile button">
