@@ -122,11 +122,11 @@ const lastname = 'Alcala'
     </section>
 
     <section class="buttons">
-      <div class="showOnDesktop" id="to-github">
+      <div class="showOnDesktop " id="to-github">
         <PButton text="Projects" />
       </div>
 
-      <div class="showOnMobile">
+      <div class="showOnMobile button">
         <PButtonWide text="Projects" />
       </div>
 
@@ -135,7 +135,7 @@ const lastname = 'Alcala'
           <PButton text="Articles" @mouseover="showPenName()" @mouseleave="showRealName()" />
         </div>
 
-        <div class="showOnMobile">
+        <div class="showOnMobile button">
           <PButtonWide text="Articles" />
         </div>
       </a>
@@ -180,7 +180,7 @@ const lastname = 'Alcala'
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr
     grid-template-rows: 1fr 1fr 1fr
     gap: 0px 0px
-    grid-template-areas: "texts texts texts texts images" "minilogos logos logos logos logos" "buttons buttons buttons buttons buttons" "articles articles articles articles articles"
+    grid-template-areas: "texts texts texts texts images" "minilogos logos logos logos logos" "buttons buttons buttons buttons buttons"
 
   .blank
     grid-area: blank
@@ -190,10 +190,13 @@ const lastname = 'Alcala'
     display: flex
     flex-direction: row
     flex-wrap: wrap
-    justify-content: space-around
+    justify-content: flex-end
     align-items: center
-    align-content: center
-    margin-top: -25rem
+    align-content: flex-end
+    margin: 0 5rem 5rem 0
+
+  // .button
+  //   padding: 0 0 0 2rem
 
   .texts
     grid-area: texts
@@ -207,13 +210,13 @@ const lastname = 'Alcala'
 
   .text--intro
     font-family: Inter
-    font-size: 1.8rem
+    font-size: 1.4rem
     color: $sub-title
 
   .text--name
     font-family: 'Open Sans'
     font-weight: bold
-    font-size: 5.2rem
+    font-size: 5rem
     color: $title
 
   .text--description
@@ -326,8 +329,8 @@ const lastname = 'Alcala'
     //   grid-template-areas: "texts texts texts texts images" "minilogos logos logos logos logos" "buttons buttons buttons buttons buttons" "articles articles articles articles articles"
 
     .images
-      grid-area: images
-      display: inline
+      // grid-area: images
+      // display: inline
       padding: 2.4rem 4rem 0 0
 
     .image
@@ -365,10 +368,14 @@ const lastname = 'Alcala'
       display: flex
       flex-direction: column
       flex-wrap: wrap
-      justify-content: space-around
+      justify-content: center
       align-items: center
       align-content: center
-      margin-top: 0rem
+      margin: 0
+      padding: 0
+
+    .button
+      margin: 0 0 1.4rem 0
 
     .texts
       grid-area: texts
