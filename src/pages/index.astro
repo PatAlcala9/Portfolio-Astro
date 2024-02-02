@@ -17,6 +17,10 @@ let name = 'Patrick Alvin Alcala'
 <script>
   import Typed from 'typed.js'
 
+  const openWebsite = (url: any) => {
+    window.open(url, '_blank')
+  }
+
   const showPenName = () => {
     const typed1 = new Typed('.text--intro', {
       strings: ['Hello, my pen name is'],
@@ -75,6 +79,16 @@ let name = 'Patrick Alvin Alcala'
     showRealName()
   })
 
+  const facebook = document.getElementById('facebook')
+  facebook.addEventListener('click', () => {
+    openWebsite('https://facebook.com/patrick.alcala')
+  })
+
+  const github = document.getElementById('github')
+  github.addEventListener('click', () => {
+    openWebsite('https://github.com/PatAlcala9')
+  })
+
   // const images = document.getElementById('images')
   // const image = document.getElementById('image')
   // images.addEventListener('mouseenter', () => {
@@ -94,7 +108,7 @@ let name = 'Patrick Alvin Alcala'
     </section>
 
     <section class="images" id="images">
-      <Image class="image" src={ pat } alt="Pat Alcala" id="image" />
+      <Image class="image" src={pat} alt="Pat Alcala" id="image" />
     </section>
 
     <section class="buttons">
@@ -119,17 +133,17 @@ let name = 'Patrick Alvin Alcala'
 
     <section class="minilogos">
       <div class="logo-and-name">
-        <Image class="minilogo--logo" src={ facebook_logo } alt="facebook logo" @click="openWebsite('https://facebook.com/patrick.alcala')" />
+        <Image class="minilogo--logo" src={facebook_logo} alt="facebook logo" id="facebook" />
         <span class="minilogo--name showOnDesktop">Facebook</span>
       </div>
 
       <div class="logo-and-name">
-        <Image class="minilogo--logo" src={ github_logo } alt="github logo" @click="openWebsite('https://github.com/PatAlcala9')" />
+        <Image class="minilogo--logo" src={github_logo} alt="github logo" id="github" />
         <span class="minilogo--name showOnDesktop">Github</span>
       </div>
 
       <div class="logo-and-name">
-        <Image class="minilogo--logo" src={ mail_black_logo } alt="email logo" />
+        <Image class="minilogo--logo" src={mail_black_logo} alt="email logo" />
         <span class="minilogo--name showOnDesktop">Email</span>
       </div>
     </section>
