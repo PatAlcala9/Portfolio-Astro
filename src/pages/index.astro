@@ -11,7 +11,10 @@ import mail_black_logo from '../assets/images/mail_black_logo2.svg'
 
 import '../css/main.sass'
 
-let name = 'Patrick Alvin Alcala'
+const name = 'Patrick Alvin Alcala'
+const firstname = 'Patrick'
+const secondname = 'Alvin'
+const lastname = 'Alcala'
 ---
 
 <script>
@@ -103,7 +106,14 @@ let name = 'Patrick Alvin Alcala'
   <div class="grid">
     <section class="texts">
       <span class="text--intro" id="text--intro">Hello, my name is</span>
-      <span class="text--name" id="text--name">{name}</span>
+      <span class="text--name showOnDesktop" id="text--name">{name}</span>
+
+      <div class="text--name--split">
+        <span class="text--name showOnMobile">{firstname}</span>
+        <span class="text--name showOnMobile">{secondname}</span>
+        <span class="text--name showOnMobile">{lastname}</span>
+      </div>
+
       <span class="text--description">I'm a Computer Engineer and Writer based on Philippines</span>
     </section>
 
@@ -197,13 +207,13 @@ let name = 'Patrick Alvin Alcala'
 
   .text--intro
     font-family: Inter
-    font-size: 2rem
+    font-size: 1.8rem
     color: $sub-title
 
   .text--name
     font-family: 'Open Sans'
     font-weight: bold
-    font-size: 5.8rem
+    font-size: 5.2rem
     color: $title
 
   .text--description
@@ -220,12 +230,12 @@ let name = 'Patrick Alvin Alcala'
     align-content: center
     align-items: center
     flex-wrap: wrap
-    padding: 4rem 0 0 0
+    padding: 4rem 4rem 0 0
     cursor: pointer
 
   .image
     border-radius: 50%
-    width: 18rem
+    width: 16rem
     height: auto
 
   .image--hidden
@@ -253,20 +263,16 @@ let name = 'Patrick Alvin Alcala'
     align-content: center
     z-index: -50
 
-  .sample
-    color: white
-    padding: 2rem 0 0 0
-
-    .glow
-      height: 50rem
-      width: 50rem
-      background: rgb(18,45,85)
-      background: radial-gradient(circle, rgba(18,45,85,1) 0%, rgba(10,25,48,0) 70%)
-      background-size: 100%
-      background-repeat: no-repeat
-      background-position: center
-      z-index: -1
-      position: absolute
+  .glow
+    height: 50rem
+    width: 50rem
+    background: rgb(18,45,85)
+    background: radial-gradient(circle, rgba(18,45,85,1) 0%, rgba(10,25,48,0) 70%)
+    background-size: 100%
+    background-repeat: no-repeat
+    background-position: center
+    z-index: -1
+    position: absolute
 
   .minilogos
     display: flex
@@ -303,28 +309,56 @@ let name = 'Patrick Alvin Alcala'
   .showOnMobile
     display: none
 
+  .text--name--split
+    display: flex
+    flex-direction: column
+    flex-wrap: wrap
+    justify-content: center
+    align-items: center
+    align-content: center
+
   @media screen and (max-width: 1366px)
+    // .grid
+    //   display: grid
+    //   grid-template-columns: 1fr 1fr 1fr 1fr 1fr
+    //   grid-template-rows: 1fr 1fr 1fr
+    //   gap: 0px 0px
+    //   grid-template-areas: "texts texts texts texts images" "minilogos logos logos logos logos" "buttons buttons buttons buttons buttons" "articles articles articles articles articles"
+
+    .images
+      grid-area: images
+      display: inline
+      padding: 2.4rem 4rem 0 0
+
     .image
-      width: 15rem
+      width: 12rem
       height: auto
 
-    .name
-      font-size: 4rem
+    .text--intro
+      font-size: 1.2rem
+
+    .text--name
+      font-size: 2.8rem
+
+    .text--description
+      font-size: 1.2rem
 
   @media screen and (max-width: 1024px)
     .grid
       display: grid
-      grid-template-columns: 1.4fr 0.6fr
+      grid-template-columns: 1.8fr 0.2fr
       grid-template-rows: 1fr 1fr 1fr
       gap: 0px 0px
       grid-template-areas: "images minilogos" "texts texts" "buttons buttons"
 
-    .minilogos
-      padding: 4rem 2rem 0 0
     .images
       grid-area: images
       display: inline
-      padding: 2rem 0 0 2rem
+      padding: 4rem 0 0 2rem
+
+    .minilogos
+      grid-area: minilogos
+      margin: 4rem 2rem 0 0
 
     .buttons
       grid-area: buttons
@@ -339,6 +373,22 @@ let name = 'Patrick Alvin Alcala'
     .texts
       grid-area: texts
       padding: 0 0 0 0
+      display: flex
+      flex-direction: column
+      flex-wrap: wrap
+      justify-content: center
+      align-items: center
+      align-content: center
+
+    .text--intro
+      font-size: 1rem
+
+    .text--name
+      font-size: 2.4rem
+
+    .text--description
+      font-size: 0.9rem
+      text-align: center
 
     .showOnDesktop
       display: none
