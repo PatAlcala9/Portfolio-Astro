@@ -13,6 +13,7 @@
     "astro": "^4.2.8",
     "astro-compressor": "^0.4.1",
     "sass": "^1.70.0",
+    "sharp": "^0.33.2",
     "typed.js": "^2.1.0"
   }
 }
