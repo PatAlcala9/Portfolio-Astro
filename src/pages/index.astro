@@ -2,6 +2,13 @@
 import MainLayout from '../layouts/MainLayout.astro'
 import PButton from '../components/PButton.astro'
 import PButtonWide from '../components/PButtonWide.astro'
+
+import { Image } from 'astro:assets'
+import pat from '../assets/images/pat.webp'
+import facebook_logo from '../assets/images/facebook_logo3.svg'
+import github_logo from '../assets/images/github_logo3.svg'
+import mail_black_logo from '../assets/images/mail_black_logo2.svg'
+
 import '../css/main.sass'
 
 let name = 'Patrick Alvin Alcala'
@@ -68,14 +75,14 @@ let name = 'Patrick Alvin Alcala'
     showRealName()
   })
 
-  const images = document.getElementById('images')
-  const image = document.getElementById('image')
-  images.addEventListener('mouseenter', () => {
-    image.setAttribute('src', '../images/pat2.webp')
-  })
-  images.addEventListener('mouseleave', () => {
-    image.setAttribute('src', '../images/pat.webp')
-  })
+  // const images = document.getElementById('images')
+  // const image = document.getElementById('image')
+  // images.addEventListener('mouseenter', () => {
+  //   image.setAttribute('src', '../images/pat2.webp')
+  // })
+  // images.addEventListener('mouseleave', () => {
+  //   image.setAttribute('src', '../images/pat.webp')
+  // })
 </script>
 
 <MainLayout title="Pat Alcala">
@@ -87,7 +94,7 @@ let name = 'Patrick Alvin Alcala'
     </section>
 
     <section class="images" id="images">
-      <img class="image" src="../images/pat.webp" alt="Pat Alcala" id="image"/>
+      <Image class="image" src={ pat } alt="Pat Alcala" id="image" />
     </section>
 
     <section class="buttons">
@@ -112,17 +119,17 @@ let name = 'Patrick Alvin Alcala'
 
     <section class="minilogos">
       <div class="logo-and-name">
-        <img class="minilogo--logo" src="../images/facebook_logo3.svg" alt="facebook logo" @click="openWebsite('https://facebook.com/patrick.alcala')" />
+        <Image class="minilogo--logo" src={ facebook_logo } alt="facebook logo" @click="openWebsite('https://facebook.com/patrick.alcala')" />
         <span class="minilogo--name showOnDesktop">Facebook</span>
       </div>
 
       <div class="logo-and-name">
-        <img class="minilogo--logo" src="../images/github_logo3.svg" alt="github logo" @click="openWebsite('https://github.com/PatAlcala9')" />
+        <Image class="minilogo--logo" src={ github_logo } alt="github logo" @click="openWebsite('https://github.com/PatAlcala9')" />
         <span class="minilogo--name showOnDesktop">Github</span>
       </div>
 
       <div class="logo-and-name">
-        <img class="minilogo--logo" src="../images/mail_black_logo2.svg" alt="email logo" />
+        <Image class="minilogo--logo" src={ mail_black_logo } alt="email logo" />
         <span class="minilogo--name showOnDesktop">Email</span>
       </div>
     </section>

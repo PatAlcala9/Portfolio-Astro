@@ -1,6 +1,16 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro'
 import '../css/main.sass'
+
+import { Image } from 'astro:assets'
+import one from '../assets/articles/1.webp'
+import two from '../assets/articles/2.webp'
+import three from '../assets/articles/3.webp'
+import four from '../assets/articles/4.webp'
+import five from '../assets/articles/5.webp'
+import six from '../assets/articles/6.webp'
+import seven from '../assets/articles/7.webp'
+import eight from '../assets/articles/8.webp'
 ---
 
 <script>
@@ -58,7 +68,7 @@ import '../css/main.sass'
     <div class="articles">
       <section class="one" id="one">
         <div class="article">
-          <img class="picture" src="../articles/1.webp" />
+          <Image class="picture" src={ one } alt="One Article"/>
           <span class="title">Don’t Pay the Ransom: Ransomware Awareness Part 1 - Identification</span>
           <span class="sub-title">A guide on how to prevent and fight ransomware for non-technical people</span>
         </div>
@@ -66,7 +76,7 @@ import '../css/main.sass'
 
       <section class="two" id="two">
         <div class="article">
-          <img class="picture" src="../articles/2.webp" />
+          <Image class="picture" src={ two } alt="Two Article"/>
           <span class="title">Don’t Pay the Ransom: Ransomware Awareness Part 2 - Prevention</span>
           <span class="sub-title">A guide on how to prevent and fight ransomware for non-technical people</span>
         </div>
@@ -74,7 +84,7 @@ import '../css/main.sass'
 
       <section class="three" id="three">
         <div class="article">
-          <img class="picture" src="../articles/3.webp" />
+          <Image class="picture" src={ three } alt="Three Article"/>
           <span class="title">Don’t Pay the Ransom: Ransomware Awareness Part 3 — Fixing</span>
           <span class="sub-title">A guide on how to prevent and fight ransomware for non-technical people</span>
         </div>
@@ -82,7 +92,7 @@ import '../css/main.sass'
 
       <section class="four" id="four">
         <div class="article">
-          <img class="picture" src="../articles/4.webp" />
+          <Image class="picture" src={ four } alt="Four Article"/>
           <span class="title">The Park Lights Up</span>
           <span class="sub-title">Moment of 2023 — sweet.pub writing contest</span>
         </div>
@@ -90,7 +100,7 @@ import '../css/main.sass'
 
       <section class="five" id="five">
         <div class="article">
-          <img class="picture" src="../articles/5.webp" />
+          <Image class="picture" src={ five } alt="Five Article"/>
           <span class="title">5 Helpful Free-to-Use Websites You May Not Know About</span>
           <span class="sub-title">Free-to-use websites that would help you in various situations</span>
         </div>
@@ -98,7 +108,7 @@ import '../css/main.sass'
 
       <section class="six" id="six">
         <div class="article">
-          <img class="picture" src="../articles/6.webp" />
+          <Image class="picture" src={ six } alt="Six Article"/>
           <span class="title">Why Linux is Best for Most People</span>
           <span class="sub-title">Linux isn’t just for experts. Some Linux flavors are specifically designed for average users</span>
         </div>
@@ -106,7 +116,7 @@ import '../css/main.sass'
 
       <section class="seven" id="seven">
         <div class="article">
-          <img class="picture" src="../articles/7.webp" />
+          <Image class="picture" src={ seven } alt="Seven Article"/>
           <span class="title">Noises to Help you Focus</span>
           <span class="sub-title">Listening to these noises will help in your focus-needed tasks</span>
         </div>
@@ -114,7 +124,7 @@ import '../css/main.sass'
 
       <section class="eight" id="eight">
         <div class="article">
-          <img class="picture" src="../articles/8.webp" />
+          <Image class="picture" src={ eight } alt="Eight Article"/>
           <span class="title">Little Things that Make us Smile</span>
           <span class="sub-title">Summon your biggest smile</span>
         </div>
@@ -144,6 +154,7 @@ import '../css/main.sass'
 
   .picture
     width: 100%
+    height: auto
     border-radius: 2rem 2rem 0 0
 
   .title
