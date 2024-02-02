@@ -11,6 +11,9 @@ dependencies:
   astro-compressor:
     specifier: ^0.4.1
     version: 0.4.1
+  gsap:
+    specifier: ^3.12.5
+    version: 3.12.5
   sass:
     specifier: ^1.70.0
     version: 1.70.0
@@ -1703,6 +1706,10 @@ packages:
       kind-of: 6.0.3
       section-matter: 1.0.0
       strip-bom-string: 1.0.0
+    dev: false
+
+  /gsap@3.12.5:
+    resolution: {integrity: sha512-srBfnk4n+Oe/ZnMIOXt3gT605BX9x5+rh/prT2F1SsNJsU1XuMiP0E2aptW481OnonOGACZWBqseH5Z7csHxhQ==}
     dev: false
 
   /has-flag@3.0.0:

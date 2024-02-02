@@ -18,11 +18,12 @@ const lastname = 'Alcala'
 ---
 
 <script>
-  // import Typed from 'typed.js'
+  import Typed from 'typed.js'
+  import { gsap, Elastic } from 'gsap'
 
-  // const openWebsite = (url: any) => {
-  //   window.open(url, '_blank')
-  // }
+  const openWebsite = (url: any) => {
+    window.open(url, '_blank')
+  }
 
   // const showPenName = () => {
   //   const typed1 = new Typed('.text--intro', {
@@ -82,15 +83,38 @@ const lastname = 'Alcala'
   //   showRealName()
   // })
 
-  // const facebook = document.getElementById('facebook')
-  // facebook.addEventListener('click', () => {
-  //   openWebsite('https://facebook.com/patrick.alcala')
-  // })
+  const facebook = document.getElementById('facebook')
+  facebook.addEventListener('click', () => {
+    openWebsite('https://facebook.com/patrick.alcala')
+  })
+  facebook.addEventListener('mouseover', () => {
+    gsap.fromTo('#facebook-name', { duration: 0.6, opacity: 0, x: 100 }, { duration: 0.6, opacity: 1, x: 1 })
+  })
+  facebook.addEventListener('mouseleave', () => {
+    gsap.to('#facebook-name', { duration: 0.6, opacity: 0, x: 100 })
+  })
 
-  // const github = document.getElementById('github')
-  // github.addEventListener('click', () => {
-  //   openWebsite('https://github.com/PatAlcala9')
+  const github = document.getElementById('github')
+  github.addEventListener('click', () => {
+    openWebsite('https://github.com/PatAlcala9')
+  })
+  github.addEventListener('mouseover', () => {
+    gsap.fromTo('#github-name', { duration: 0.6, opacity: 0, x: 100 }, { duration: 0.6, opacity: 1, x: 1 })
+  })
+  github.addEventListener('mouseleave', () => {
+    gsap.to('#github-name', { duration: 0.6, opacity: 0, x: 100 })
+  })
+
+  const email = document.getElementById('email')
+  // email.addEventListener('click', () => {
+  //   // openWebsite('https://github.com/PatAlcala9')
   // })
+  email.addEventListener('mouseover', () => {
+    gsap.fromTo('#email-name', { duration: 0.6, opacity: 0, x: 100 }, { duration: 0.6, opacity: 1, x: 1 })
+  })
+  email.addEventListener('mouseleave', () => {
+    gsap.to('#email-name', { duration: 0.6, opacity: 0, x: 100 })
+  })
 
   // const images = document.getElementById('images')
   // const image = document.getElementById('image')
@@ -122,7 +146,7 @@ const lastname = 'Alcala'
     </section>
 
     <section class="buttons">
-      <div class="showOnDesktop " id="to-github">
+      <div class="showOnDesktop" id="to-github">
         <PButton text="Projects" />
       </div>
 
@@ -144,17 +168,17 @@ const lastname = 'Alcala'
     <section class="minilogos">
       <div class="logo-and-name">
         <Image class="minilogo--logo" src={facebook_logo} alt="facebook logo" id="facebook" />
-        <span class="minilogo--name showOnDesktop">Facebook</span>
+        <span class="minilogo--name showOnDesktop" id="facebook-name">Facebook</span>
       </div>
 
       <div class="logo-and-name">
         <Image class="minilogo--logo" src={github_logo} alt="github logo" id="github" />
-        <span class="minilogo--name showOnDesktop">Github</span>
+        <span class="minilogo--name showOnDesktop" id="github-name">Github</span>
       </div>
 
       <div class="logo-and-name">
-        <Image class="minilogo--logo" src={mail_black_logo} alt="email logo" />
-        <span class="minilogo--name showOnDesktop">Email</span>
+        <Image class="minilogo--logo" src={mail_black_logo} alt="email logo" id="email" />
+        <span class="minilogo--name showOnDesktop" id="email-name">Email</span>
       </div>
     </section>
   </div>
@@ -305,6 +329,7 @@ const lastname = 'Alcala'
     font-family: Inter
     color: $title
     padding: 0 0 0 1rem
+    opacity: 0
 
   .showOnDesktop
     display: block
