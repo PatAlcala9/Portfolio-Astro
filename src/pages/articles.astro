@@ -1,5 +1,6 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro'
+import PArticle from '../components/PArticle.astro'
 import '../css/main.sass'
 
 import { Image } from 'astro:assets'
@@ -66,69 +67,81 @@ import eight from '../assets/articles/8.webp'
     </div>
 
     <div class="articles">
-      <section class="one" id="one">
+      <!-- <section class="one" id="one">
         <div class="article">
           <Image class="picture" src={one} alt="One Article" quality={'low'} />
           <span class="title">Don’t Pay the Ransom: Ransomware Awareness Part 1 - Identification</span>
           <span class="sub-title">A guide on how to prevent and fight ransomware for non-technical people</span>
         </div>
-      </section>
+      </section> -->
+      <PArticle class="one" title="Don’t Pay the Ransom: Ransomware Awareness Part 1 - Identification" subTitle="A guide on how to prevent and fight ransomware for non-technical people" image={one} imageAlt="One Article"/>
 
-      <section class="two" id="two">
+      <!-- <section class="two" id="two">
         <div class="article">
           <Image class="picture" src={two} alt="Two Article" quality={'low'} />
           <span class="title">Don’t Pay the Ransom: Ransomware Awareness Part 2 - Prevention</span>
           <span class="sub-title">A guide on how to prevent and fight ransomware for non-technical people</span>
         </div>
-      </section>
+      </section> -->
+      <PArticle class="two" title="Don’t Pay the Ransom: Ransomware Awareness Part 2 - Prevention" subTitle="A guide on how to prevent and fight ransomware for non-technical people" image={two} imageAlt="Two Article"/>
 
-      <section class="three" id="three">
+
+      <!-- <section class="three" id="three">
         <div class="article">
           <Image class="picture" src={three} alt="Three Article" quality={'low'} />
           <span class="title">Don’t Pay the Ransom: Ransomware Awareness Part 3 — Fixing</span>
           <span class="sub-title">A guide on how to prevent and fight ransomware for non-technical people</span>
         </div>
-      </section>
+      </section> -->
+      <PArticle class="three" title="Don’t Pay the Ransom: Ransomware Awareness Part 3 — Fixing" subTitle="A guide on how to prevent and fight ransomware for non-technical people" image={three} imageAlt="Three Article"/>
 
-      <section class="four" id="four">
+      <!-- <section class="four" id="four">
         <div class="article">
           <Image class="picture" src={four} alt="Four Article" quality={'low'} />
           <span class="title">The Park Lights Up</span>
           <span class="sub-title">Moment of 2023 — sweet.pub writing contest</span>
         </div>
-      </section>
+      </section> -->
+      <PArticle class="four" title="The Park Lights Up" subTitle="Moment of 2023 — sweet.pub writing contest" image={four} imageAlt="Four Article"/>
 
-      <section class="five" id="five">
+      <!-- <section class="five" id="five">
         <div class="article">
           <Image class="picture" src={five} alt="Five Article" quality={'low'} />
           <span class="title">5 Helpful Free-to-Use Websites You May Not Know About</span>
           <span class="sub-title">Free-to-use websites that would help you in various situations</span>
         </div>
-      </section>
+      </section> -->
+      <PArticle class="five" title="5 Helpful Free-to-Use Websites You May Not Know About<" subTitle="Free-to-use websites that would help you in various situations" image={five} imageAlt="Five Article"/>
 
-      <section class="six" id="six">
+      <!-- <section class="six" id="six">
         <div class="article">
           <Image class="picture" src={six} alt="Six Article" quality={'low'} />
           <span class="title">Why Linux is Best for Most People</span>
           <span class="sub-title">Linux isn’t just for experts. Some Linux flavors are specifically designed for average users</span>
         </div>
-      </section>
+      </section> -->
+      <PArticle class="six" title="Why Linux is Best for Most People<" subTitle="Linux isn’t just for experts. Some Linux flavors are specifically designed for average users" image={six} imageAlt="Six Article"/>
 
-      <section class="seven" id="seven">
+
+      <!-- <section class="seven" id="seven">
         <div class="article">
           <Image class="picture" src={seven} alt="Seven Article" quality={'low'} />
           <span class="title">Noises to Help you Focus</span>
           <span class="sub-title">Listening to these noises will help in your focus-needed tasks</span>
         </div>
-      </section>
+      </section> -->
+      <PArticle class="seven" title="Noises to Help you Focus<" subTitle="Listening to these noises will help in your focus-needed tasks" image={seven} imageAlt="Seven Article"/>
 
-      <section class="eight" id="eight">
+
+      <!-- <section class="eight" id="eight">
         <div class="article">
           <Image class="picture" src={eight} alt="Eight Article" quality={'low'} />
           <span class="title">Little Things that Make us Smile</span>
           <span class="sub-title">Summon your biggest smile</span>
         </div>
-      </section>
+      </section> -->
+      <PArticle class="eight" title="Little Things that Make us Smile<" subTitle="Summon your biggest smile" image={eight} imageAlt="Eight Article"/>
+
     </div>
   </div>
 </MainLayout>
@@ -180,6 +193,8 @@ import eight from '../assets/articles/8.webp'
     gap: 0px 0px
     grid-auto-flow: row
     grid-template-areas: "page-title" "articles"
+    width: 100vw
+    width: 100svw
 
   .page-title
     grid-area: page-title
@@ -194,13 +209,14 @@ import eight from '../assets/articles/8.webp'
     display: grid
     grid-template-columns: 1fr 1fr 1fr 1fr
     grid-template-rows: 1fr 1fr
-    gap: 4rem 0px
+    gap: 3rem 0px
     grid-auto-flow: row
     grid-template-areas: "one two three four" "five six seven eight"
     justify-content: space-around
     justify-items: center
     align-items: center
     padding: 0 0 2rem 0
+    
 
   // .articles > section
   //   margin: 0 0 2rem 0
