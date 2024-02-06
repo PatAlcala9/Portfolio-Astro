@@ -16,5 +16,8 @@
     "sass": "^1.70.0",
     "sharp": "^0.33.2",
     "typed.js": "^2.1.0"
+  },
+  "devDependencies": {
+    "astro-robots-txt": "^1.0.0"
   }
 }
