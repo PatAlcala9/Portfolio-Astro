@@ -1,0 +1,211 @@
+---
+import MainLayout from '../layouts/MainLayout.astro'
+import PArticle from '../components/PArticle.astro'
+import '../css/main.sass'
+
+// import { Image } from 'astro:assets'
+// import one from '../assets/articles/1.webp'
+// import two from '../assets/articles/2.webp'
+// import three from '../assets/articles/3.webp'
+// import four from '../assets/articles/4.webp'
+// import five from '../assets/articles/5.webp'
+// import six from '../assets/articles/6.webp'
+// import seven from '../assets/articles/7.webp'
+// import eight from '../assets/articles/8.webp'
+// import nine from '../assets/articles/9.webp'
+// import ten from '../assets/articles/10.webp'
+// import eleven from '../assets/articles/11.webp'
+// import twelve from '../assets/articles/12.webp'
+// import thirteen from '../assets/articles/13.webp'
+---
+
+<script>
+  const openWebsite = (url: any) => {
+    window.open(url, '_blank')
+  }
+
+  // const one = document.getElementById('one')
+  // one.addEventListener('click', () => {
+  //   openWebsite('https://medium.com/illumination/dont-pay-the-ransom-ransomware-awareness-part-1-identification-230274406918')
+  // })
+
+  // const two = document.getElementById('two')
+  // two.addEventListener('click', () => {
+  //   openWebsite('https://medium.com/illumination/dont-pay-the-ransom-ransomware-awareness-part-2-prevention-cff967846330')
+  // })
+
+  // const three = document.getElementById('three')
+  // three.addEventListener('click', () => {
+  //   openWebsite('https://medium.com/illumination/dont-pay-the-ransom-ransomware-awareness-part-3-fixing-e248ed5bc43c')
+  // })
+
+  // const four = document.getElementById('four')
+  // four.addEventListener('click', () => {
+  //   openWebsite('https://medium.com/short-sweet-valuable/the-park-lights-up-605e04771272')
+  // })
+
+  // const five = document.getElementById('five')
+  // five.addEventListener('click', () => {
+  //   openWebsite('https://medium.com/long-sweet-valuable/5-helpful-free-to-use-websites-you-may-not-know-about-c8076f3da3ac')
+  // })
+
+  // const six = document.getElementById('six')
+  // six.addEventListener('click', () => {
+  //   openWebsite('https://medium.com/@patalcala/why-linux-is-best-for-most-people-48a14e414dc7')
+  // })
+
+  // const seven = document.getElementById('seven')
+  // seven.addEventListener('click', () => {
+  //   openWebsite('https://medium.com/the-shortform/noises-to-help-you-focus-4326184893c7')
+  // })
+
+  // const eight = document.getElementById('eight')
+  // eight.addEventListener('click', () => {
+  //   openWebsite('https://medium.com/short-sweet-valuable/little-things-that-make-us-smile-e98cbc5a396e')
+  // })
+</script>
+
+<MainLayout title="Projects - Pat Alcala" pageDescription="Projects">
+  <div class="grid">
+    <div class="page-title">
+      <span class="page-title--text">My Projects</span>
+    </div>
+  </div>
+</MainLayout>
+
+<style lang="sass">
+  $title: #aeb6c2
+  $sub-title: #8296b7
+
+  .article
+    cursor: pointer
+    border: 1px solid #008080
+    width: 23rem
+    display: flex
+    flex-direction: column
+    align-content: center
+    justify-content: center
+    align-items: center
+    border-radius: 2rem
+    transition: all 0.2s ease-in-out
+
+  .article:hover
+    box-shadow: 0px 0px 3rem 3rem rgba(0, 125, 125, 0.6)
+
+  .picture
+    width: 100%
+    height: auto
+    border-radius: 2rem 2rem 0 0
+
+  .title
+    font-family: Open Sans
+    font-size: 1rem
+    color: $title
+    padding: 2rem 0 2rem 0
+    width: 100%
+    text-align: center
+
+  .sub-title
+    font-family: Inter
+    font-size: 0.9rem
+    color: $title
+    padding: 0 0 2rem 0
+    width: 100%
+    text-align: center
+
+  .grid
+    display: grid
+    grid-template-columns: 1fr
+    grid-template-rows: 0.2fr 1.8fr
+    gap: 0px 0px
+    grid-auto-flow: row
+    grid-template-areas: "page-title" "articles"
+    width: 100vw
+    width: 100svw
+
+  .page-title
+    grid-area: page-title
+    @extend .title
+    padding: 2rem 0 2rem 0
+
+  .page-title--text
+    font-size: 2rem
+
+  .articles
+    grid-area: articles
+    display: grid
+    grid-template-columns: 1fr 1fr 1fr 1fr
+    grid-template-rows: 1fr 1fr
+    gap: 3rem 0px
+    grid-auto-flow: row
+    grid-template-areas: "one two three four" "five six seven eight"
+    justify-content: space-around
+    justify-items: center
+    align-items: center
+    padding: 0 0 2rem 0
+
+  // .articles > section
+  //   margin: 0 0 2rem 0
+
+  .one
+    grid-area: one
+
+  .two
+    grid-area: two
+
+  .three
+    grid-area: three
+
+  .four
+    grid-area: four
+
+  .five
+    grid-area: five
+
+  .six
+    grid-area: six
+
+  .seven
+    grid-area: seven
+
+  .eight
+    grid-area: eight
+
+  @media screen and (max-width: 1024px)
+    .grid
+      display: grid
+      grid-template-columns: 1fr
+      grid-template-rows: 0.1fr 1.9fr
+      gap: 1rem 0px
+      grid-template-areas: "page-title" "articles"
+
+    .page-title
+      grid-area: page-title
+      margin: 3rem 0 0 0
+
+    .page-title--text
+      font-size: 1.4rem
+
+    .articles
+      grid-area: articles
+      display: flex
+      flex-direction: column
+      flex-wrap: wrap
+      justify-content: center
+      align-items: center
+      align-content: center
+
+    .articles > section
+      margin: 0px
+
+    .article
+      width: 16rem
+
+    .title
+      font-size: 0.9rem
+      padding: 1rem 0 1rem 0
+
+    .sub-title
+      font-size: 0.8rem
+      padding: 0 0 1.5rem 0
+</style>
