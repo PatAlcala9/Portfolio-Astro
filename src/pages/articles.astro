@@ -63,6 +63,16 @@ import thirteen from '../assets/articles/13.webp'
   eight.addEventListener('click', () => {
     openWebsite('https://medium.com/short-sweet-valuable/little-things-that-make-us-smile-e98cbc5a396e')
   })
+
+  const nine = document.getElementById('nine')
+  nine.addEventListener('click', () => {
+    openWebsite('https://medium.com/the-shortform/trust-is-something-you-must-not-break-e1ac92b96fa7')
+  })
+
+   const ten = document.getElementById('ten')
+  ten.addEventListener('click', () => {
+    openWebsite('https://medium.com/the-shortform/how-improvisation-can-save-your-day-df9d0e8f5b13')
+  })
 </script>
 
 <MainLayout title="Articles - Pat Alcala" pageDescription="Articles">
@@ -72,86 +82,57 @@ import thirteen from '../assets/articles/13.webp'
     </div>
 
     <div class="articles">
-      <!-- <section class="one" id="one">
-        <div class="article">
-          <Image class="picture" src={one} alt="One Article" quality={'low'} />
-          <span class="title">Don’t Pay the Ransom: Ransomware Awareness Part 1 - Identification</span>
-          <span class="sub-title">A guide on how to prevent and fight ransomware for non-technical people</span>
-        </div>
-      </section> -->
-      <PArticle class="one" title="Don’t Pay the Ransom: Ransomware Awareness Part 1 - Identification" subTitle="A guide on how to prevent and fight ransomware for non-technical people" image={one} imageAlt="One Article"/>
+      <section class="one" id="one">
+        <PArticle title="Don’t Pay the Ransom: Ransomware Awareness Part 1 - Identification" subTitle="A guide on how to prevent and fight ransomware for non-technical people" image={one} imageAlt="One Article" />
+      </section>
 
-      <!-- <section class="two" id="two">
-        <div class="article">
-          <Image class="picture" src={two} alt="Two Article" quality={'low'} />
-          <span class="title">Don’t Pay the Ransom: Ransomware Awareness Part 2 - Prevention</span>
-          <span class="sub-title">A guide on how to prevent and fight ransomware for non-technical people</span>
-        </div>
-      </section> -->
-      <PArticle class="two" title="Don’t Pay the Ransom: Ransomware Awareness Part 2 - Prevention" subTitle="A guide on how to prevent and fight ransomware for non-technical people" image={two} imageAlt="Two Article"/>
+      <section class="two" id="two">
+        <PArticle class="two" title="Don’t Pay the Ransom: Ransomware Awareness Part 2 - Prevention" subTitle="A guide on how to prevent and fight ransomware for non-technical people" image={two} imageAlt="Two Article" />
+      </section>
 
+      <section class="three" id="three">
+        <PArticle class="three" title="Don’t Pay the Ransom: Ransomware Awareness Part 3 — Fixing" subTitle="A guide on how to prevent and fight ransomware for non-technical people" image={three} imageAlt="Three Article" />
+      </section>
 
-      <!-- <section class="three" id="three">
-        <div class="article">
-          <Image class="picture" src={three} alt="Three Article" quality={'low'} />
-          <span class="title">Don’t Pay the Ransom: Ransomware Awareness Part 3 — Fixing</span>
-          <span class="sub-title">A guide on how to prevent and fight ransomware for non-technical people</span>
-        </div>
-      </section> -->
-      <PArticle class="three" title="Don’t Pay the Ransom: Ransomware Awareness Part 3 — Fixing" subTitle="A guide on how to prevent and fight ransomware for non-technical people" image={three} imageAlt="Three Article"/>
+      <section class="four" id="four">
+        <PArticle class="four" title="The Park Lights Up" subTitle="Moment of 2023 — sweet.pub writing contest" image={four} imageAlt="Four Article" />
+      </section>
 
-      <!-- <section class="four" id="four">
-        <div class="article">
-          <Image class="picture" src={four} alt="Four Article" quality={'low'} />
-          <span class="title">The Park Lights Up</span>
-          <span class="sub-title">Moment of 2023 — sweet.pub writing contest</span>
-        </div>
-      </section> -->
-      <PArticle class="four" title="The Park Lights Up" subTitle="Moment of 2023 — sweet.pub writing contest" image={four} imageAlt="Four Article"/>
+      <section class="five" id="five">
+        <PArticle class="five" title="5 Helpful Free-to-Use Websites You May Not Know About<" subTitle="Free-to-use websites that would help you in various situations" image={five} imageAlt="Five Article" />
+      </section>
 
-      <!-- <section class="five" id="five">
-        <div class="article">
-          <Image class="picture" src={five} alt="Five Article" quality={'low'} />
-          <span class="title">5 Helpful Free-to-Use Websites You May Not Know About</span>
-          <span class="sub-title">Free-to-use websites that would help you in various situations</span>
-        </div>
-      </section> -->
-      <PArticle class="five" title="5 Helpful Free-to-Use Websites You May Not Know About<" subTitle="Free-to-use websites that would help you in various situations" image={five} imageAlt="Five Article"/>
+      <section class="six" id="six">
+        <PArticle class="six" title="Why Linux is Best for Most People<" subTitle="Linux isn’t just for experts. Some Linux flavors are specifically designed for average users" image={six} imageAlt="Six Article" />
+      </section>
 
-      <!-- <section class="six" id="six">
-        <div class="article">
-          <Image class="picture" src={six} alt="Six Article" quality={'low'} />
-          <span class="title">Why Linux is Best for Most People</span>
-          <span class="sub-title">Linux isn’t just for experts. Some Linux flavors are specifically designed for average users</span>
-        </div>
-      </section> -->
-      <PArticle class="six" title="Why Linux is Best for Most People<" subTitle="Linux isn’t just for experts. Some Linux flavors are specifically designed for average users" image={six} imageAlt="Six Article"/>
+      <section class="seven" id="seven">
+        <PArticle class="seven" title="Noises to Help you Focus<" subTitle="Listening to these noises will help in your focus-needed tasks" image={seven} imageAlt="Seven Article" />
+      </section>
 
+      <section class="eight" id="eight">
+        <PArticle class="eight" title="Little Things that Make us Smile" subTitle="Summon your biggest smile" image={eight} imageAlt="Eight Article" />
+      </section>
 
-      <!-- <section class="seven" id="seven">
-        <div class="article">
-          <Image class="picture" src={seven} alt="Seven Article" quality={'low'} />
-          <span class="title">Noises to Help you Focus</span>
-          <span class="sub-title">Listening to these noises will help in your focus-needed tasks</span>
-        </div>
-      </section> -->
-      <PArticle class="seven" title="Noises to Help you Focus<" subTitle="Listening to these noises will help in your focus-needed tasks" image={seven} imageAlt="Seven Article"/>
+      <section class="nine" id="nine">
+        <PArticle title="Trust is Something You Must Not Break" subTitle="It can never be regained" image={nine} imageAlt="Nine Article" />
+      </section>
 
+      <section class="ten" id="ten">
+        <PArticle title="How Improvisation Can Save your Day" subTitle="When you master how to improvise, you can conquer your day" image={ten} imageAlt="Ten Article" />
+      </section>
 
-      <!-- <section class="eight" id="eight">
-        <div class="article">
-          <Image class="picture" src={eight} alt="Eight Article" quality={'low'} />
-          <span class="title">Little Things that Make us Smile</span>
-          <span class="sub-title">Summon your biggest smile</span>
-        </div>
-      </section> -->
-      <PArticle class="eight" title="Little Things that Make us Smile" subTitle="Summon your biggest smile" image={eight} imageAlt="Eight Article"/>
-      <PArticle class="nine" title="Trust is Something You Must Not Break" subTitle="It can never be regained" image={nine} imageAlt="Nine Article"/>
-      <PArticle class="ten" title="Trust is Something You Must Not Break" subTitle="It can never be regained" image={ten} imageAlt="Ten Article"/>
-      <PArticle class="eleven" title="5 Free-to-use Windows Applications to Enhance Computer Experience" subTitle="Free-to-use Application that makes Windows comfortable" image={eleven} imageAlt="Eleven Article"/>
-      <PArticle class="twelve" title="Impossible is Just a Made-Up Word" subTitle="All we need is a space" image={twelve} imageAlt="Twelve Article"/>
-      <PArticle class="thirteen" title="Stepping Into 2024" subTitle="A new year poem" image={thirteen} imageAlt="Thirteen Article"/>
+      <section class="eleven" id="eleven">
+        <PArticle title="5 Free-to-use Windows Applications to Enhance Computer Experience" subTitle="Free-to-use Application that makes Windows comfortable" image={eleven} imageAlt="Eleven Article" />
+      </section>
 
+      <section class="twelve" id="twelve">
+        <PArticle title="Impossible is Just a Made-Up Word" subTitle="All we need is a space" image={twelve} imageAlt="Twelve Article" />
+      </section>
+
+      <section class="thirteen" id="thirteen">
+        <PArticle title="Stepping Into 2024" subTitle="A new year poem" image={thirteen} imageAlt="Thirteen Article" />
+      </section>
     </div>
   </div>
 </MainLayout>
@@ -226,7 +207,6 @@ import thirteen from '../assets/articles/13.webp'
     justify-items: center
     align-items: center
     padding: 0 0 2rem 0
-    
 
   // .articles > section
   //   margin: 0 0 2rem 0
