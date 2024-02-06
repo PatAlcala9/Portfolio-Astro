@@ -5,9 +5,9 @@ import PButtonWide from '../components/PButtonWide.astro'
 
 import { Image } from 'astro:assets'
 import pat from '../assets/images/pat.webp'
-import facebook_logo from '../assets/images/facebook_logo3.svg'
-import github_logo from '../assets/images/github_logo3.svg'
-import mail_black_logo from '../assets/images/mail_black_logo2.svg'
+import facebook_logo from '../assets/images/facebook_logo4.svg'
+import github_logo from '../assets/images/github_logo4.svg'
+import mail_black_logo from '../assets/images/mail_black_logo3.svg'
 
 import '../css/main.sass'
 
@@ -18,70 +18,11 @@ const lastname = 'Alcala'
 ---
 
 <script>
-  import Typed from 'typed.js'
-  import { gsap, Elastic } from 'gsap'
+  import { gsap } from 'gsap'
 
   const openWebsite = (url: any) => {
     window.open(url, '_blank')
   }
-
-  // const showPenName = () => {
-  //   const typed1 = new Typed('.text--intro', {
-  //     strings: ['Hello, my pen name is'],
-  //     typeSpeed: 11,
-  //     showCursor: false,
-  //   })
-
-  //   const typed2 = new Typed('#text--name', {
-  //     strings: ['Pat Alcala'],
-  //     typeSpeed: 20,
-  //     showCursor: false,
-  //   })
-  // }
-
-  // const showRealName = () => {
-  //   const typed1 = new Typed('.text--intro', {
-  //     strings: ['Hello, my name is'],
-  //     typeSpeed: 11,
-  //     showCursor: false,
-  //   })
-
-  //   const typed2 = new Typed('#text--name', {
-  //     strings: ['Patrick Alvin Alcala'],
-  //     typeSpeed: 5,
-  //     showCursor: false,
-  //   })
-  // }
-
-  // const showGithubName = () => {
-  //   const typed1 = new Typed('.text--intro', {
-  //     strings: ['Hello, my username is'],
-  //     typeSpeed: 11,
-  //     showCursor: false,
-  //   })
-
-  //   const typed2 = new Typed('#text--name', {
-  //     strings: ['PatAlcala9'],
-  //     typeSpeed: 14,
-  //     showCursor: false,
-  //   })
-  // }
-
-  // const toGithub = document.getElementById('to-github')
-  // toGithub.addEventListener('mouseover', () => {
-  //   showGithubName()
-  // })
-  // toGithub.addEventListener('mouseleave', () => {
-  //   showRealName()
-  // })
-
-  // const toMedium = document.getElementById('to-medium')
-  // toMedium.addEventListener('mouseover', () => {
-  //   showPenName()
-  // })
-  // toMedium.addEventListener('mouseleave', () => {
-  //   showRealName()
-  // })
 
   const facebook = document.getElementById('facebook')
   facebook.addEventListener('click', () => {
@@ -167,12 +108,12 @@ const lastname = 'Alcala'
 
     <section class="minilogos">
       <div class="logo-and-name">
-        <Image class="minilogo--logo" src={facebook_logo} alt="facebook logo" id="facebook" format="webp" />
+        <Image class="minilogo--logo" src={facebook_logo} alt="facebook logo" id="facebook"  />
         <span class="minilogo--name showOnDesktop" id="facebook-name">Facebook</span>
       </div>
 
       <div class="logo-and-name">
-        <Image class="minilogo--logo" src={github_logo} alt="github logo" id="github" format="webp" />
+        <Image class="minilogo--logo" src={github_logo} alt="github logo" id="github"  />
         <span class="minilogo--name showOnDesktop" id="github-name">Github</span>
       </div>
 
