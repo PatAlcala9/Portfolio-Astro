@@ -1,5 +1,5 @@
 ---
-const { title } = Astro.props
+const { title, pageDescription } = Astro.props
 ---
 
 <html lang="en">
@@ -7,7 +7,7 @@ const { title } = Astro.props
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon2.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Portfolio of Patrick Alvin Alcala" />
+    <meta name="description" content=`${pageDescription} of Patrick Alvin Alcala` />
     <meta name="generator" content={Astro.generator} />
     <title>{ title }</title>
   </head>
