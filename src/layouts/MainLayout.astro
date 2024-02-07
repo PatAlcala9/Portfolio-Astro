@@ -2,6 +2,21 @@
 const { title, pageDescription } = Astro.props
 ---
 
+<script>
+  const cursorSmall = document.getElementById('small')
+
+  const positionElement = (e: MouseEvent) => {
+    const mouseY = e.pageY
+    const mouseX = e.pageX
+    const height = cursorSmall.offsetHeight
+    const width = cursorSmall.offsetWidth
+
+    cursorSmall.style.transform = `translate3d(${mouseX - width}px, ${mouseY - height}px, 0)`
+  }
+
+  window.addEventListener('mousemove', positionElement)
+</script>
+
 <html lang="en">
   <head>
     <meta charset="utf-8" />
@@ -9,24 +24,48 @@ const { title, pageDescription } = Astro.props
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content=`${pageDescription} of Patrick Alvin Alcala` />
     <meta name="generator" content={Astro.generator} />
-    <title>{ title }</title>
+    <title>{title}</title>
   </head>
 
   <body class="layout">
-    <slot/>
+    <div class="small" id="small"></div>
+
+    <slot />
   </body>
 </html>
 
-<style lang="sass">
-.layout
-  background: #0a1930
-  position: absolute
-  top: 0
-  left: 0
-  width: 100vw
-  width: 100svw
-  height: 100vh
-  height: 100svh
-  overflow: auto
+<style lang="sass" is:global>
+  @font-face
+    font-family: 'Inter'
+    src: url('../assets/fonts/Inter.woff2')
+
+  @font-face
+    font-family: 'Open Sans'
+    src: url('../assets/fonts/OpenSans-Bold.woff2')
+
+  .page
+    padding: 0.5rem 1rem
+
+  .text
+    color: #ffffff
+
+  .layout
+    background: #0a1930
+    position: absolute
+    top: 0
+    left: 0
+    width: 100vw
+    width: 100svw
+    height: 100vh
+    height: 100svh
+    overflow: hidden
+    cursor: none
+    // cursor: url('../assets/images/mouse3.webp') 32 32, auto
+
+  .small
+    width: 10px
+    height: 10px
+    border: 2px solid #fff
+    border-radius: 50%
+    pointer-events: none
 </style>
- 

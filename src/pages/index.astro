@@ -9,8 +9,6 @@ import facebook_logo from '../assets/images/facebook_logo4.svg'
 import github_logo from '../assets/images/github_logo4.svg'
 import mail_black_logo from '../assets/images/mail_black_logo3.svg'
 
-import '../css/main.sass'
-
 const name = 'Patrick Alvin Alcala'
 const firstname = 'Patrick'
 const secondname = 'Alvin'
@@ -65,6 +63,7 @@ const lastname = 'Alcala'
   // images.addEventListener('mouseleave', () => {
   //   image.setAttribute('src', '../images/pat.webp')
   // })
+
 </script>
 
 <MainLayout title="Pat Alcala" pageDescription="Portfolio">
@@ -259,7 +258,8 @@ const lastname = 'Alcala'
 
   .minilogo--logo:hover
     width: 3rem
-    transition: width 0.4s ease
+    // cursor: url('../assets/images/mouse4.webp') 16 16, auto
+    cursor: none
 
   .logo-and-name
     display: flex
