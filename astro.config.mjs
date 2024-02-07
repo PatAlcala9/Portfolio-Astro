@@ -6,5 +6,9 @@ import compressor from "astro-compressor";
 export default defineConfig({
   site: 'https://patalcala.com',
   
-  integrations: [compressor({gzip: false, brotli: true}), robotsTxt()]
+  integrations: [compressor({gzip: false, brotli: true}), robotsTxt()],
+
+  build: {
+    assets: '_patalcala'
+  }
 });
