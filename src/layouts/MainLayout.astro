@@ -2,7 +2,7 @@
 const { title, pageDescription } = Astro.props
 ---
 
-<script>
+<!-- <script>
   const cursorSmall = document.getElementById('small')
 
   const positionElement = (e: MouseEvent) => {
@@ -15,7 +15,7 @@ const { title, pageDescription } = Astro.props
   }
 
   window.addEventListener('mousemove', positionElement)
-</script>
+</script> -->
 
 <html lang="en">
   <head>
@@ -28,7 +28,7 @@ const { title, pageDescription } = Astro.props
   </head>
 
   <body class="layout">
-    <div class="small" id="small"></div>
+    <!-- <div class="small" id="small"></div> -->
 
     <slot />
   </body>
@@ -60,7 +60,7 @@ const { title, pageDescription } = Astro.props
     height: 100svh
     overflow: hidden
     cursor: none
-    // cursor: url('../assets/images/mouse3.webp') 32 32, auto
+    cursor: url('../assets/images/mouse3.webp') 32 32, auto
 
   .small
     width: 10px
