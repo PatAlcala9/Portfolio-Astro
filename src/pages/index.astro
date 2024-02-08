@@ -360,7 +360,7 @@ const lastname = 'Alcala'
   @media screen and (max-width: 1024px)
     .grid
       display: grid
-      grid-template-columns: 1.8fr 0.2fr
+      grid-template-columns: 1fr 1fr
       grid-template-rows: 1fr 1fr 1fr
       gap: 0px 0px
       grid-template-areas: "images minilogos" "texts texts" "buttons buttons"
@@ -368,11 +368,21 @@ const lastname = 'Alcala'
     .images
       grid-area: images
       display: inline
-      padding: 4rem 0 0 2rem
+      margin: 1rem 0 0 2rem
 
     .minilogos
       grid-area: minilogos
-      margin: 4rem 2rem 0 0
+      margin: 4rem 3rem 0 0
+
+    .texts
+      grid-area: texts
+      margin: 0
+      display: flex
+      flex-direction: column
+      flex-wrap: wrap
+      justify-content: center
+      align-items: center
+      align-content: center
 
     .buttons
       grid-area: buttons
@@ -382,21 +392,14 @@ const lastname = 'Alcala'
       justify-content: center
       align-items: center
       align-content: center
-      margin: 0
-      padding: 0
+      margin: auto
+      padding: auto
+      width: 100vw
 
     .button
-      margin: 0 0 1.4rem 0
+      margin: 0 0 1.2rem 0
 
-    .texts
-      grid-area: texts
-      padding: 0 0 0 0
-      display: flex
-      flex-direction: column
-      flex-wrap: wrap
-      justify-content: center
-      align-items: center
-      align-content: center
+    
 
     .text--intro
       font-size: 1rem
