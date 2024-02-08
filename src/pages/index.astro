@@ -63,7 +63,6 @@ const lastname = 'Alcala'
   // images.addEventListener('mouseleave', () => {
   //   image.setAttribute('src', '../images/pat.webp')
   // })
-
 </script>
 
 <MainLayout title="Pat Alcala" pageDescription="Portfolio">
@@ -124,6 +123,16 @@ const lastname = 'Alcala'
       </div>
     </section>
   </div>
+
+  <div class="grid2">
+    <section class="grid2-title">
+      <span>About Me</span>
+    </section>
+
+    <section class="grid2-body">
+      <span>The quick brown fox</span>
+    </section>
+  </div>
 </MainLayout>
 
 <style lang="sass">
@@ -144,9 +153,9 @@ const lastname = 'Alcala'
   .grid
     display: grid
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr
-    grid-template-rows: 1fr 1fr 1fr
+    grid-template-rows: 0.1fr 0.9fr 1fr
     gap: 0px 0px
-    grid-template-areas: "texts texts texts texts images" "minilogos logos logos logos logos" "buttons buttons buttons buttons buttons"
+    grid-template-areas: "buttons buttons buttons buttons buttons" "texts texts texts texts images" "minilogos logos logos logos logos" 
 
   .blank
     grid-area: blank
@@ -166,7 +175,8 @@ const lastname = 'Alcala'
 
   .texts
     grid-area: texts
-    padding: 4rem 0 0 4rem
+    padding: 0 0 0 4rem
+    margin: 0 0 0 4rem
     display: flex
     flex-direction: column
     flex-wrap: wrap
@@ -199,7 +209,8 @@ const lastname = 'Alcala'
     align-content: center
     align-items: center
     flex-wrap: wrap
-    padding: 4rem 4rem 0 0
+    // padding: 0 4rem 0 0
+    margin: -4rem 1rem 0 0
     cursor: pointer
 
   .image
@@ -246,7 +257,7 @@ const lastname = 'Alcala'
   .minilogos
     display: flex
     flex-direction: column
-    margin: 0 0 0 4rem
+    margin: 0 0 0 8rem
 
   .minilogo--logo
     cursor: pointer
@@ -287,6 +298,38 @@ const lastname = 'Alcala'
     justify-content: center
     align-items: center
     align-content: center
+
+  .grid2
+    // background-color: red
+    height: 100vh
+    height: 100svh
+    display: grid
+    grid-template-columns: 1fr
+    grid-template-rows: 0.1fr 1.9fr
+    gap: 0px 0px
+    grid-template-areas: "grid2-title" "grid2-body"
+
+  .grid2-title
+    grid-area: grid2-title
+    // background-color: white
+    display: flex
+    justify-content: center
+    align-items: center
+    align-content: center
+    font-family: 'Open Sans'
+    font-size: 2rem
+    color: $title
+    padding: 1rem 0 1rem 0
+
+  .grid2-body
+    grid-area: grid2-body
+    display: flex
+    justify-content: center
+    align-items: center
+    align-content: center
+    font-family: 'Inter'
+    font-size: 1rem
+    color: $sub-title
 
   @media screen and (max-width: 1366px)
     // .grid
