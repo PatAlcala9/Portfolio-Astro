@@ -1,0 +1,39 @@
+---
+import { Image } from 'astro:assets'
+const { img, alt } = Astro.props
+---
+
+<div class="logo-and-name">
+  <Image class="minilogo--logo" src={img} alt={alt} id="github" />
+  <span class="minilogo--name showOnDesktop" id="github-name">Github</span>
+</div>
+
+<style lang="sass">
+  $title: #aeb6c2
+  
+  .logo-and-name
+    display: flex
+    flex-direction: column
+    align-content: center
+    align-items: center
+    margin: 0 1rem 0 0
+
+  .minilogo--logo
+    cursor: pointer
+    width: 2.6rem
+    height: auto
+    background: transparent
+    background-blend-mode: soft-light
+    transition: all 0.4s ease
+
+  .minilogo--logo:hover
+    // width: 3rem
+    cursor: url('../assets/images/mouse2-32.webp') 0 0, auto
+    // cursor: none
+
+  .minilogo--name
+    font-family: Inter
+    color: $title
+    padding: 1.1rem 0 0 0
+    opacity: 0
+</style>
