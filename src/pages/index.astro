@@ -83,24 +83,17 @@ const lastname = 'Alcala'
       <span class="text--description">I'm a Computer Engineer and Writer based on Philippines</span>
 
       <section class="minilogos">
-        <PLogo img={facebook_logo} alt="facebook logo" id="facebook" />
-        <PLogo img={github_logo} alt="github logo" id="github" />
-        <PLogo img={mail_black_logo} alt="email logo" id="email" />
-
-        <!-- <div class="logo-and-name">
-          <Image class="minilogo--logo" src={facebook_logo} alt="facebook logo" id="facebook" />
-          <span class="minilogo--name showOnDesktop" id="facebook-name">Facebook</span>
+        <div id="facebook">
+          <PLogo img={facebook_logo} alt="facebook logo" textid="facebook-name" text="Facebook" />
         </div>
 
-        <div class="logo-and-name">
-          <Image class="minilogo--logo" src={github_logo} alt="github logo" id="github" />
-          <span class="minilogo--name showOnDesktop" id="github-name">Github</span>
+        <div id="github">
+          <PLogo img={github_logo} alt="github logo" textid="github-name" text="Github" margin="2.5" />
         </div>
 
-        <div class="logo-and-name">
-          <Image class="minilogo--logo" src={mail_black_logo} alt="email logo" id="email" />
-          <span class="minilogo--name showOnDesktop" id="email-name">Email</span>
-        </div> -->
+        <div id="email">
+          <PLogo img={mail_black_logo} alt="email logo" textid="email-name" text="Email" />
+        </div>
       </section>
     </section>
 
@@ -169,7 +162,7 @@ const lastname = 'Alcala'
     grid-template-columns: 1.4fr 0.6fr
     grid-template-rows: 1fr 1fr
     gap: 0px 0px
-    grid-template-areas: "blank images" "texts buttons"
+    grid-template-areas: ".images" "texts buttons"
     height: 100vh
     height: 100svh
 
@@ -202,8 +195,7 @@ const lastname = 'Alcala'
 
   .texts
     grid-area: texts
-    padding: 0 0 0 4rem
-    margin: 0 0 0 4rem
+    margin: 0 0 0 8rem
     display: flex
     flex-direction: column
     flex-wrap: wrap
@@ -224,8 +216,9 @@ const lastname = 'Alcala'
     transition: color 1s ease-out
 
   .text--name:hover
-    color: blue
-    transition: color 1s ease-out
+    color: transparent
+    -webkit-text-stroke: 2px $title
+    transition: all 1s ease-out
 
   .text--description
     padding: 1rem 0 0 0
@@ -297,7 +290,7 @@ const lastname = 'Alcala'
     justify-content: flex-start
     align-items: center
     align-content: center
-    margin: 1rem 0 0 0
+    margin: 1.6rem 0 0 0
 
   .minilogo--logo
     cursor: pointer
@@ -340,13 +333,18 @@ const lastname = 'Alcala'
     align-content: center
 
   .grid2
-    height: 100vh
-    height: 100svh
+    // height: 100vh
+    // height: 100svh
+    // display: grid
+    // grid-template-columns: 1fr
+    // grid-template-rows: 0.1fr 1.9fr
+    // gap: 0px 0px
+    // grid-template-areas: "grid2-title" "grid2-body"
     display: grid
-    grid-template-columns: 1fr
-    grid-template-rows: 0.1fr 1.9fr
+    grid-template-columns: 1.2fr 0.8fr
+    grid-template-rows: 0.8fr 1.2fr
     gap: 0px 0px
-    grid-template-areas: "grid2-title" "grid2-body"
+    grid-template-areas: ".grid2-title" "grid2-body ."
 
   .grid2::before
     content: ""
@@ -370,18 +368,22 @@ const lastname = 'Alcala'
     align-items: center
     align-content: center
     font-family: 'Inter'
-    font-size: 2rem
+    font-size: 4rem
     color: $title
-    padding: 1rem 0 1rem 0
+    margin: 8rem 0 0 0
 
   .grid2-body
     grid-area: grid2-body
     display: flex
+    flex-direction: column
+    flex-wrap: wrap
     justify-content: center
     align-items: center
     align-content: center
     font-family: 'Inter'
-    font-size: 1rem
+    font-size: 1.2rem
+    width: 100%
+    height: 100%
     color: $sub-title
 
   @media screen and (max-width: 1366px)
