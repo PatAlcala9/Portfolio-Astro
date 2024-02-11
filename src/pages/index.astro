@@ -87,8 +87,12 @@ const lastname = 'Alcala'
           <PLogo img={facebook_logo} alt="facebook logo" textid="facebook-name" text="Facebook" />
         </div>
 
-        <div id="github">
+        <div class="showOnDesktop" id="github">
           <PLogo img={github_logo} alt="github logo" textid="github-name" text="Github" margin="2.5" />
+        </div>
+
+        <div class="showOnMobile" id="github">
+          <PLogo img={github_logo} alt="github logo" textid="github-name" text="Github" />
         </div>
 
         <div id="email">
@@ -241,8 +245,9 @@ const lastname = 'Alcala'
     width: 20rem
     height: auto
     cursor: url('../assets/images/mouse2-32.webp') 0 0, auto
-    border: 1px solid $sub-title
     padding: 2rem
+    backdrop-filter: blur(9px) saturate(196%)
+    border: 1px solid rgba(209, 213, 219, 0.3)
 
   .image--hidden
     @extend .image
@@ -344,7 +349,7 @@ const lastname = 'Alcala'
     grid-template-columns: 1.2fr 0.8fr
     grid-template-rows: 0.8fr 1.2fr
     gap: 0px 0px
-    grid-template-areas: ".grid2-title" "grid2-body ."
+    grid-template-areas: ".grid2-title" "grid2-body."
 
   .grid2::before
     content: ""
@@ -415,10 +420,10 @@ const lastname = 'Alcala'
   @media screen and (max-width: 1024px)
     .grid
       display: grid
-      grid-template-columns: 1fr 1fr
+      grid-template-columns: 1fr
       grid-template-rows: 1fr 1fr 1fr
-      gap: 0px 0px
-      grid-template-areas: "images minilogos" "texts texts" "buttons buttons"
+      gap: 3rem 0px
+      grid-template-areas: "images" "texts" "buttons"
       width: 100svw
       overflow: auto
 
@@ -428,8 +433,13 @@ const lastname = 'Alcala'
 
     .images
       grid-area: images
-      display: inline
-      margin: 1rem 0 0 2rem
+      display: flex
+      flex-direction: column
+      flex-wrap: wrap
+      justify-content: flex-start
+      align-items: center
+      align-content: center
+      margin: 1rem 0 0 0
       // opacity: 1
 
     .minilogos
@@ -476,4 +486,37 @@ const lastname = 'Alcala'
 
     .showOnMobile
       display: block
+
+    .grid2
+      display: grid
+      grid-template-columns: 1fr
+      grid-template-rows: 1fr 1fr 1fr
+      gap: 3rem 0px
+      grid-template-areas: "grid2-title" "grid2-body"
+      width: 100svw
+      overflow: auto
+
+    .grid2::before
+      background-image: url(../assets/images/page2_mobile_background.webp)
+      mix-blend-mode: overlay
+
+    .grid2-title
+      grid-area: grid2-title
+      font-size: 2rem
+      color: $title
+      margin: 8rem 0 0 0
+
+    .grid2-body
+      grid-area: grid2-body
+      display: flex
+      flex-direction: column
+      flex-wrap: wrap
+      justify-content: center
+      align-items: center
+      align-content: center
+      font-family: 'Inter'
+      font-size: 1.2rem
+      width: 100%
+      height: 100%
+      color: $sub-title
 </style>
