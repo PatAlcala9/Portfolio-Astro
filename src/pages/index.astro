@@ -108,21 +108,21 @@ const lastname = 'Alcala'
     <section class="buttons">
       <a href="projects">
         <div class="showOnDesktop" id="to-github">
-          <PButton text="Projects" />
+          <PButton text="My Work" />
         </div>
 
         <div class="showOnMobile button">
-          <PButtonWide text="Projects" />
+          <PButtonWide text="My Work" />
         </div>
       </a>
 
       <a href="articles">
         <div class="showOnDesktop" id="to-medium">
-          <PButton text="Articles" />
+          <PButton text="My Articles" />
         </div>
 
         <div class="showOnMobile button">
-          <PButtonWide text="Articles" />
+          <PButtonWide text="My Articles" />
         </div>
       </a>
     </section>
@@ -152,6 +152,7 @@ const lastname = 'Alcala'
 <style lang="sass">
   $title: #aeb6c2
   $sub-title: #8296b7
+  $text: #DEE5F0
 
   .page
     padding: 4rem
@@ -191,7 +192,7 @@ const lastname = 'Alcala'
     mix-blend-mode: overlay
     background-size: cover
     background-position: center
-    opacity: 0.3
+    opacity: 0.5
     pointer-events: none
 
   .blank
@@ -376,7 +377,7 @@ const lastname = 'Alcala'
     mix-blend-mode: overlay
     background-size: cover
     background-position: center
-    opacity: 0.3
+    opacity: 0.5
     pointer-events: none
 
   .grid2-title
@@ -401,7 +402,7 @@ const lastname = 'Alcala'
     font-family: 'Inter'
     font-size: 1.2rem
     margin: 8rem
-    color: $sub-title
+    color: $text
 
   .grid3
     display: grid
@@ -423,7 +424,7 @@ const lastname = 'Alcala'
     mix-blend-mode: overlay
     background-size: cover
     background-position: center
-    opacity: 0.3
+    opacity: 0.5
     pointer-events: none
 
   .grid3-title
@@ -449,7 +450,7 @@ const lastname = 'Alcala'
     font-family: 'Inter'
     font-size: 1.2rem
     margin: 8rem
-    color: $sub-title
+    color:  $text
 
   @media screen and (max-width: 1366px)
     // .grid
