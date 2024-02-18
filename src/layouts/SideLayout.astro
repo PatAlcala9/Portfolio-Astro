@@ -1,0 +1,67 @@
+---
+const { title, pageDescription, pageTitle } = Astro.props
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon2.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content=`${pageDescription} of Patrick Alvin Alcala` />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+
+  <body class="layout">
+    <div class="page-title">
+      <span class="page-title--text">{pageTitle}</span>
+    </div>
+
+    <slot />
+  </body>
+</html>
+
+<style lang="sass" is:global>
+  $title: #aeb6c2
+  $sub-title: #8296b7
+
+  @font-face
+    font-family: 'Inter'
+    src: url('../assets/fonts/Inter.woff2')
+
+  @font-face
+    font-family: 'Open Sans'
+    src: url('../assets/fonts/OpenSans-Bold.woff2')
+
+  .page
+    padding: 0.5rem 1rem
+
+  .text
+    color: #ffffff
+
+  .layout
+    background: #0a1930
+    // background: #2A47BD
+    position: absolute
+    top: 0
+    left: 0
+    width: 100vw
+    width: 100svw
+    height: 100vh
+    height: 100svh
+    overflow: auto
+    cursor: url('../assets/images/mouse1.webp') 0 0, auto
+    margin: 0
+
+  .page-title
+    width: 100%
+    height: 10rem
+    position: fixed
+    // background-color: red
+
+  .page-title--text
+    font-family: 'Inter'
+    font-size: 5rem
+    color: $title
+    margin: 1rem 0 1rem 2rem
+</style>

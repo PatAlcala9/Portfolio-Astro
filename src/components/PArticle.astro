@@ -25,11 +25,20 @@ const { title, subTitle, image, imageAlt } = Astro.props
     align-items: center
     border-radius: 2rem
     // backdrop-filter: blur(9px) saturate(196%)
-    transition: box-shadow 0.5s ease-out
+    transition: all 0.5s ease-out
 
   .article:hover
-    border: 1px solid #008080
-    box-shadow: 0px 0px 3rem 3rem rgba(0, 125, 125, 0.6)
+    border: 1px solid $title
+    // box-shadow: 0px 0px 3rem 3rem rgba(0, 125, 125, 0.6)
+    box-shadow: 0px 0px 3rem 3rem rgba(174, 182, 194, 0.6)
+    transform: scale(1.1)
+    // box-shadow: 0px 0px 1rem rgba(0, 125, 125, 0.6), 0px 0px 2rem rgba(0, 125, 125, 0.6)
+    // z-index: 2
+
+  // .article:hover
+  //   border: 1px solid #008080;
+  //   box-shadow: 0px 0px 3rem 3rem rgba(0, 125, 125, 0.6);
+  //   ; /* add this line */
 
   .picture
     width: 100%
@@ -42,7 +51,7 @@ const { title, subTitle, image, imageAlt } = Astro.props
     color: $title
     padding: 2rem 0 2rem 0
     width: 90%
-    text-align: center
+    text-align: left
 
   .sub-title
     font-family: Inter
@@ -50,7 +59,8 @@ const { title, subTitle, image, imageAlt } = Astro.props
     color: $title
     padding: 0 0 2rem 0
     width: 94%
-    text-align: center
+    text-align: left
+    margin: 0 0 0 1rem
 
   @media screen and (max-width: 1024px)
     .article
