@@ -7,7 +7,6 @@ export default defineConfig({
   site: 'https://patalcala.com',
   
   integrations: [compressor({gzip: false, brotli: true}), robotsTxt()],
-  compressHTML: false,
   build: {
     assets: '_patalcala',
     // inlineStylesheets: `always`,
