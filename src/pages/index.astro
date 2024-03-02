@@ -12,6 +12,7 @@ import mail_black_logo from '../assets/images/mail_black_logo3.svg'
 import page1_background from '../assets/images/page1_background.jpg'
 import page2_background from '../assets/images/page2_background.jpg'
 import page3_background from '../assets/images/page3_background.jpg'
+import background from '../assets/images/background.jpg'
 
 const name = 'Patrick Alvin Alcala'
 const firstname = 'Patrick'
@@ -71,7 +72,7 @@ const lastname = 'Alcala'
 
 <MainLayout title="Pat Alcala" pageDescription="Portfolio">
   <div class="grid">
-    <Image class="backgroundimage" src={page1_background} alt="Pat Alcala" id="image" quality={'low'} width={1280} />
+    <Image class="background-one" src={background} alt="Pat Alcala" id="image" quality={'low'} width={1280} />
 
     <section class="texts">
       <span class="text--intro" id="text--intro">Hello, my name is</span>
@@ -132,18 +133,18 @@ const lastname = 'Alcala'
   </div>
 
   <div class="grid2">
-    <Image class="backgroundimage2" src={page2_background} alt="Pat Alcala" id="image" quality={'low'} width={1280} />
+    <!-- <Image class="backgroundimage2" src={page2_background} alt="Pat Alcala" id="image" quality={'low'} width={1280} /> -->
     <section class="grid2-title">
       <span>About Me</span>
     </section>
 
     <section class="grid2-body">
-      <span>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed repellendus inventore quod consequuntur nihil beatae voluptas omnis, dolores nam eaque dicta. Perferendis sint deserunt aspernatur culpa minima, voluptatum porro cumque? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias facere natus tenetur earum id dolore nam tempora, minus nemo inventore pariatur quod praesentium ipsum laborum nesciunt, sequi accusamus ab sit.</span>
+      <span>I create application from both frontend and backend, along with UX Design.</span>
     </section>
   </div>
 
   <div class="grid3">
-    <Image class="backgroundimage3" src={page3_background} alt="Pat Alcala" id="image" quality={'low'} width={1280} />
+    <!-- <Image class="backgroundimage3" src={page3_background} alt="Pat Alcala" id="image" quality={'low'} width={1280} /> -->
     <section class="grid3-title">
       <span>Skills</span>
     </section>
@@ -185,6 +186,18 @@ const lastname = 'Alcala'
     grid-template-areas: ".images" "texts buttons"
     height: 100vh
     height: 100svh
+
+  .background-one
+    position: absolute
+    top: 0
+    left: 0
+    width: 100vw
+    height: 300vh
+    object-fit: cover
+    z-index: -1
+    opacity: 0.5
+    mix-blend-mode: overlay
+    pointer-events: none
 
   .backgroundimage
     position: absolute
