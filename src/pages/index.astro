@@ -9,8 +9,9 @@ import pat from '../assets/images/pat2.webp'
 import facebook_logo from '../assets/images/facebook_logo4.svg'
 import github_logo from '../assets/images/github_logo4.svg'
 import mail_black_logo from '../assets/images/mail_black_logo3.svg'
-import page1_background from '../assets/images/page1_background.png'
-import sample from '../assets/images/sample.webp'
+import page1_background from '../assets/images/page1_background.jpg'
+import page2_background from '../assets/images/page2_background.jpg'
+import page3_background from '../assets/images/page3_background.jpg'
 
 const name = 'Patrick Alvin Alcala'
 const firstname = 'Patrick'
@@ -70,6 +71,8 @@ const lastname = 'Alcala'
 
 <MainLayout title="Pat Alcala" pageDescription="Portfolio">
   <div class="grid">
+    <Image class="backgroundimage" src={page1_background} alt="Pat Alcala" id="image" quality={'low'} width={1280} />
+
     <section class="texts">
       <span class="text--intro" id="text--intro">Hello, my name is</span>
       <span class="text--name showOnDesktop" id="text--name">{name}</span>
@@ -102,7 +105,7 @@ const lastname = 'Alcala'
     </section>
 
     <section class="images" id="images">
-      <Image class="image" src={pat} alt="Pat Alcala" id="image" quality={'mid'} width={800} height={800}/>
+      <Image class="image" src={pat} alt="Pat Alcala" id="image" quality={'mid'} width={800} height={800} />
     </section>
 
     <section class="buttons">
@@ -129,6 +132,7 @@ const lastname = 'Alcala'
   </div>
 
   <div class="grid2">
+    <Image class="backgroundimage2" src={page2_background} alt="Pat Alcala" id="image" quality={'low'} width={1280} />
     <section class="grid2-title">
       <span>About Me</span>
     </section>
@@ -139,6 +143,7 @@ const lastname = 'Alcala'
   </div>
 
   <div class="grid3">
+    <Image class="backgroundimage3" src={page3_background} alt="Pat Alcala" id="image" quality={'low'} width={1280} />
     <section class="grid3-title">
       <span>Skills</span>
     </section>
@@ -174,25 +179,47 @@ const lastname = 'Alcala'
     // height: 100vh
     // height: 100svh
     display: grid
-    grid-template-columns: 1.4fr 0.6fr
+    grid-template-columns: 1.3fr 0.7fr
     grid-template-rows: 1fr 1fr
     gap: 0px 0px
     grid-template-areas: ".images" "texts buttons"
     height: 100vh
     height: 100svh
 
-  .grid::before
-    content: ""
+  .backgroundimage
     position: absolute
     top: 0
     left: 0
     width: 100vw
     height: 100vh
-    background-image: url(../assets/images/page1_background.webp)
+    object-fit: cover
+    z-index: -1
+    opacity: 0.9
     mix-blend-mode: overlay
-    background-size: cover
-    background-position: center
-    opacity: 0.5
+    pointer-events: none
+
+  .backgroundimage2
+    position: absolute
+    top: 100
+    left: 0
+    width: 100vw
+    height: 100vh
+    object-fit: cover
+    z-index: -1
+    opacity: 0.9
+    mix-blend-mode: overlay
+    pointer-events: none
+
+  .backgroundimage3
+    position: absolute
+    top: 200
+    left: 0
+    width: 100vw
+    height: 100vh
+    object-fit: cover
+    z-index: -1
+    opacity: 0.9
+    mix-blend-mode: overlay
     pointer-events: none
 
   .blank
@@ -367,20 +394,6 @@ const lastname = 'Alcala'
     height: 100vh
     height: 100svh
 
-  .grid2::before
-    content: ""
-    position: absolute
-    top: 100
-    left: 0
-    width: 100vw
-    height: 100vh
-    background-image: url(../assets/images/page2_background.webp)
-    mix-blend-mode: overlay
-    background-size: cover
-    background-position: center
-    opacity: 0.5
-    pointer-events: none
-
   .grid2-title
     grid-area: grid2-title
     display: flex
@@ -414,20 +427,6 @@ const lastname = 'Alcala'
     height: 100vh
     height: 100svh
 
-  .grid3::before
-    content: ""
-    position: absolute
-    top: 200
-    left: 0
-    width: 100vw
-    height: 100vh
-    background-image: url(../assets/images/page3_background.webp)
-    mix-blend-mode: overlay
-    background-size: cover
-    background-position: center
-    opacity: 0.5
-    pointer-events: none
-
   .grid3-title
     grid-area: grid3-title
     // background-color: white
@@ -451,9 +450,9 @@ const lastname = 'Alcala'
     font-family: 'Inter'
     font-size: 1.2rem
     margin: 8rem
-    color:  $text
+    color: $text
 
-  @media screen and (max-width: 1366px)
+  @media screen and (max-width: 1439px)
     // .grid
     //   display: grid
     //   grid-template-columns: 1fr 1fr 1fr 1fr 1fr
@@ -479,7 +478,7 @@ const lastname = 'Alcala'
     .text--description
       font-size: 1.2rem
 
-  @media screen and (max-width: 1024px)
+  @media screen and (max-width: 1023px)
     .grid
       display: grid
       grid-template-columns: 1fr
