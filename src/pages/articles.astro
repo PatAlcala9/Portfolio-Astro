@@ -2,6 +2,7 @@
 import SideLayout from '../layouts/SideLayout.astro'
 import PArticle from '../components/PArticle.astro'
 
+import { Image } from 'astro:assets'
 import one from '../assets/articles/1.webp'
 import two from '../assets/articles/2.webp'
 import three from '../assets/articles/3.webp'
@@ -15,6 +16,7 @@ import ten from '../assets/articles/10.webp'
 import eleven from '../assets/articles/11.webp'
 import twelve from '../assets/articles/12.webp'
 import thirteen from '../assets/articles/13.webp'
+import background from '../assets/images/article_background.jpg'
 ---
 
 <script>
@@ -93,6 +95,7 @@ import thirteen from '../assets/articles/13.webp'
     <!-- <div class="page-title">
       <span class="page-title--text">My Articles</span>
     </div> -->
+    <Image class="background" src={background} alt="Pat Alcala" id="image" quality={'low'} width={1280} />
 
     <div class="articles">
       <section class="one" id="one">
@@ -201,20 +204,31 @@ import thirteen from '../assets/articles/13.webp'
     width: 100vw
     width: 100svw
 
-  .grid::before
-    content: ""
+  // .grid::before
+  //   content: ""
+  //   position: fixed
+  //   top: 100
+  //   left: 0
+  //   width: 100vw
+  //   height: 100vh
+  //   background-image: url(../assets/images/article_background.webp)
+  //   mix-blend-mode: overlay
+  //   background-size: cover
+  //   background-position: center
+  //   opacity: 0.3
+  //   pointer-events: none
+
+  .background
     position: fixed
-    top: 100
+    top: 0
     left: 0
     width: 100vw
     height: 100vh
-    background-image: url(../assets/images/article_background.webp)
+    object-fit: cover
+    z-index: -1
+    opacity: 0.5
     mix-blend-mode: overlay
-    background-size: cover
-    background-position: center
-    opacity: 0.3
     pointer-events: none
-    
 
   .page-title
     grid-area: page-title
