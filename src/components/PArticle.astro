@@ -17,14 +17,15 @@ const { title, subTitle, image, imageAlt } = Astro.props
   .article
     cursor: url('../assets/images/mouse2-32.webp') 0 0, auto
     border: 1px solid rgba(255, 255, 255, 0.1)
-    width: 18rem
+    width: 17rem
+    height: 23rem
     display: flex
     flex-direction: column
     align-content: center
     justify-content: center
     align-items: center
     border-radius: 2rem
-    // backdrop-filter: blur(9px) saturate(196%)
+    backdrop-filter: blur(9px) saturate(100%)
     transition: all 0.5s ease-out
 
   .article:hover
@@ -33,6 +34,8 @@ const { title, subTitle, image, imageAlt } = Astro.props
     transform: scale(1.1)
 
   .picture
+    position: absolute
+    top: 0
     width: 100%
     height: auto
     border-radius: 2rem 2rem 0 0
@@ -44,6 +47,7 @@ const { title, subTitle, image, imageAlt } = Astro.props
     padding: 2rem 0 2rem 0
     width: 90%
     text-align: left
+    margin: 11rem 0 0 0
 
   .sub-title
     font-family: Inter
