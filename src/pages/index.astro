@@ -75,24 +75,27 @@ const lastname = 'Alcala'
   //   image.setAttribute('src', '../images/pat.webp')
   // })
 
-  gsap.fromTo('.image', {
-    duration: 1.5,
-    scale: 0.9,
-    boxShadow: '0 10px 20px rgba(41, 61, 92, 0.3)',
-    padding: '2rem',
-    yoyo: true,
-    repeat: -1,
-    ease: 'power1.inOut',
-  },
-  {
-    duration: 1.5,
-    scale: 1.2,
-    boxShadow: '0 10px 20px rgba(41, 61, 92, 0)',
-    padding: '1.1rem',
-    yoyo: true,
-    repeat: -1,
-    ease: 'power1.inOut',
-  })
+  gsap.fromTo(
+    '.image',
+    {
+      duration: 1.5,
+      scale: 0.9,
+      boxShadow: '0 10px 20px rgba(41, 61, 92, 0.3)',
+      padding: '2rem',
+      yoyo: true,
+      repeat: -1,
+      ease: 'power1.inOut',
+    },
+    {
+      duration: 1.5,
+      scale: 1.2,
+      boxShadow: '0 10px 20px rgba(41, 61, 92, 0)',
+      padding: '1.1rem',
+      yoyo: true,
+      repeat: -1,
+      ease: 'power1.inOut',
+    }
+  )
 </script>
 
 <MainLayout title="Pat Alcala" pageDescription="Portfolio">
@@ -495,7 +498,6 @@ const lastname = 'Alcala'
   .grid3-body
     @extend .grid2-body
     grid-area: grid3-body
-    
 
   @media screen and (max-width: 1439px)
     // .grid
@@ -586,6 +588,7 @@ const lastname = 'Alcala'
     .text--description
       font-size: 0.9rem
       text-align: center
+      margin: 0.5rem 0 0 0
 
     .showOnDesktop
       display: none
@@ -615,15 +618,8 @@ const lastname = 'Alcala'
 
     .grid2-body
       grid-area: grid2-body
-      display: flex
-      flex-direction: column
-      flex-wrap: wrap
-      justify-content: center
-      align-items: center
-      align-content: center
-      font-family: 'Inter'
+      text-align: center
       font-size: 1.2rem
-      color: $sub-title
 
     .grid3
       display: grid
@@ -646,14 +642,6 @@ const lastname = 'Alcala'
       font-weight: bold
 
     .grid3-body
+      @extend .grid2-body
       grid-area: grid3-body
-      display: flex
-      flex-direction: column
-      flex-wrap: wrap
-      justify-content: center
-      align-items: center
-      align-content: center
-      font-family: 'Inter'
-      font-size: 1.2rem
-      color: $sub-title
 </style>
