@@ -287,13 +287,14 @@ const lastname = 'Alcala'
     gap: 0.9rem
 
   .text--intro
-    font-family: Inter
+    font-family: 'Inter'
     font-size: 1.4rem
+    font-weight: 500
     color: $sub-title
 
   .text--name
     font-family: 'Inter'
-    font-weight: bold
+    font-weight: 800
     font-size: 5rem
     color: $title
     transition: color 1s ease-out
@@ -306,8 +307,9 @@ const lastname = 'Alcala'
 
   .text--description
     margin: -1rem 0 0 0
-    font-family: Inter
+    font-family: 'Inter'
     font-size: 1.2rem
+    font-weight: 500
     color: $title
 
   .images
@@ -406,9 +408,7 @@ const lastname = 'Alcala'
     transition: all 0.4s ease
 
   .minilogo--logo:hover
-    // width: 3rem
     cursor: url('../assets/images/mouse2-32.webp') 0 0, auto
-    // cursor: none
 
   .logo-and-name
     display: flex
@@ -461,6 +461,7 @@ const lastname = 'Alcala'
     align-content: center
     font-family: 'Inter'
     font-size: 4rem
+    font-weight: 700
     color: $title
     margin: 8rem 0 0 0
 
@@ -473,7 +474,8 @@ const lastname = 'Alcala'
     align-items: center
     align-content: center
     font-family: 'Inter'
-    font-size: 1.2rem
+    font-size: 1.4rem
+    font-weight: 400
     margin: 8rem
     color: $text
 
@@ -487,29 +489,13 @@ const lastname = 'Alcala'
     height: 100svh
 
   .grid3-title
+    @extend .grid2-title
     grid-area: grid3-title
-    // background-color: white
-    display: flex
-    justify-content: center
-    align-items: center
-    align-content: center
-    font-family: 'Inter'
-    font-size: 4rem
-    color: $title
-    margin: 8rem 0 0 0
 
   .grid3-body
+    @extend .grid2-body
     grid-area: grid3-body
-    display: flex
-    flex-direction: column
-    flex-wrap: wrap
-    justify-content: center
-    align-items: center
-    align-content: center
-    font-family: 'Inter'
-    font-size: 1.2rem
-    margin: 8rem
-    color: $text
+    
 
   @media screen and (max-width: 1439px)
     // .grid
