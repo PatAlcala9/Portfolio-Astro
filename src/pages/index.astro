@@ -13,6 +13,14 @@ import mail_black_logo from '../assets/images/mail_black_logo3.svg'
 // import page2_background from '../assets/images/page2_background.jpg'
 // import page3_background from '../assets/images/page3_background.jpg'
 import background from '../assets/images/background.jpg'
+import js_logo from '../assets/images/js_logo.svg'
+import html_logo from '../assets/images/html_logo.svg'
+import css_logo from '../assets/images/css_logo.svg'
+import vue_logo from '../assets/images/vue_logo.svg'
+import go_logo from '../assets/images/go_logo.svg'
+import mysql_logo from '../assets/images/mysql_logo.svg'
+import nginx_logo from '../assets/images/nginx_logo.svg'
+import ts_logo from '../assets/images/ts_logo.svg'
 
 const name = 'Patrick Alvin Alcala'
 const firstname = 'Patrick'
@@ -196,8 +204,31 @@ const lastname = 'Alcala'
       <span class="hidden-left">Skills</span>
     </section>
 
-    <section class="grid3-body">
-      <span class="hidden-right">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed repellendus inventore quod consequuntur nihil beatae voluptas omnis, dolores nam eaque dicta. Perferendis sint deserunt aspernatur culpa minima, voluptatum porro cumque? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias facere natus tenetur earum id dolore nam tempora, minus nemo inventore pariatur quod praesentium ipsum laborum nesciunt, sequi accusamus ab sit.</span>
+    <section class="grid3-body hidden-right">
+      <div class="one">
+        <Image class="html_logo" src={html_logo} alt="html_logo" quality={'mid'} width={60} />
+      </div>
+      <div class="two">
+        <Image class="css_logo" src={css_logo} alt="css_logo" quality={'mid'} width={60} />
+      </div>
+      <div class="three">
+        <Image class="js_logo" src={js_logo} alt="js_logo" quality={'mid'} width={60} />
+      </div>
+      <div class="four">
+        <Image class="vue_logo" src={vue_logo} alt="vue_logo" quality={'mid'} width={120} />
+      </div>
+      <div class="five">
+        <Image class="go_logo" src={go_logo} alt="go_logo" quality={'mid'} width={100} />
+      </div>
+      <div class="six">
+        <Image class="nginx_logo" src={nginx_logo} alt="nginx_logo" quality={'mid'} width={120} />
+      </div>
+      <div class="seven">
+        <Image class="mysql_logo" src={mysql_logo} alt="mysql_logo" quality={'mid'} width={120} />
+      </div>
+      <div class="eight">
+        <Image class="ts_logo" src={ts_logo} alt="ts_logo" quality={'mid'} width={60} />
+      </div>
     </section>
   </div>
 </MainLayout>
@@ -510,6 +541,40 @@ const lastname = 'Alcala'
   .grid3-body
     @extend .grid2-body
     grid-area: grid3-body
+    display: grid
+    grid-template-columns: 1fr 1fr 1fr 1fr
+    grid-template-rows: 1fr 1fr 1fr
+    gap: 0 0
+    grid-template-areas: "one two three four" "five six seven eight" "nine ten eleven twelve"
+
+  .one, .two, .three, .four, .five, .six, .seven, .eight, .nine, .ten, .eleven, .twelve
+    justify-self: center
+    align-self: center
+
+  .one
+    grid-area: one
+  .two
+    grid-area: two
+  .three
+    grid-area: three
+  .four
+    grid-area: four
+  .five
+    grid-area: five
+  .six
+    grid-area: six
+  .seven
+    grid-area: seven
+  .eight
+    grid-area: eight
+  .nine
+    grid-area: nine
+  .ten
+    grid-area: ten
+  .eleven
+    grid-area: eleven
+  .twelve
+    grid-area: twelve
 
   .hidden-right
     opacity: 0
