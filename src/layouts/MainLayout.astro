@@ -2,21 +2,6 @@
 const { title, pageDescription } = Astro.props
 ---
 
-<!-- <script>
-  const cursorSmall = document.getElementById('small')
-
-  const positionElement = (e: MouseEvent) => {
-    const mouseY = e.pageY
-    const mouseX = e.pageX
-    const height = cursorSmall.offsetHeight
-    const width = cursorSmall.offsetWidth
-
-    cursorSmall.style.transform = `translate3d(${mouseX - width}px, ${mouseY - height}px, 0)`
-  }
-
-  window.addEventListener('mousemove', positionElement)
-</script> -->
-
 <html lang="en">
   <head>
     <meta charset="utf-8" />
@@ -28,8 +13,6 @@ const { title, pageDescription } = Astro.props
   </head>
 
   <body class="layout">
-    <!-- <div class="small" id="small"></div> -->
-
     <slot />
   </body>
 </html>
@@ -51,7 +34,6 @@ const { title, pageDescription } = Astro.props
 
   .layout
     background: #0a1930
-    // background: #2A47BD
     position: absolute
     top: 0
     left: 0
@@ -63,10 +45,4 @@ const { title, pageDescription } = Astro.props
     cursor: url('../assets/images/mouse1.webp') 0 0, auto
     margin: 0
 
-  // .small
-  //   width: 10px
-  //   height: 10px
-  //   border: 2px solid #fff
-  //   border-radius: 50%
-  //   pointer-events: none
 </style>
