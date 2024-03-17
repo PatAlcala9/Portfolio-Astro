@@ -20,11 +20,13 @@ const { title, pageDescription } = Astro.props
 <style lang="sass" is:global>
   @font-face
     font-family: 'Inter'
-    src: url('../assets/fonts/Inter.woff2')
+    src: url('../assets/fonts/Inter.woff2') format('woff2')
+    font-display: swap
 
   @font-face
     font-family: 'Open Sans'
-    src: url('../assets/fonts/OpenSans-Bold.woff2')
+    src: url('../assets/fonts/OpenSans-Bold.woff2') format('woff2')
+    font-display: swap
 
   .page
     padding: 0.5rem 1rem
@@ -44,5 +46,4 @@ const { title, pageDescription } = Astro.props
     overflow: auto
     cursor: url('../assets/images/mouse1.webp') 0 0, auto
     margin: 0
-
 </style>

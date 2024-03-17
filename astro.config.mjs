@@ -16,7 +16,7 @@ export default defineConfig({
       enableMiddleware_SRI: false, // false by default
       // sriHashesModule: resolve(rootDir, 'src', 'utils', 'sriHashes.mjs'),
     }),
-  minify({
+  min({
       do_not_minify_doctype: false,
       ensure_spec_compliant_unquoted_attribute_values: false,
       keep_closing_tags: false,
