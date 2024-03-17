@@ -96,6 +96,27 @@ const lastname = 'Alcala'
       ease: 'power1.inOut',
     }
   )
+
+  const hiddenElementsLeft = document.querySelectorAll('.hidden-left')
+  const hiddenElementsRight = document.querySelectorAll('.hidden-right')
+
+  const observer = new IntersectionObserver((elems) => {
+    elems.map((elem) => {
+      if (elem.isIntersecting) {
+        // if (elem.target.classList.contains('hidden-right')) {
+        //   elem.target.classList.add('show-right')
+        // } else {
+        //   elem.target.classList.add('show-left')
+        // }
+        elem.target.classList.add('show')
+      } else {
+        elem.target.classList.remove('show')
+      }
+    })
+  })
+
+  hiddenElementsLeft.forEach((elem) => observer.observe(elem))
+  hiddenElementsRight.forEach((elem) => observer.observe(elem))
 </script>
 
 <MainLayout title="Pat Alcala" pageDescription="Portfolio">
@@ -162,21 +183,21 @@ const lastname = 'Alcala'
 
   <div class="grid2">
     <section class="grid2-title">
-      <span>About Me</span>
+      <span class="hidden-right">About Me</span>
     </section>
 
     <section class="grid2-body">
-      <span>I create web applications in both frontend and backend, along with UI/UX design.</span>
+      <span class="hidden-left">I create web applications in both frontend and backend, along with UI/UX design.</span>
     </section>
   </div>
 
   <div class="grid3">
     <section class="grid3-title">
-      <span>Skills</span>
+      <span class="hidden-left">Skills</span>
     </section>
 
     <section class="grid3-body">
-      <span>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed repellendus inventore quod consequuntur nihil beatae voluptas omnis, dolores nam eaque dicta. Perferendis sint deserunt aspernatur culpa minima, voluptatum porro cumque? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias facere natus tenetur earum id dolore nam tempora, minus nemo inventore pariatur quod praesentium ipsum laborum nesciunt, sequi accusamus ab sit.</span>
+      <span class="hidden-right">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed repellendus inventore quod consequuntur nihil beatae voluptas omnis, dolores nam eaque dicta. Perferendis sint deserunt aspernatur culpa minima, voluptatum porro cumque? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias facere natus tenetur earum id dolore nam tempora, minus nemo inventore pariatur quod praesentium ipsum laborum nesciunt, sequi accusamus ab sit.</span>
     </section>
   </div>
 </MainLayout>
@@ -489,6 +510,20 @@ const lastname = 'Alcala'
   .grid3-body
     @extend .grid2-body
     grid-area: grid3-body
+
+  .hidden-right
+    opacity: 0
+    transform: translateX(90px)
+    transition: all 1.2s cubic-bezier(0.39, 0.575, 0.565, 1)
+
+  .hidden-left
+    opacity: 0
+    transform: translateX(-90px)
+    transition: all 1.2s cubic-bezier(0.39, 0.575, 0.565, 1)
+
+  .show
+    opacity: 1
+    transform: translateX(0)
 
   @media screen and (max-width: 1439px)
     // .grid
