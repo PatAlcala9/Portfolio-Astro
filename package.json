@@ -12,6 +12,7 @@
   "dependencies": {
     "astro": "^4.5.3",
     "astro-compressor": "^0.4.1",
+    "astro-min": "^1.2.6",
     "gsap": "^3.12.5",
     "sass": "^1.72.0",
     "sharp": "^0.33.2",
