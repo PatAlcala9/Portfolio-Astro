@@ -13,6 +13,7 @@ import mail_black_logo from '../assets/images/mail_black_logo3.svg'
 // import page2_background from '../assets/images/page2_background.jpg'
 // import page3_background from '../assets/images/page3_background.jpg'
 import background from '../assets/images/background.jpg'
+import background_mobile from '../assets/images/background_mobile.jpg'
 import js_logo from '../assets/images/js_logo.svg'
 import html_logo from '../assets/images/html_logo.svg'
 import css_logo from '../assets/images/css_logo.svg'
@@ -138,7 +139,8 @@ const lastname = 'Alcala'
 
 <MainLayout title="Pat Alcala" pageDescription="Portfolio">
   <div class="grid">
-    <Image class="background-one" src={background} alt="Pat Alcala" id="image" quality={'mid'} width={1280} />
+    <Image class="background-one showOnDesktop" src={background} alt="Pat Alcala" id="image" quality={'mid'} width={1280} />
+    <Image class="background-one showOnMobile" src={background_mobile} alt="Pat Alcala" id="image" quality={'mid'} width={720} />
 
     <section class="texts">
       <span class="text--intro" id="text--intro">Hello, my name is</span>
@@ -282,6 +284,7 @@ const lastname = 'Alcala'
     align-content: flex-start
     height: 100vh
     height: 100svh
+    overflow: hidden
 
   .grid
     display: grid
@@ -665,11 +668,12 @@ const lastname = 'Alcala'
       gap: 3rem
       grid-template-areas: "images" "texts" "buttons"
       width: 100vw
+      height: auto
       overflow: auto
 
-    .grid::before
-      background-image: url(../assets/images/page1_mobile_background.webp)
-      mix-blend-mode: overlay
+    // .grid::before
+    //   background-image: url(../assets/images/page1_mobile_background.webp)
+    //   mix-blend-mode: overlay
 
     .images
       grid-area: images
@@ -734,12 +738,14 @@ const lastname = 'Alcala'
       grid-template-rows: 0.2fr 1.8fr
       gap: 0px 0px
       grid-template-areas: "grid2-title" "grid2-body"
+      grid-alignment: center
       width: 100svw
+      height: auto
       overflow: auto
 
-    .grid2::before
-      background-image: url(../assets/images/page2_mobile_background.webp)
-      mix-blend-mode: overlay
+    // .grid2::before
+    //   background-image: url(../assets/images/page2_mobile_background.webp)
+    //   mix-blend-mode: overlay
 
     .grid2-title
       grid-area: grid2-title
@@ -760,11 +766,12 @@ const lastname = 'Alcala'
       gap: 0px 0px
       grid-template-areas: "grid3-title" "grid3-body"
       width: 100svw
+      height: auto
       overflow: auto
 
-    .grid2::before
-      background-image: url(../assets/images/page2_mobile_background.webp)
-      mix-blend-mode: overlay
+    // .grid3::before
+    //   background-image: url(../assets/images/page2_mobile_background.webp)
+    //   mix-blend-mode: overlay
 
     .grid3-title
       grid-area: grid3-title
@@ -776,4 +783,9 @@ const lastname = 'Alcala'
     .grid3-body
       @extend .grid2-body
       grid-area: grid3-body
+      display: grid
+      grid-template-columns: 1fr 1fr 1fr
+      grid-template-rows: 1fr 1fr 1fr 1fr 1fr
+      gap: 0px 0px
+      grid-template-areas: "one two three" "four five six" "seven eight nine" "ten eleven twelve" "thirteen fourteen fifteen" "sixteen seventeen eighteen"
 </style>
