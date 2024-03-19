@@ -218,65 +218,65 @@ const lastname = 'Alcala'
       <span class="hidden-left">Skills</span>
     </section>
 
-    <section class="grid3-body hidden-right">
-      <div class="one">
+    <section class="grid3-body">
+      <div class="one hidden-right">
         <Image class="html_logo" src={html_logo} alt="html_logo" quality={'mid'} width={60} />
       </div>
-      <div class="two">
+      <div class="two hidden-right">
         <Image class="css_logo" src={css_logo} alt="css_logo" quality={'mid'} width={60} />
       </div>
-      <div class="three">
+      <div class="three hidden-right">
         <Image class="js_logo" src={js_logo} alt="js_logo" quality={'mid'} width={60} />
       </div>
-      <div class="four">
+      <div class="four hidden-right">
         <Image class="vue_logo" src={vue_logo} alt="vue_logo" quality={'mid'} width={120} />
       </div>
-      <div class="five">
+      <div class="five hidden-right">
         <Image class="go_logo" src={go_logo} alt="go_logo" quality={'mid'} width={100} />
       </div>
-      <div class="six">
+      <div class="six hidden-right">
         <Image class="nginx_logo" src={nginx_logo} alt="nginx_logo" quality={'mid'} width={120} />
       </div>
-      <div class="seven">
+      <div class="seven hidden-right">
         <Image class="mysql_logo" src={mysql_logo} alt="mysql_logo" quality={'mid'} width={120} />
       </div>
-      <div class="eight">
+      <div class="eight hidden-right">
         <Image class="ts_logo" src={ts_logo} alt="ts_logo" quality={'mid'} width={60} />
       </div>
-      <div class="nine">
+      <div class="nine hidden-right">
         <Image class="cplusplus_logo" src={cplusplus_logo} alt="cplusplus_logo" quality={'mid'} width={60} />
       </div>
-      <div class="ten">
+      <div class="ten hidden-right">
         <Image class="nuxt_logo" src={nuxt_logo} alt="nuxt_logo" quality={'mid'} width={100} />
       </div>
-      <div class="eleven">
+      <div class="eleven hidden-right">
         <Image class="quasar_logo" src={quasar_logo} alt="quasar_logo" quality={'mid'} width={60} />
       </div>
-      <div class="twelve">
+      <div class="twelve hidden-right">
         <Image class="astro_logo" src={astro_logo} alt="astro_logo" quality={'mid'} width={50} />
       </div>
-      <div class="thirteen">
+      <div class="thirteen hidden-right">
         <Image class="dotnet_logo" src={dotnet_logo} alt="dotnet_logo" quality={'mid'} width={60} />
       </div>
-      <div class="fourteen">
+      <div class="fourteen hidden-right">
         <Image class="mongodb_logo" src={mongodb_logo} alt="mongodb_logo" quality={'mid'} width={110} />
       </div>
-      <div class="fifteen">
+      <div class="fifteen hidden-right">
         <Image class="express_logo" src={express_logo} alt="express_logo" quality={'mid'} width={100} />
       </div>
-      <div class="sixteen">
+      <div class="sixteen hidden-right">
         <Image class="fastify_logo" src={fastify_logo} alt="fastify_logo" quality={'mid'} width={60} />
       </div>
-      <div class="seventeen">
+      <div class="seventeen hidden-right">
         <Image class="gimp_logo" src={gimp_logo} alt="gimp_logo" quality={'mid'} width={100} />
       </div>
-      <div class="eighteen">
+      <div class="eighteen hidden-right">
         <Image class="photoshop_logo" src={photoshop_logo} alt="photoshop_logo" quality={'mid'} width={60} />
       </div>
-      <div class="nineteen">
+      <div class="nineteen hidden-right">
         <Image class="premiere_logo" src={premiere_logo} alt="premiere_logo" quality={'mid'} width={60} />
       </div>
-      <div class="twenty">
+      <div class="twenty hidden-right">
         <Image class="davinci_logo" src={davinci_logo} alt="davinci_logo" quality={'mid'} width={60} />
       </div>
     </section>
@@ -604,8 +604,10 @@ const lastname = 'Alcala'
 
   .one
     grid-area: one
+    transition-delay: 0s
   .two
     grid-area: two
+    transition-delay: 0.2s
   .three
     grid-area: three
   .four
@@ -647,6 +649,15 @@ const lastname = 'Alcala'
     opacity: 0
     transform: translateX(90px)
     transition: all 1.2s cubic-bezier(0.39, 0.575, 0.565, 1)
+
+    &:nth-child(2), &:nth-child(6), &:nth-child(10), &:nth-child(14), &:nth-child(18)
+      transition-delay: 0.2s
+
+    &:nth-child(3),  &:nth-child(7),  &:nth-child(11),  &:nth-child(15),  &:nth-child(19)
+      transition-delay: 0.4s
+
+    &:nth-child(4),  &:nth-child(8),  &:nth-child(12),  &:nth-child(16),  &:nth-child(20)
+      transition-delay: 0.6s
 
   .hidden-left
     opacity: 0
@@ -788,9 +799,11 @@ const lastname = 'Alcala'
       grid-template-rows: 0.2fr 1.8fr
       gap: 0px 0px
       grid-template-areas: "grid3-title" "grid3-body"
+      grid-alignment: center
       width: 100svw
       height: auto
       overflow: auto
+      padding: 0
 
     // .grid3::before
     //   background-image: url(../assets/images/page2_mobile_background.webp)
@@ -804,11 +817,12 @@ const lastname = 'Alcala'
       font-weight: bold
 
     .grid3-body
-      @extend .grid2-body
+      // @extend .grid2-body
       grid-area: grid3-body
       display: grid
       grid-template-columns: 1fr 1fr 1fr
       grid-template-rows: 1fr 1fr 1fr 1fr 1fr
+      grid-alignment: center
       gap: 0px 0px
-      grid-template-areas: "one two three" "four five six" "seven eight nine" "ten eleven twelve" "thirteen fourteen fifteen" "sixteen seventeen eighteen"
+      grid-template-areas: "one two three" "four five six" "seven eight nine" "ten eleven twelve" "thirteen fourteen fifteen" "sixteen seventeen eighteen" "nineteen twenty ."
 </style>
