@@ -6,14 +6,14 @@ settings:
 
 dependencies:
   astro:
-    specifier: ^4.5.3
-    version: 4.5.3(sass@1.72.0)
+    specifier: ^4.5.6
+    version: 4.5.6(sass@1.72.0)
   astro-compressor:
     specifier: ^0.4.1
     version: 0.4.1
   astro-min:
     specifier: ^1.2.6
-    version: 1.2.6(astro@4.5.3)
+    version: 1.2.6(astro@4.5.6)
   gsap:
     specifier: ^3.12.5
     version: 3.12.5
@@ -30,7 +30,7 @@ dependencies:
 devDependencies:
   '@kindspells/astro-shield':
     specifier: ^1.1.0
-    version: 1.1.0(astro@4.5.3)
+    version: 1.1.0(astro@4.5.6)
   astro-robots-txt:
     specifier: ^1.0.0
     version: 1.0.0
@@ -701,13 +701,13 @@ packages:
       '@jridgewell/resolve-uri': 3.1.1
       '@jridgewell/sourcemap-codec': 1.4.15
 
-  /@kindspells/astro-shield@1.1.0(astro@4.5.3):
+  /@kindspells/astro-shield@1.1.0(astro@4.5.6):
     resolution: {integrity: sha512-NdDPGASwt7KCtgZyYySLUoN1qS37cQ8IggvRMzr/TkJBwgqewtZgdsCZ7TBWImsmLGTPsgiduMMjyK1KNJHXpg==}
     engines: {node: '>= 18.0.0'}
     peerDependencies:
       astro: ^4.0.0
     dependencies:
-      astro: 4.5.3(sass@1.72.0)
+      astro: 4.5.6(sass@1.72.0)
     dev: true
 
   /@minify-html/node-darwin-x64@0.15.0:
@@ -976,13 +976,13 @@ packages:
     resolution: {integrity: sha512-IAgYAlxYRMolaptsFB9quH7RxX4eUeC4UfULCPhT+ILcg7m1kbaxuyUKqGg9Hh+KZ+FNPPDAz7DqUfl+HDWhQg==}
     dev: false
 
-  /astro-min@1.2.6(astro@4.5.3):
+  /astro-min@1.2.6(astro@4.5.6):
     resolution: {integrity: sha512-wvQM//HdXtwFB1aiwJ/ULviShpARhlwsQSYlSMcPu2DDZyuWIq+Ii9/bZM464zbGBKHlekKkazgBXo7Af7vw2Q==}
     peerDependencies:
       astro: ^4.0.0 || ^3.0.0 || ^2.0.0 || ^1.0.0
     dependencies:
       '@minify-html/node': 0.15.0
-      astro: 4.5.3(sass@1.72.0)
+      astro: 4.5.6(sass@1.72.0)
       svgo: 3.2.0
     dev: false
 
@@ -993,8 +993,8 @@ packages:
       zod: 3.22.4
     dev: true
 
-  /astro@4.5.3(sass@1.72.0):
-    resolution: {integrity: sha512-MEiLeAr3+THeadTZCQ4U+DI9VTTUZdYrPEPedSKmQwqnkiPkLjpLgx4yOcyH7Yp4t57+SWiC6W0rt7lPGM36Fg==}
+  /astro@4.5.6(sass@1.72.0):
+    resolution: {integrity: sha512-/pXr+tDvgps1x3w+9i48XzfNPDr4NrT89EJPeCTL57IjaTpitSQ8Oy10Fv6zAqXNLIUJ5j3P1c+fJx+taKIg0g==}
     engines: {node: '>=18.14.1', npm: '>=6.14.0'}
     hasBin: true
     dependencies:

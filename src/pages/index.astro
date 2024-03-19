@@ -24,13 +24,16 @@ import nginx_logo from '../assets/images/nginx_logo.svg'
 import ts_logo from '../assets/images/ts_logo.svg'
 import cplusplus_logo from '../assets/images/cplusplus_logo.svg'
 import nuxt_logo from '../assets/images/nuxt_logo.svg'
-import quasar_logo from '../assets/images/quasar_logo.svg'
+import quasar_logo from '../assets/images/quasar_logo2.png'
 import astro_logo from '../assets/images/astro_logo.svg'
 import dotnet_logo from '../assets/images/dotnet_logo.svg'
-import mongodb_logo from '../assets/images/mongodb_logo.svg'
+import mongodb_logo from '../assets/images/mongodb_logo2.png'
 import express_logo from '../assets/images/express_logo2.svg'
 import fastify_logo from '../assets/images/fastify_logo2.svg'
-import gin_logo from '../assets/images/gin_logo.svg'
+import gimp_logo from '../assets/images/gimp_logo.svg'
+import photoshop_logo from '../assets/images/photoshop_logo.svg'
+import premiere_logo from '../assets/images/premiere_logo.svg'
+import davinci_logo from '../assets/images/davinci_logo.png'
 
 const name = 'Patrick Alvin Alcala'
 const firstname = 'Patrick'
@@ -247,22 +250,34 @@ const lastname = 'Alcala'
         <Image class="nuxt_logo" src={nuxt_logo} alt="nuxt_logo" quality={'mid'} width={100} />
       </div>
       <div class="eleven">
-        <Image class="quasar_logo" src={quasar_logo} alt="quasar_logo" quality={'mid'} width={100} />
+        <Image class="quasar_logo" src={quasar_logo} alt="quasar_logo" quality={'mid'} width={60} />
       </div>
       <div class="twelve">
         <Image class="astro_logo" src={astro_logo} alt="astro_logo" quality={'mid'} width={50} />
       </div>
       <div class="thirteen">
-        <Image class="dotnet_logo" src={dotnet_logo} alt="dotnet_logo" quality={'mid'} width={50} />
+        <Image class="dotnet_logo" src={dotnet_logo} alt="dotnet_logo" quality={'mid'} width={60} />
       </div>
       <div class="fourteen">
-        <Image class="mongodb_logo" src={mongodb_logo} alt="mongodb_logo" quality={'mid'} width={50} />
+        <Image class="mongodb_logo" src={mongodb_logo} alt="mongodb_logo" quality={'mid'} width={110} />
       </div>
       <div class="fifteen">
         <Image class="express_logo" src={express_logo} alt="express_logo" quality={'mid'} width={100} />
       </div>
       <div class="sixteen">
         <Image class="fastify_logo" src={fastify_logo} alt="fastify_logo" quality={'mid'} width={60} />
+      </div>
+      <div class="seventeen">
+        <Image class="gimp_logo" src={gimp_logo} alt="gimp_logo" quality={'mid'} width={100} />
+      </div>
+      <div class="eighteen">
+        <Image class="photoshop_logo" src={photoshop_logo} alt="photoshop_logo" quality={'mid'} width={60} />
+      </div>
+      <div class="nineteen">
+        <Image class="premiere_logo" src={premiere_logo} alt="premiere_logo" quality={'mid'} width={60} />
+      </div>
+      <div class="twenty">
+        <Image class="davinci_logo" src={davinci_logo} alt="davinci_logo" quality={'mid'} width={60} />
       </div>
     </section>
   </div>
@@ -300,7 +315,7 @@ const lastname = 'Alcala'
     top: 0
     left: 0
     width: 100vw
-    height: 300vh
+    height: 320vh
     object-fit: cover
     z-index: -1
     opacity: 0.9
@@ -564,7 +579,7 @@ const lastname = 'Alcala'
   .grid3
     display: grid
     grid-template-columns: 0.8fr 1.2fr
-    grid-template-rows: 0.8fr 1.2fr
+    grid-template-rows: 0.2fr 1.8fr
     gap: 0px 0px
     grid-template-areas: "grid3-title." ".grid3-body"
     height: 100vh
@@ -579,11 +594,11 @@ const lastname = 'Alcala'
     grid-area: grid3-body
     display: grid
     grid-template-columns: 1fr 1fr 1fr 1fr
-    grid-template-rows: 1fr 1fr 1fr
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr
     gap: 0 0
-    grid-template-areas: "one two three four" "five six seven eight" "nine ten eleven twelve" "thirteen fourteen fifteen sixteen"
+    grid-template-areas: "one two three four" "five six seven eight" "nine ten eleven twelve" "thirteen fourteen fifteen sixteen" "seventeen eighteen nineteen twenty"
 
-  .one, .two, .three, .four, .five, .six, .seven, .eight, .nine, .ten, .eleven, .twelve, .thirteen, .fourteen, .fifteen, .sixteen
+  .one, .two, .three, .four, .five, .six, .seven, .eight, .nine, .ten, .eleven, .twelve, .thirteen, .fourteen, .fifteen, .sixteen, .seventeen, .eighteen, .nineteen, .twenty
     justify-self: center
     align-self: center
 
@@ -619,6 +634,14 @@ const lastname = 'Alcala'
     grid-area: fifteen
   .sixteen
     grid-area: sixteen
+  .seventeen
+    grid-area: seventeen
+  .eighteen
+    grid-area: eighteen
+  .nineteen
+    grid-area: nineteen
+  .twenty
+    grid-area: twenty
 
   .hidden-right
     opacity: 0
