@@ -39,6 +39,13 @@ const name = 'Patrick Alvin Alcala'
 const firstname = 'Patrick'
 const secondname = 'Alvin'
 const lastname = 'Alcala'
+
+const about = 'I create web applications in both frontend and backend, along with UI/UX design.'
+const about1 = `A versatile and experienced full-stack developer with an interest in UX design, web development, and data
+analysis. Focus on leveraging secure, high-performance, and user-friendly web applications. Seeking a new
+challenge and a better opportunity to develop and improve skills and knowledge.`
+const about2 = `I am also a tech enthusiast who enjoys exploring and learning new technologies and, occasionally, a writer
+who writes articles and stories online.`
 ---
 
 <script>
@@ -46,6 +53,13 @@ const lastname = 'Alcala'
   import tippy, { followCursor } from 'tippy.js'
   import 'tippy.js/dist/tippy.css'
   import 'tippy.js/animations/scale.css'
+
+  // const about1 = 'I create web applications in both frontend and backend, along with UI/UX design.'
+  // const about = `A versatile and experienced full-stack developer with an interest in UX design, web development, and data
+  // analysis. Focus on leveraging secure, high-performance, and user-friendly web applications. Seeking a new
+  // challenge and a better opportunity to develop and improve skills and knowledge.
+  // I am also a tech enthusiast who enjoys exploring and learning new technologies and, occasionally, a writer
+  // who writes articles and stories online.`
 
   // scrollTrigger: {
   //   scrub: 1,
@@ -142,12 +156,6 @@ const lastname = 'Alcala'
 
   hiddenElementsLeft.forEach((elem) => observer.observe(elem))
   hiddenElementsRight.forEach((elem) => observer.observe(elem))
-
-  // const modal = document.getElementById('modal')
-  // const html_logo = document.getElementById('html_logo')
-  // html_logo.addEventListener('mousehover', () => {
-  //   modal.style.opacity = '1'
-  // })
 
   tippy('#html_logo', {
     theme: 'tomato',
@@ -328,6 +336,12 @@ const lastname = 'Alcala'
     animation: 'scale',
     plugins: [followCursor],
   })
+
+  // const aboutText = document.getElementById('aboutText')
+  // const aboutDesc = document.getElementById('aboutDesc')
+  // aboutText.addEventListener('mousehover', () => {
+  //   aboutDesc.innerHTML = 'about'
+  // })
 </script>
 
 <MainLayout title="Pat Alcala" pageDescription="Portfolio">
@@ -395,11 +409,16 @@ const lastname = 'Alcala'
 
   <div class="grid2">
     <section class="grid2-title">
-      <span class="hidden-right">About Me</span>
+      <span class="hidden-right" id="aboutText">About Me</span>
     </section>
 
     <section class="grid2-body">
-      <span class="hidden-left">I create web applications in both frontend and backend, along with UI/UX design.</span>
+      <span class="hidden-left" id="aboutDesc">{about}</span>
+      <!-- <div class="hidden-left">
+        <p>{about1}</p>
+        <p>{about2}</p>
+        MAKE THIS SWAP PLACE
+      </div> -->
     </section>
   </div>
 
