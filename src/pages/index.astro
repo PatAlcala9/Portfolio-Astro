@@ -43,6 +43,10 @@ const lastname = 'Alcala'
 
 <script>
   import { gsap } from 'gsap'
+  import tippy, { followCursor } from 'tippy.js'
+  import 'tippy.js/dist/tippy.css'
+  import 'tippy.js/animations/scale.css'
+
   // scrollTrigger: {
   //   scrub: 1,
   //   trigger: ".scroll-trigger-ready__worm-wrap",
@@ -138,6 +142,192 @@ const lastname = 'Alcala'
 
   hiddenElementsLeft.forEach((elem) => observer.observe(elem))
   hiddenElementsRight.forEach((elem) => observer.observe(elem))
+
+  // const modal = document.getElementById('modal')
+  // const html_logo = document.getElementById('html_logo')
+  // html_logo.addEventListener('mousehover', () => {
+  //   modal.style.opacity = '1'
+  // })
+
+  tippy('#html_logo', {
+    theme: 'tomato',
+    content: '<a style="font-family: \'Inter\'; font-size: 1.2rem; font-weight: 700; color: #f2f2f2">HTML5</a><br/><a style="font-family: \'Inter\'; font-size: 1rem; font-weight: 500; color: #f5f5f5">A Markup Language used for creating the structure and content of web pages</a>',
+    followCursor: true,
+    allowHTML: true,
+    animation: 'scale',
+    plugins: [followCursor],
+  })
+
+  tippy('#css_logo', {
+    theme: 'tomato',
+    content: '<a style="font-family: \'Inter\'; font-size: 1.2rem; font-weight: 700; color: #f2f2f2">CSS3</a><br/><a style="font-family: \'Inter\'; font-size: 1rem; font-weight: 500; color: #f5f5f5">A styling language used to control the presentation and appearance of HTML elements on web pages</a>',
+    followCursor: true,
+    allowHTML: true,
+    animation: 'scale',
+    plugins: [followCursor],
+  })
+
+  tippy('#js_logo', {
+    theme: 'tomato',
+    content: '<a style="font-family: \'Inter\'; font-size: 1.2rem; font-weight: 700; color: #f2f2f2">JavaScript</a><br/><a style="font-family: \'Inter\'; font-size: 1rem; font-weight: 500; color: #f5f5f5">A programming language primarily used for adding interactivity and dynamic behavior to web pages</a>',
+    followCursor: true,
+    allowHTML: true,
+    animation: 'scale',
+    plugins: [followCursor],
+  })
+
+  tippy('#vue_logo', {
+    theme: 'tomato',
+    content: '<a style="font-family: \'Inter\'; font-size: 1.2rem; font-weight: 700; color: #f2f2f2">Vue JS</a><br/><a style="font-family: \'Inter\'; font-size: 1rem; font-weight: 500; color: #f5f5f5">A progressive JavaScript framework for building user interfaces, providing a reactive and component-based approach to web development</a>',
+    followCursor: true,
+    allowHTML: true,
+    animation: 'scale',
+    plugins: [followCursor],
+  })
+
+  tippy('#go_logo', {
+    theme: 'tomato',
+    content: '<a style="font-family: \'Inter\'; font-size: 1.2rem; font-weight: 700; color: #f2f2f2">Go</a><br/><a style="font-family: \'Inter\'; font-size: 1rem; font-weight: 500; color: #f5f5f5">An open-source programming language known for its simplicity, efficiency, and strong support for concurrent programming</a>',
+    followCursor: true,
+    allowHTML: true,
+    animation: 'scale',
+    plugins: [followCursor],
+  })
+
+  tippy('#nginx_logo', {
+    theme: 'tomato',
+    content: '<a style="font-family: \'Inter\'; font-size: 1.2rem; font-weight: 700; color: #f2f2f2">Nginx</a><br/><a style="font-family: \'Inter\'; font-size: 1rem; font-weight: 500; color: #f5f5f5">A High-performance web server and reverse proxy server known for its speed, scalability, and efficient handling of concurrent connections</a>',
+    followCursor: true,
+    allowHTML: true,
+    animation: 'scale',
+    plugins: [followCursor],
+  })
+
+  tippy('#mysql_logo', {
+    theme: 'tomato',
+    content: '<a style="font-family: \'Inter\'; font-size: 1.2rem; font-weight: 700; color: #f2f2f2">MySQL</a><br/><a style="font-family: \'Inter\'; font-size: 1rem; font-weight: 500; color: #f5f5f5">An open-source relational database management system (RDBMS) widely used for storing and managing structured data</a>',
+    followCursor: true,
+    allowHTML: true,
+    animation: 'scale',
+    plugins: [followCursor],
+  })
+
+  tippy('#ts_logo', {
+    theme: 'tomato',
+    content: '<a style="font-family: \'Inter\'; font-size: 1.2rem; font-weight: 700; color: #f2f2f2">TypeScript</a><br/><a style="font-family: \'Inter\'; font-size: 1rem; font-weight: 500; color: #f5f5f5">An open-source programming language developed by Microsoft, which is a typed superset of JavaScript. TypeScript adds static typing and additional features to JavaScript, enabling developers to catch errors early during development and enhance code maintainability and scalability</a>',
+    followCursor: true,
+    allowHTML: true,
+    animation: 'scale',
+    plugins: [followCursor],
+  })
+
+  tippy('#cplusplus_logo', {
+    theme: 'tomato',
+    content: '<a style="font-family: \'Inter\'; font-size: 1.2rem; font-weight: 700; color: #f2f2f2">C++</a><br/><a style="font-family: \'Inter\'; font-size: 1rem; font-weight: 500; color: #f5f5f5">A general-purpose programming language known for its high performance, efficiency, and extensive use in various domains, including system programming, game development, and embedded systems</a>',
+    followCursor: true,
+    allowHTML: true,
+    animation: 'scale',
+    plugins: [followCursor],
+  })
+
+  tippy('#nuxt_logo', {
+    theme: 'tomato',
+    content: '<a style="font-family: \'Inter\'; font-size: 1.2rem; font-weight: 700; color: #f2f2f2">Nuxt JS</a><br/><a style="font-family: \'Inter\'; font-size: 1rem; font-weight: 500; color: #f5f5f5">A framework for building server-side rendered (SSR) Vue.js applications. Nuxt.js provides a convention-based setup and a streamlined development experience for creating universal Vue.js applications</a>',
+    followCursor: true,
+    allowHTML: true,
+    animation: 'scale',
+    plugins: [followCursor],
+  })
+
+  tippy('#quasar_logo', {
+    theme: 'tomato',
+    content: '<a style="font-family: \'Inter\'; font-size: 1.2rem; font-weight: 700; color: #f2f2f2">Quasar</a><br/><a style="font-family: \'Inter\'; font-size: 1rem; font-weight: 500; color: #f5f5f5">A high-performance Vue.js-based framework for building responsive and cross-platform applications. Quasar provides a rich set of UI components, such as buttons, forms, dialogs, and layouts, with a consistent and customizable design</a>',
+    followCursor: true,
+    allowHTML: true,
+    animation: 'scale',
+    plugins: [followCursor],
+  })
+
+  tippy('#astro_logo', {
+    theme: 'tomato',
+    content: '<a style="font-family: \'Inter\'; font-size: 1.2rem; font-weight: 700; color: #f2f2f2">Astro</a><br/><a style="font-family: \'Inter\'; font-size: 1rem; font-weight: 500; color: #f5f5f5">A modern static site builder that combines the benefits of static site generation with dynamic components</a>',
+    followCursor: true,
+    allowHTML: true,
+    animation: 'scale',
+    plugins: [followCursor],
+  })
+
+  tippy('#dotnet_logo', {
+    theme: 'tomato',
+    content: '<a style="font-family: \'Inter\'; font-size: 1.2rem; font-weight: 700; color: #f2f2f2">Dot Net</a><br/><a style="font-family: \'Inter\'; font-size: 1rem; font-weight: 500; color: #f5f5f5">A free, open-source framework developed by Microsoft for building various types of applications</a>',
+    followCursor: true,
+    allowHTML: true,
+    animation: 'scale',
+    plugins: [followCursor],
+  })
+
+  tippy('#mongodb_logo', {
+    theme: 'tomato',
+    content: '<a style="font-family: \'Inter\'; font-size: 1.2rem; font-weight: 700; color: #f2f2f2">Mongo DB</a><br/><a style="font-family: \'Inter\'; font-size: 1rem; font-weight: 500; color: #f5f5f5">A NoSQL database management system that stores data in a flexible, document-oriented format called BSON (Binary JSON)</a>',
+    followCursor: true,
+    allowHTML: true,
+    animation: 'scale',
+    plugins: [followCursor],
+  })
+
+  tippy('#express_logo', {
+    theme: 'tomato',
+    content: '<a style="font-family: \'Inter\'; font-size: 1.2rem; font-weight: 700; color: #f2f2f2">Express JS</a><br/><a style="font-family: \'Inter\'; font-size: 1rem; font-weight: 500; color: #f5f5f5">A minimalistic and flexible web application framework for Node.js</a>',
+    followCursor: true,
+    allowHTML: true,
+    animation: 'scale',
+    plugins: [followCursor],
+  })
+
+  tippy('#fastify_logo', {
+    theme: 'tomato',
+    content: '<a style="font-family: \'Inter\'; font-size: 1.2rem; font-weight: 700; color: #f2f2f2">Fastify</a><br/><a style="font-family: \'Inter\'; font-size: 1rem; font-weight: 500; color: #f5f5f5">A highly efficient and low-overhead web framework for Node.js</a>',
+    followCursor: true,
+    allowHTML: true,
+    animation: 'scale',
+    plugins: [followCursor],
+  })
+
+  tippy('#gimp_logo', {
+    theme: 'tomato',
+    content: '<a style="font-family: \'Inter\'; font-size: 1.2rem; font-weight: 700; color: #f2f2f2">GIMP (GNU Image Manipulation Program)</a><br/><a style="font-family: \'Inter\'; font-size: 1rem; font-weight: 500; color: #f5f5f5">A free and open-source raster graphics editor</a>',
+    followCursor: true,
+    allowHTML: true,
+    animation: 'scale',
+    plugins: [followCursor],
+  })
+
+  tippy('#photoshop_logo', {
+    theme: 'tomato',
+    content: '<a style="font-family: \'Inter\'; font-size: 1.2rem; font-weight: 700; color: #f2f2f2">Adobe Photoshop</a><br/><a style="font-family: \'Inter\'; font-size: 1rem; font-weight: 500; color: #f5f5f5">A professional raster graphics editor developed by Adobe</a>',
+    followCursor: true,
+    allowHTML: true,
+    animation: 'scale',
+    plugins: [followCursor],
+  })
+
+  tippy('#premiere_logo', {
+    theme: 'tomato',
+    content: '<a style="font-family: \'Inter\'; font-size: 1.2rem; font-weight: 700; color: #f2f2f2">Adobe Premiere Pro</a><br/><a style="font-family: \'Inter\'; font-size: 1rem; font-weight: 500; color: #f5f5f5">A professional video editing software developed by Adobe</a>',
+    followCursor: true,
+    allowHTML: true,
+    animation: 'scale',
+    plugins: [followCursor],
+  })
+
+  tippy('#davinci_logo', {
+    theme: 'tomato',
+    content: '<a style="font-family: \'Inter\'; font-size: 1.2rem; font-weight: 700; color: #f2f2f2">DaVinci Resolve</a><br/><a style="font-family: \'Inter\'; font-size: 1rem; font-weight: 500; color: #f5f5f5">A professional video editing and color grading software developed by Blackmagic Design</a>',
+    followCursor: true,
+    allowHTML: true,
+    animation: 'scale',
+    plugins: [followCursor],
+  })
 </script>
 
 <MainLayout title="Pat Alcala" pageDescription="Portfolio">
@@ -220,64 +410,64 @@ const lastname = 'Alcala'
 
     <section class="grid3-body">
       <div class="one hidden-right">
-        <Image class="html_logo" src={html_logo} alt="html_logo" quality={'mid'} width={60} />
+        <Image class="html_logo" id="html_logo" src={html_logo} alt="html_logo" quality={'mid'} width={60} />
       </div>
       <div class="two hidden-right">
-        <Image class="css_logo" src={css_logo} alt="css_logo" quality={'mid'} width={60} />
+        <Image class="css_logo" id="css_logo" src={css_logo} alt="css_logo" quality={'mid'} width={60} />
       </div>
       <div class="three hidden-right">
-        <Image class="js_logo" src={js_logo} alt="js_logo" quality={'mid'} width={60} />
+        <Image class="js_logo" id="js_logo" src={js_logo} alt="js_logo" quality={'mid'} width={60} />
       </div>
       <div class="four hidden-right">
-        <Image class="vue_logo" src={vue_logo} alt="vue_logo" quality={'mid'} width={120} />
+        <Image class="vue_logo" id="vue_logo" src={vue_logo} alt="vue_logo" quality={'mid'} width={120} />
       </div>
       <div class="five hidden-right">
-        <Image class="go_logo" src={go_logo} alt="go_logo" quality={'mid'} width={100} />
+        <Image class="go_logo" id="go_logo" src={go_logo} alt="go_logo" quality={'mid'} width={100} />
       </div>
       <div class="six hidden-right">
-        <Image class="nginx_logo" src={nginx_logo} alt="nginx_logo" quality={'mid'} width={120} />
+        <Image class="nginx_logo" id="nginx_logo" src={nginx_logo} alt="nginx_logo" quality={'mid'} width={120} />
       </div>
       <div class="seven hidden-right">
-        <Image class="mysql_logo" src={mysql_logo} alt="mysql_logo" quality={'mid'} width={120} />
+        <Image class="mysql_logo" id="mysql_logo" src={mysql_logo} alt="mysql_logo" quality={'mid'} width={120} />
       </div>
       <div class="eight hidden-right">
-        <Image class="ts_logo" src={ts_logo} alt="ts_logo" quality={'mid'} width={60} />
+        <Image class="ts_logo" id="ts_logo" src={ts_logo} alt="ts_logo" quality={'mid'} width={60} />
       </div>
       <div class="nine hidden-right">
-        <Image class="cplusplus_logo" src={cplusplus_logo} alt="cplusplus_logo" quality={'mid'} width={60} />
+        <Image class="cplusplus_logo" id="cplusplus_logo" src={cplusplus_logo} alt="cplusplus_logo" quality={'mid'} width={60} />
       </div>
       <div class="ten hidden-right">
-        <Image class="nuxt_logo" src={nuxt_logo} alt="nuxt_logo" quality={'mid'} width={100} />
+        <Image class="nuxt_logo" id="nuxt_logo" src={nuxt_logo} alt="nuxt_logo" quality={'mid'} width={100} />
       </div>
       <div class="eleven hidden-right">
-        <Image class="quasar_logo" src={quasar_logo} alt="quasar_logo" quality={'mid'} width={60} />
+        <Image class="quasar_logo" id="quasar_logo" src={quasar_logo} alt="quasar_logo" quality={'mid'} width={60} />
       </div>
       <div class="twelve hidden-right">
-        <Image class="astro_logo" src={astro_logo} alt="astro_logo" quality={'mid'} width={50} />
+        <Image class="astro_logo" id="astro_logo" src={astro_logo} alt="astro_logo" quality={'mid'} width={50} />
       </div>
       <div class="thirteen hidden-right">
-        <Image class="dotnet_logo" src={dotnet_logo} alt="dotnet_logo" quality={'mid'} width={60} />
+        <Image class="dotnet_logo" id="dotnet_logo" src={dotnet_logo} alt="dotnet_logo" quality={'mid'} width={60} />
       </div>
       <div class="fourteen hidden-right">
-        <Image class="mongodb_logo" src={mongodb_logo} alt="mongodb_logo" quality={'mid'} width={110} />
+        <Image class="mongodb_logo" id="mongodb_logo" src={mongodb_logo} alt="mongodb_logo" quality={'mid'} width={110} />
       </div>
       <div class="fifteen hidden-right">
-        <Image class="express_logo" src={express_logo} alt="express_logo" quality={'mid'} width={100} />
+        <Image class="express_logo" id="express_logo" src={express_logo} alt="express_logo" quality={'mid'} width={100} />
       </div>
       <div class="sixteen hidden-right">
-        <Image class="fastify_logo" src={fastify_logo} alt="fastify_logo" quality={'mid'} width={60} />
+        <Image class="fastify_logo" id="fastify_logo" src={fastify_logo} alt="fastify_logo" quality={'mid'} width={60} />
       </div>
       <div class="seventeen hidden-right">
-        <Image class="gimp_logo" src={gimp_logo} alt="gimp_logo" quality={'mid'} width={100} />
+        <Image class="gimp_logo" id="gimp_logo" src={gimp_logo} alt="gimp_logo" quality={'mid'} width={100} />
       </div>
       <div class="eighteen hidden-right">
-        <Image class="photoshop_logo" src={photoshop_logo} alt="photoshop_logo" quality={'mid'} width={60} />
+        <Image class="photoshop_logo" id="photoshop_logo" src={photoshop_logo} alt="photoshop_logo" quality={'mid'} width={60} />
       </div>
       <div class="nineteen hidden-right">
-        <Image class="premiere_logo" src={premiere_logo} alt="premiere_logo" quality={'mid'} width={60} />
+        <Image class="premiere_logo" id="premiere_logo" src={premiere_logo} alt="premiere_logo" quality={'mid'} width={60} />
       </div>
       <div class="twenty hidden-right">
-        <Image class="davinci_logo" src={davinci_logo} alt="davinci_logo" quality={'mid'} width={60} />
+        <Image class="davinci_logo" id="davinci_logo" src={davinci_logo} alt="davinci_logo" quality={'mid'} width={60} />
       </div>
     </section>
   </div>
@@ -667,6 +857,15 @@ const lastname = 'Alcala'
   .show
     opacity: 1
     transform: translateX(0)
+
+  .modal
+    width: 500px
+    height: 500px
+    background-color: blue
+    opacity: 0
+
+    &--text
+      .color: white
 
   @media screen and (max-width: 1439px)
     // .grid
