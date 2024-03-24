@@ -5,7 +5,7 @@ const { title, subTitle, image, imageAlt } = Astro.props
 ---
 
 <div class="article">
-  <Image class="picture" src={image} alt={imageAlt} quality={'low'} />
+  <Image class="picture" src={image} alt={imageAlt} quality={'mid'} width={300}/>
   <span class="title">{title}</span>
   <span class="sub-title">{subTitle}</span>
 </div>

@@ -411,11 +411,13 @@ who writes articles and stories online.`
 
   <div class="grid2">
     <section class="grid2-title">
-      <span class="hidden-right" id="aboutText">About Me</span>
+      <span class="hidden-right showOnDesktop" id="aboutText">About Me</span>
+      <span class="hidden-up showOnMobile" id="aboutText">About Me</span>
     </section>
 
     <section class="grid2-body">
-      <span class="hidden-left" id="aboutDesc">{about}</span>
+      <span class="hidden-left showOnDesktop" id="aboutDesc">{about}</span>
+      <span class="hidden-up showOnMobile delayed" id="aboutDesc">{about}</span>
       <!-- <div class="hidden-left">
         <p>{about1}</p>
         <p>{about2}</p>
@@ -426,7 +428,8 @@ who writes articles and stories online.`
 
   <div class="grid3">
     <section class="grid3-title">
-      <span class="hidden-left">Skills</span>
+      <span class="hidden-left showOnDesktop">Skills</span>
+      <span class="hidden-up showOnMobile">Skills</span>
     </section>
 
     <section class="grid3-body showOnDesktop">
@@ -967,6 +970,9 @@ who writes articles and stories online.`
     &:nth-child(22),  &:nth-child(23),  &:nth-child(24)
       transition-delay: 1.6s
 
+  .delayed
+    transition-delay: 0.4s
+    
   .show
     opacity: 1
     transform: translateX(0)
