@@ -106,6 +106,10 @@ import background from '../assets/images/article_background.jpg'
   sixteen.addEventListener('click', () => {
     openWebsite('https://medium.com/scrittura/getting-out-of-vim-3b44852318eb')
   })
+
+  const articles = document.getElementById('articles')
+  const articleCount = articles.childElementCount
+  console.log(articleCount)
 </script>
 
 <SideLayout title="Articles - Pat Alcala" pageDescription="Articles" pageTitle="My Articles">
@@ -118,7 +122,7 @@ import background from '../assets/images/article_background.jpg'
       <h1>Category</h1>
     </div>
 
-    <div class="articles">
+    <div class="articles" id="articles">
       <section class="one" id="one">
         <PArticle class="one" title="Don’t Pay the Ransom: Ransomware Awareness Part 1 - Identification" subTitle="A guide on how to prevent and fight ransomware for non-technical people" image={one} imageAlt="One Article" />
       </section>
@@ -247,32 +251,21 @@ import background from '../assets/images/article_background.jpg'
     width: 100vw
     width: 100svw
 
-  // .page-title
-  //   grid-area: page-title
-  //   @extend .title
-  //   padding: 2rem 0 2rem 0
-
-  // .page-title--text
-  //   font-size: 2rem
-
-  // .content
-  //   grid-area: content
-  //   display: grid
-  //   grid-template-columns: 0.2fr 1.8fr
-  //   grid-template-rows: 1fr
-  //   gap: 0px 0px
-  //   grid-template-areas: "category articles"
-
   .category
     grid-area: category
+    position: fixed
+    top: 0
+    left: 0
+    margin: 5rem 0.5rem 2rem 2rem
 
   .articles
+    margin: 5rem 0 2rem 0
     grid-area: articles
     display: grid
     grid-template-columns: repeat(3, 1fr)
-    grid-template-rows: repeat(5, 1fr)
+    grid-template-rows: repeat(6, 1fr)
     gap: 3rem 2rem
-    grid-template-areas: "one two three" "four five six" "seven eight nine" "ten eleven twelve" "thirteen fourteen fifteen"
+    grid-template-areas: "one two three" "four five six" "seven eight nine" "ten eleven twelve" "thirteen fourteen fifteen" "sixteen sixteen sixteen"
 
   .one
     grid-area: one
