@@ -109,15 +109,18 @@ import background from '../assets/images/article_background.jpg'
 </script>
 
 <SideLayout title="Articles - Pat Alcala" pageDescription="Articles" pageTitle="My Articles">
+  <Image class="background" src={background} alt="Pat Alcala" id="image" quality={'low'} width={1280} />
   <div class="grid">
     <!-- <div class="page-title">
       <span class="page-title--text">My Articles</span>
     </div> -->
-    <Image class="background" src={background} alt="Pat Alcala" id="image" quality={'low'} width={1280} />
+    <div class="category">
+      <h1>Category</h1>
+    </div>
 
     <div class="articles">
       <section class="one" id="one">
-        <PArticle title="Don’t Pay the Ransom: Ransomware Awareness Part 1 - Identification" subTitle="A guide on how to prevent and fight ransomware for non-technical people" image={one} imageAlt="One Article" />
+        <PArticle class="one" title="Don’t Pay the Ransom: Ransomware Awareness Part 1 - Identification" subTitle="A guide on how to prevent and fight ransomware for non-technical people" image={one} imageAlt="One Article" />
       </section>
 
       <section class="two" id="two">
@@ -223,30 +226,6 @@ import background from '../assets/images/article_background.jpg'
   //   width: 100%
   //   text-align: center
 
-  .grid
-    display: grid
-    grid-template-columns: 1fr
-    grid-template-rows: 0.2fr 1.8fr
-    gap: 0px 0px
-    grid-auto-flow: row
-    grid-template-areas: "page-title" "articles"
-    width: 100vw
-    width: 100svw
-
-  // .grid::before
-  //   content: ""
-  //   position: fixed
-  //   top: 100
-  //   left: 0
-  //   width: 100vw
-  //   height: 100vh
-  //   background-image: url(../assets/images/article_background.webp)
-  //   mix-blend-mode: overlay
-  //   background-size: cover
-  //   background-position: center
-  //   opacity: 0.3
-  //   pointer-events: none
-
   .background
     position: fixed
     top: 0
@@ -259,29 +238,41 @@ import background from '../assets/images/article_background.jpg'
     mix-blend-mode: overlay
     pointer-events: none
 
-  .page-title
-    grid-area: page-title
-    @extend .title
-    padding: 2rem 0 2rem 0
+  .grid
+    display: grid
+    grid-template-columns: 0.4fr 1.6fr
+    grid-template-rows: 1fr
+    gap: 0px 0px
+    grid-template-areas: "category articles"
+    width: 100vw
+    width: 100svw
 
-  .page-title--text
-    font-size: 2rem
+  // .page-title
+  //   grid-area: page-title
+  //   @extend .title
+  //   padding: 2rem 0 2rem 0
+
+  // .page-title--text
+  //   font-size: 2rem
+
+  // .content
+  //   grid-area: content
+  //   display: grid
+  //   grid-template-columns: 0.2fr 1.8fr
+  //   grid-template-rows: 1fr
+  //   gap: 0px 0px
+  //   grid-template-areas: "category articles"
+
+  .category
+    grid-area: category
 
   .articles
     grid-area: articles
     display: grid
-    grid-template-columns: 1fr 1fr 1fr 1fr
-    grid-template-rows: 1fr 1fr
-    gap: 3rem 0px
-    grid-auto-flow: row
-    grid-template-areas: "one two three four" "five six seven eight"
-    justify-content: space-around
-    justify-items: center
-    align-items: center
-    padding: 0 0 2rem 0
-
-  // .articles > section
-  //   margin: 0 0 2rem 0
+    grid-template-columns: repeat(3, 1fr)
+    grid-template-rows: repeat(5, 1fr)
+    gap: 3rem 2rem
+    grid-template-areas: "one two three" "four five six" "seven eight nine" "ten eleven twelve" "thirteen fourteen fifteen"
 
   .one
     grid-area: one
@@ -307,6 +298,30 @@ import background from '../assets/images/article_background.jpg'
   .eight
     grid-area: eight
 
+  .nine
+    grid-area: nine
+
+  .ten
+    grid-area: ten
+
+  .eleven
+    grid-area: eleven
+
+  .twelve
+    grid-area: twelve
+
+  .thirteen
+    grid-area: thirteen
+
+  .fourteen
+    grid-area: fourteen
+
+  .fifteen
+    grid-area: fifteen
+
+  .sixteen
+    grid-area: sixteen
+
   @media screen and (max-width: 1024px)
     .grid
       display: grid
@@ -315,12 +330,12 @@ import background from '../assets/images/article_background.jpg'
       gap: 1rem 0px
       grid-template-areas: "page-title" "articles"
 
-    .page-title
-      grid-area: page-title
-      margin: 3rem 0 0 0
+    // .page-title
+    //   grid-area: page-title
+    //   margin: 3rem 0 0 0
 
-    .page-title--text
-      font-size: 1.4rem
+    // .page-title--text
+    //   font-size: 1.4rem
 
     .articles
       grid-area: articles
