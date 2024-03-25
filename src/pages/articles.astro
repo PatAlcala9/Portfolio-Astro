@@ -108,18 +108,24 @@ import background from '../assets/images/article_background.jpg'
   })
 
   const articles = document.getElementById('articles')
+  const value = document.getElementById('value')
   const articleCount = articles.childElementCount
-  console.log(articleCount)
+  value.innerHTML = articleCount.toString()
 </script>
 
 <SideLayout title="Articles - Pat Alcala" pageDescription="Articles" pageTitle="My Articles">
   <Image class="background" src={background} alt="Pat Alcala" id="image" quality={'low'} width={1280} />
   <div class="grid">
-    <!-- <div class="page-title">
-      <span class="page-title--text">My Articles</span>
-    </div> -->
     <div class="category">
-      <h1>Category</h1>
+      <span class="category--text">Count</span>
+      <span class="category--number" id="value" />
+
+      <section class="category--menu">
+        <span>All</span>
+        <span>Technology</span>
+        <span>Philosophy</span>
+        <span>Poem</span>
+      </section>
     </div>
 
     <div class="articles" id="articles">
@@ -252,11 +258,38 @@ import background from '../assets/images/article_background.jpg'
     width: 100svw
 
   .category
+    font-family: Inter
+    color: $title
     grid-area: category
     position: fixed
     top: 0
     left: 0
-    margin: 5rem 0.5rem 2rem 2rem
+    display: flex
+    flex-direction: column
+    flex-wrap: wrap
+    justify-content: flex-start
+    align-items: flex-start
+    align-content: flex-start
+    margin: 6rem 0.5rem 2rem 2rem
+
+  .category--text
+    font-size: 1.2rem
+
+  .category--number
+    font-size: 3rem
+    font-weight: 600
+
+  .category--menu
+    display: flex
+    flex-direction: column
+    flex-wrap: wrap
+    justify-content: flex-start
+    align-items: flex-start
+    align-content: flex-start
+    margin: 3rem 0 0 0
+    font-size: 1.4rem
+    gap: 1rem
+    font-weight: 400
 
   .articles
     margin: 5rem 0 2rem 0
@@ -322,13 +355,6 @@ import background from '../assets/images/article_background.jpg'
       grid-template-rows: 0.1fr 1.9fr
       gap: 1rem 0px
       grid-template-areas: "page-title" "articles"
-
-    // .page-title
-    //   grid-area: page-title
-    //   margin: 3rem 0 0 0
-
-    // .page-title--text
-    //   font-size: 1.4rem
 
     .articles
       grid-area: articles
