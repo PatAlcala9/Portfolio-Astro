@@ -19,6 +19,7 @@ import thirteen from '../assets/articles/13.webp'
 import fourteen from '../assets/articles/14.webp'
 import fifteen from '../assets/articles/15.webp'
 import sixteen from '../assets/articles/16.webp'
+import seventeen from '../assets/articles/17.webp'
 import background from '../assets/images/article_background.jpg'
 ---
 
@@ -107,6 +108,11 @@ import background from '../assets/images/article_background.jpg'
     openWebsite('https://medium.com/scrittura/getting-out-of-vim-3b44852318eb')
   })
 
+  const seventeen = document.getElementById('seventeen')
+  seventeen.addEventListener('click', () => {
+    openWebsite('https://medium.com/illumination/solving-distro-hopping-by-building-the-ultimate-arch-7f431a825861')
+  })
+
   const articles = document.getElementById('articles')
   const value = document.getElementById('value')
   const articleCount = articles.childElementCount
@@ -191,6 +197,10 @@ import background from '../assets/images/article_background.jpg'
 
       <section class="sixteen" id="sixteen">
         <PArticle title="Getting Out of Vim" subTitle="A nerdy poem about exiting Vim" image={sixteen} imageAlt="Sixteen Article" />
+      </section>
+
+      <section class="seventeen" id="seventeen">
+        <PArticle title="Solving Distro Hopping by Building The Ultimate Arch" subTitle="You will use Arch, by the way" image={seventeen} imageAlt="Seventeen Article" />
       </section>
     </div>
   </div>
@@ -298,7 +308,7 @@ import background from '../assets/images/article_background.jpg'
     grid-template-columns: repeat(3, 1fr)
     grid-template-rows: repeat(6, 1fr)
     gap: 3rem 2rem
-    grid-template-areas: "one two three" "four five six" "seven eight nine" "ten eleven twelve" "thirteen fourteen fifteen" "sixteen sixteen sixteen"
+    grid-template-areas: "one two three" "four five six" "seven eight nine" "ten eleven twelve" "thirteen fourteen fifteen" "sixteen seventeen seventeen"
 
   .one
     grid-area: one
@@ -347,6 +357,9 @@ import background from '../assets/images/article_background.jpg'
 
   .sixteen
     grid-area: sixteen
+
+  .seventeen
+    grid-area: seventeen
 
   @media screen and (max-width: 1024px)
     .grid
