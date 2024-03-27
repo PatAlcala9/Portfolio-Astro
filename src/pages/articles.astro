@@ -22,6 +22,11 @@ import sixteen from '../assets/articles/16.webp'
 import seventeen from '../assets/articles/17.webp'
 import eighteen from '../assets/articles/18.webp'
 import nineteen from '../assets/articles/19.webp'
+import twenty from '../assets/articles/20.webp'
+import twentyone from '../assets/articles/21.webp'
+import twentytwo from '../assets/articles/22.webp'
+import twentythree from '../assets/articles/23.webp'
+import twentyfour from '../assets/articles/24.webp'
 import background from '../assets/images/article_background.jpg'
 ---
 
@@ -116,13 +121,38 @@ import background from '../assets/images/article_background.jpg'
   })
 
   const eighteen = document.getElementById('eighteen')
-  seventeen.addEventListener('click', () => {
+  eighteen.addEventListener('click', () => {
     openWebsite('https://effective-programmer.com/why-you-should-never-bother-switching-to-typescript-da04bbd14ba9')
   })
 
   const nineteen = document.getElementById('nineteen')
-  seventeen.addEventListener('click', () => {
+  nineteen.addEventListener('click', () => {
     openWebsite('https://medium.com/the-shortform/never-stop-learning-ccb6737ca14e')
+  })
+
+  const twenty = document.getElementById('twenty')
+  twenty.addEventListener('click', () => {
+    openWebsite('https://medium.com/illuminations-mirror/why-msg-is-actually-healthier-than-salt-c6019d014293')
+  })
+
+  const twentyone = document.getElementById('twentyone')
+  twentyone.addEventListener('click', () => {
+    openWebsite('https://medium.com/short-sweet-valuable/forgot-my-charger-45d01d8bb5ed')
+  })
+
+  const twentytwo = document.getElementById('twentytwo')
+  twentytwo.addEventListener('click', () => {
+    openWebsite('https://medium.com/short-sweet-valuable/re-unlocking-imagination-to-enhance-creativity-d74c65b00f0b')
+  })
+
+  const twentythree = document.getElementById('twentythree')
+  twentythree.addEventListener('click', () => {
+    openWebsite('https://medium.com/the-shortform/befriend-your-future-self-9fa260433835')
+  })
+
+  const twentyfour = document.getElementById('twentyfour')
+  twentyfour.addEventListener('click', () => {
+    openWebsite('https://medium.com/scrittura/opening-a-door-e15ac2e6a611')
   })
 
   const articles = document.getElementById('articles')
@@ -221,6 +251,26 @@ import background from '../assets/images/article_background.jpg'
 
       <section class="nineteen" id="nineteen">
         <PArticle title="Never Stop Learning" subTitle="Learning can either be fun, boring, or scary. It depends on who you ask" image={nineteen} imageAlt="Nineteen Article" />
+      </section>
+
+      <section class="twenty" id="twenty">
+        <PArticle title="Why MSG is actually healthier than Salt" subTitle="Monosodium Glutamate vs Sodium Chloride" image={twenty} imageAlt="Twenty Article" />
+      </section>
+
+      <section class="twentyone" id="twentyone">
+        <PArticle title="Forgot My Charger" subTitle="Charger, my charger, why did I forgot; How can I use my phone without your shot" image={twentyone} imageAlt="Twentyone Article" />
+      </section>
+
+      <section class="twentytwo" id="twentytwo">
+        <PArticle title="Re-unlocking Imagination to Enhance Creativity" subTitle="Imagination is unlimited, and creativity should be too" image={twentytwo} imageAlt="Twentytwo Article" />
+      </section>
+
+      <section class="twentythree" id="twentythree">
+        <PArticle title="Befriend your Future Self" subTitle="Your decision today will affect your future self" image={twentythree} imageAlt="Twentythree Article" />
+      </section>
+
+      <section class="twentyfour" id="twentyfour">
+        <PArticle title="Opening A Door" subTitle="A poem about opening a door" image={twentyfour} imageAlt="Twentythree Article" />
       </section>
     </div>
   </div>
@@ -328,7 +378,7 @@ import background from '../assets/images/article_background.jpg'
     grid-template-columns: repeat(3, 1fr)
     grid-template-rows: repeat(7, 1fr)
     gap: 3rem 2rem
-    grid-template-areas: "one two three" "four five six" "seven eight nine" "ten eleven twelve" "thirteen fourteen fifteen" "sixteen seventeen eighteen" "nineteen nineteen nineteen"
+    grid-template-areas: "one two three" "four five six" "seven eight nine" "ten eleven twelve" "thirteen fourteen fifteen" "sixteen seventeen eighteen" "nineteen twenty twentyone" "twentytwo twentythree twentyfour"
 
   .one
     grid-area: one
@@ -386,6 +436,21 @@ import background from '../assets/images/article_background.jpg'
 
   .nineteen
     grid-area: nineteen
+
+  .twenty
+    grid-area: twenty
+
+  .twentyone
+    grid-area: twentyone
+  
+  .twentytwo
+    grid-area: twentytwo
+
+  .twentythree
+    grid-area: twentythree
+
+  .twentyfour
+    grid-area: twentyfour
 
   @media screen and (max-width: 1024px)
     .grid
