@@ -20,6 +20,8 @@ import fourteen from '../assets/articles/14.webp'
 import fifteen from '../assets/articles/15.webp'
 import sixteen from '../assets/articles/16.webp'
 import seventeen from '../assets/articles/17.webp'
+import eighteen from '../assets/articles/18.webp'
+import nineteen from '../assets/articles/19.webp'
 import background from '../assets/images/article_background.jpg'
 ---
 
@@ -113,6 +115,16 @@ import background from '../assets/images/article_background.jpg'
     openWebsite('https://medium.com/illumination/solving-distro-hopping-by-building-the-ultimate-arch-7f431a825861')
   })
 
+  const eighteen = document.getElementById('eighteen')
+  seventeen.addEventListener('click', () => {
+    openWebsite('https://effective-programmer.com/why-you-should-never-bother-switching-to-typescript-da04bbd14ba9')
+  })
+
+  const nineteen = document.getElementById('nineteen')
+  seventeen.addEventListener('click', () => {
+    openWebsite('https://medium.com/the-shortform/never-stop-learning-ccb6737ca14e')
+  })
+
   const articles = document.getElementById('articles')
   const value = document.getElementById('value')
   const articleCount = articles.childElementCount
@@ -124,7 +136,7 @@ import background from '../assets/images/article_background.jpg'
   <div class="grid">
     <div class="category">
       <span class="category--text">Count</span>
-      <span class="category--number" id="value" />
+      <span class="category--number" id="value"></span>
 
       <section class="category--menu">
         <span>All</span>
@@ -201,6 +213,14 @@ import background from '../assets/images/article_background.jpg'
 
       <section class="seventeen" id="seventeen">
         <PArticle title="Solving Distro Hopping by Building The Ultimate Arch" subTitle="You will use Arch, by the way" image={seventeen} imageAlt="Seventeen Article" />
+      </section>
+
+      <section class="eighteen" id="eighteen">
+        <PArticle title="Why You Should Never Bother Switching to TypeScript" subTitle="If you’re learning TypeScript or want to try it out, you might want to read this first" image={eighteen} imageAlt="Eighteen Article" />
+      </section>
+
+      <section class="nineteen" id="nineteen">
+        <PArticle title="Never Stop Learning" subTitle="Learning can either be fun, boring, or scary. It depends on who you ask" image={nineteen} imageAlt="Nineteen Article" />
       </section>
     </div>
   </div>
@@ -306,9 +326,9 @@ import background from '../assets/images/article_background.jpg'
     grid-area: articles
     display: grid
     grid-template-columns: repeat(3, 1fr)
-    grid-template-rows: repeat(6, 1fr)
+    grid-template-rows: repeat(7, 1fr)
     gap: 3rem 2rem
-    grid-template-areas: "one two three" "four five six" "seven eight nine" "ten eleven twelve" "thirteen fourteen fifteen" "sixteen seventeen seventeen"
+    grid-template-areas: "one two three" "four five six" "seven eight nine" "ten eleven twelve" "thirteen fourteen fifteen" "sixteen seventeen eighteen" "nineteen nineteen nineteen"
 
   .one
     grid-area: one
@@ -360,6 +380,12 @@ import background from '../assets/images/article_background.jpg'
 
   .seventeen
     grid-area: seventeen
+
+  .eighteen
+    grid-area: eighteen
+
+  .nineteen
+    grid-area: nineteen
 
   @media screen and (max-width: 1024px)
     .grid
