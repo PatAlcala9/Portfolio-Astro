@@ -34,18 +34,16 @@ import gimp_logo from '../assets/images/gimp_logo.svg'
 import photoshop_logo from '../assets/images/photoshop_logo.svg'
 import premiere_logo from '../assets/images/premiere_logo.svg'
 import davinci_logo from '../assets/images/davinci_logo.png'
+import react_logo from '../assets/images/react_logo.svg'
+import nextjs_logo from '../assets/images/nextjs_logo2.svg'
 
 const name = 'Patrick Alvin Alcala'
 const firstname = 'Patrick'
 const secondname = 'Alvin'
 const lastname = 'Alcala'
 
-const about = 'I create web applications in both frontend and backend, along with UI/UX design.'
-const about1 = `A versatile and experienced full-stack developer with an interest in UX design, web development, and data
-analysis. Focus on leveraging secure, high-performance, and user-friendly web applications. Seeking a new
-challenge and a better opportunity to develop and improve skills and knowledge.`
-const about2 = `I am also a tech enthusiast who enjoys exploring and learning new technologies and, occasionally, a writer
-who writes articles and stories online.`
+const about = 'I create web applications in both frontend and backend, along with UI/UX design that focuses on performance and security.'
+const about2 = `I also writes articles and stories online, and as a tech enthusiast, I enjoy learning and exploring new technologies as a hobby.`
 ---
 
 <script>
@@ -339,6 +337,24 @@ who writes articles and stories online.`
     plugins: [followCursor],
   })
 
+  tippy('#react_logo', {
+    theme: 'tomato',
+    content: '<a style="font-family: \'Inter\'; font-size: 1.2rem; font-weight: 700; color: #f2f2f2">React JS</a><br/><a style="font-family: \'Inter\'; font-size: 1rem; font-weight: 500; color: #f5f5f5">A popular open-source JavaScript library that simplifies the process of building complex and interactive user interfaces</a>',
+    followCursor: true,
+    allowHTML: true,
+    animation: 'scale',
+    plugins: [followCursor],
+  })
+
+  tippy('#nextjs_logo', {
+    theme: 'tomato',
+    content: '<a style="font-family: \'Inter\'; font-size: 1.2rem; font-weight: 700; color: #f2f2f2">Next JS</a><br/><a style="font-family: \'Inter\'; font-size: 1rem; font-weight: 500; color: #f5f5f5">A popular open-source React framework that enables server-side rendering (SSR) and static site generation (SSG) for React-based web applications</a>',
+    followCursor: true,
+    allowHTML: true,
+    animation: 'scale',
+    plugins: [followCursor],
+  })
+
   // const aboutText = document.getElementById('aboutText')
   // const aboutDesc = document.getElementById('aboutDesc')
   // aboutText.addEventListener('mousehover', () => {
@@ -416,13 +432,14 @@ who writes articles and stories online.`
     </section>
 
     <section class="grid2-body">
-      <span class="hidden-left showOnDesktop" id="aboutDesc">{about}</span>
-      <span class="hidden-up showOnMobile delayed" id="aboutDesc">{about}</span>
-      <!-- <div class="hidden-left">
-        <p>{about1}</p>
-        <p>{about2}</p>
-        MAKE THIS SWAP PLACE
-      </div> -->
+      <p>
+        <span class="hidden-left showOnDesktop" id="aboutDesc">{about}</span>
+        <span class="hidden-up showOnMobile delayed" id="aboutDesc">{about}</span>
+      </p>
+      <p>
+        <span class="hidden-left showOnDesktop" id="aboutDesc">{about2}</span>
+        <span class="hidden-up showOnMobile delayed" id="aboutDesc">{about2}</span>
+      </p>
     </section>
   </div>
 
@@ -476,21 +493,27 @@ who writes articles and stories online.`
         <Image class="astro_logo showOnDesktop" id="astro_logo" src={astro_logo} alt="astro_logo" quality={'mid'} width={50} />
       </div>
       <div class="fifteen hidden-right">
-        <Image class="express_logo showOnDesktop" id="express_logo" src={express_logo} alt="express_logo" quality={'mid'} width={90} />
+        <Image class="react_logo showOnDesktop" id="react_logo" src={react_logo} alt="react_logo" quality={'mid'} width={90} />
       </div>
       <div class="sixteen hidden-right">
-        <Image class="fastify_logo showOnDesktop" id="fastify_logo" src={fastify_logo} alt="fastify_logo" quality={'mid'} width={60} />
+        <Image class="nextjs_logo showOnDesktop" id="nextjs_logo" src={nextjs_logo} alt="nextjs_logo" quality={'mid'} width={90} />
       </div>
       <div class="seventeen hidden-right">
-        <Image class="gimp_logo showOnDesktop" id="gimp_logo" src={gimp_logo} alt="gimp_logo" quality={'mid'} width={100} />
+        <Image class="express_logo showOnDesktop" id="express_logo" src={express_logo} alt="express_logo" quality={'mid'} width={90} />
       </div>
       <div class="eighteen hidden-right">
-        <Image class="photoshop_logo showOnDesktop" id="photoshop_logo" src={photoshop_logo} alt="photoshop_logo" quality={'mid'} width={60} />
+        <Image class="fastify_logo showOnDesktop" id="fastify_logo" src={fastify_logo} alt="fastify_logo" quality={'mid'} width={60} />
       </div>
       <div class="nineteen hidden-right">
-        <Image class="premiere_logo showOnDesktop" id="premiere_logo" src={premiere_logo} alt="premiere_logo" quality={'mid'} width={60} />
+        <Image class="gimp_logo showOnDesktop" id="gimp_logo" src={gimp_logo} alt="gimp_logo" quality={'mid'} width={100} />
       </div>
       <div class="twenty hidden-right">
+        <Image class="photoshop_logo showOnDesktop" id="photoshop_logo" src={photoshop_logo} alt="photoshop_logo" quality={'mid'} width={60} />
+      </div>
+      <div class="twentyone hidden-right">
+        <Image class="premiere_logo showOnDesktop" id="premiere_logo" src={premiere_logo} alt="premiere_logo" quality={'mid'} width={60} />
+      </div>
+      <div class="twentytwo hidden-right">
         <Image class="davinci_logo showOnDesktop" id="davinci_logo" src={davinci_logo} alt="davinci_logo" quality={'mid'} width={60} />
       </div>
     </section>
@@ -539,21 +562,27 @@ who writes articles and stories online.`
         <Image class="astro_logo showOnMobile" id="astro_logo" src={astro_logo} alt="astro_logo" quality={'mid'} width={30} />
       </div>
       <div class="fifteen hidden-up">
-        <Image class="express_logo showOnMobile" id="express_logo" src={express_logo} alt="express_logo" quality={'mid'} width={70} />
+        <Image class="react_logo showOnMobile" id="react_logo" src={react_logo} alt="react_logo" quality={'mid'} width={70} />
       </div>
       <div class="sixteen hidden-up">
-        <Image class="fastify_logo showOnMobile" id="fastify_logo" src={fastify_logo} alt="fastify_logo" quality={'mid'} width={40} />
+        <Image class="nextjs_logo showOnMobile" id="nextjs_logo" src={nextjs_logo} alt="nextjs_logo" quality={'mid'} width={70} />
       </div>
       <div class="seventeen hidden-up">
-        <Image class="gimp_logo showOnMobile" id="gimp_logo" src={gimp_logo} alt="gimp_logo" quality={'mid'} width={80} />
+        <Image class="express_logo showOnMobile" id="express_logo" src={express_logo} alt="express_logo" quality={'mid'} width={70} />
       </div>
       <div class="eighteen hidden-up">
-        <Image class="photoshop_logo showOnMobile" id="photoshop_logo" src={photoshop_logo} alt="photoshop_logo" quality={'mid'} width={40} />
+        <Image class="fastify_logo showOnMobile" id="fastify_logo" src={fastify_logo} alt="fastify_logo" quality={'mid'} width={40} />
       </div>
       <div class="nineteen hidden-up">
-        <Image class="premiere_logo showOnMobile" id="premiere_logo" src={premiere_logo} alt="premiere_logo" quality={'mid'} width={40} />
+        <Image class="gimp_logo showOnMobile" id="gimp_logo" src={gimp_logo} alt="gimp_logo" quality={'mid'} width={80} />
       </div>
       <div class="twenty hidden-up">
+        <Image class="photoshop_logo showOnMobile" id="photoshop_logo" src={photoshop_logo} alt="photoshop_logo" quality={'mid'} width={40} />
+      </div>
+      <div class="twentyone hidden-up">
+        <Image class="premiere_logo showOnMobile" id="premiere_logo" src={premiere_logo} alt="premiere_logo" quality={'mid'} width={40} />
+      </div>
+      <div class="twentytwo hidden-up">
         <Image class="davinci_logo showOnMobile" id="davinci_logo" src={davinci_logo} alt="davinci_logo" quality={'mid'} width={40} />
       </div>
     </section>
@@ -592,7 +621,7 @@ who writes articles and stories online.`
     top: 0
     left: 0
     width: 100vw
-    height: 320vh
+    height: 340vh
     object-fit: cover
     z-index: -1
     opacity: 0.9
@@ -870,12 +899,12 @@ who writes articles and stories online.`
     @extend .grid2-body
     grid-area: grid3-body
     display: grid
-    grid-template-columns: 1fr 1fr 1fr 1fr
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr
+    grid-template-columns: repeat(4, 1fr)
+    grid-template-rows: repeat(6, 1fr)
     gap: 0 0
-    grid-template-areas: "one two three four" "five six seven eight" "nine ten eleven twelve" "thirteen fourteen fifteen sixteen" "seventeen eighteen nineteen twenty"
+    grid-template-areas: "one two three four" "five six seven eight" "nine ten eleven twelve" "thirteen fourteen fifteen sixteen" "seventeen eighteen nineteen twenty" "twentyone twentytwo none none"
 
-  .one, .two, .three, .four, .five, .six, .seven, .eight, .nine, .ten, .eleven, .twelve, .thirteen, .fourteen, .fifteen, .sixteen, .seventeen, .eighteen, .nineteen, .twenty
+  .one, .two, .three, .four, .five, .six, .seven, .eight, .nine, .ten, .eleven, .twelve, .thirteen, .fourteen, .fifteen, .sixteen, .seventeen, .eighteen, .nineteen, .twenty, .twentyone, .twentytwo
     justify-self: center
     align-self: center
 
@@ -921,19 +950,23 @@ who writes articles and stories online.`
     grid-area: nineteen
   .twenty
     grid-area: twenty
+  .twentyone
+    grid-area: twentyone
+  .twentytwo
+    grid-area: twentytwo
 
   .hidden-right
     opacity: 0
     transform: translateX(90px)
     transition: all 1.2s cubic-bezier(0.39, 0.575, 0.565, 1)
 
-    &:nth-child(2), &:nth-child(6), &:nth-child(10), &:nth-child(14), &:nth-child(18)
+    &:nth-child(2), &:nth-child(6), &:nth-child(10), &:nth-child(14), &:nth-child(18), &:nth-child(22)
       transition-delay: 0.2s
 
-    &:nth-child(3),  &:nth-child(7),  &:nth-child(11),  &:nth-child(15),  &:nth-child(19)
+    &:nth-child(3),  &:nth-child(7),  &:nth-child(11),  &:nth-child(15),  &:nth-child(19), &:nth-child(23)
       transition-delay: 0.4s
 
-    &:nth-child(4),  &:nth-child(8),  &:nth-child(12),  &:nth-child(16),  &:nth-child(20)
+    &:nth-child(4),  &:nth-child(8),  &:nth-child(12),  &:nth-child(16),  &:nth-child(20), &:nth-child(24)
       transition-delay: 0.6s
 
   .hidden-left
@@ -954,7 +987,7 @@ who writes articles and stories online.`
 
     &:nth-child(7),  &:nth-child(8),  &:nth-child(9)
       transition-delay: 0.6s
-    
+
     &:nth-child(10),  &:nth-child(11),  &:nth-child(12)
       transition-delay: 0.8s
 
@@ -972,7 +1005,7 @@ who writes articles and stories online.`
 
   .delayed
     transition-delay: 0.4s
-    
+
   .show
     opacity: 1
     transform: translateX(0)
@@ -1014,6 +1047,9 @@ who writes articles and stories online.`
       font-size: 1.2rem
 
   @media screen and (max-width: 1023px)
+    .background-one
+      height: 360vh
+
     .grid
       display: grid
       grid-template-columns: 1fr
@@ -1140,8 +1176,8 @@ who writes articles and stories online.`
       width: 100vw
       display: grid
       grid-template-columns: repeat(3, 1fr)
-      grid-template-rows: repeat(7, 1fr)
+      grid-template-rows: repeat(8, 1fr)
       gap: 0px 0px
-      grid-template-areas: "one two three" "four five six" "seven eight nine" "ten eleven twelve" "thirteen fourteen fifteen" "sixteen seventeen eighteen" "nineteen twenty ."
+      grid-template-areas: "one two three" "four five six" "seven eight nine" "ten eleven twelve" "thirteen fourteen fifteen" "sixteen seventeen eighteen" "nineteen twenty twentyone" "twentytwo none none"
       margin: 6rem 0 0 0
 </style>
