@@ -432,13 +432,18 @@ const about2 = `I also writes articles and stories online, and as a tech enthusi
     </section>
 
     <section class="grid2-body">
-      <p>
-        <span class="hidden-left showOnDesktop" id="aboutDesc">{about}</span>
-        <span class="hidden-up showOnMobile delayed" id="aboutDesc">{about}</span>
+      <p class="hidden-left showOnDesktop">
+        <span id="aboutDesc">{about}</span>
       </p>
-      <p>
-        <span class="hidden-left showOnDesktop" id="aboutDesc">{about2}</span>
-        <span class="hidden-up showOnMobile delayed" id="aboutDesc">{about2}</span>
+      <p class="hidden-left showOnDesktop">
+        <span id="aboutDesc">{about2}</span>
+      </p>
+
+      <p class="hidden-up showOnMobile delayed">
+        <span id="aboutDesc">{about}</span>
+      </p>
+      <p class="hidden-up showOnMobile delayed">
+        <span id="aboutDesc">{about2}</span>s
       </p>
     </section>
   </div>
@@ -973,6 +978,9 @@ const about2 = `I also writes articles and stories online, and as a tech enthusi
     opacity: 0
     transform: translateX(-90px)
     transition: all 1.2s cubic-bezier(0.39, 0.575, 0.565, 1)
+
+    &:nth-child(2)
+      transition-delay: 0.4s
 
   .hidden-up
     opacity: 0
