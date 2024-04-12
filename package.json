@@ -10,11 +10,11 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^4.5.15",
+    "astro": "^4.6.0",
     "astro-compressor": "^0.4.1",
     "astro-min": "^1.2.6",
     "gsap": "^3.12.5",
-    "sass": "^1.74.1",
+    "sass": "^1.75.0",
     "sharp": "^0.33.3",
     "tippy.js": "^6.3.7",
     "typed.js": "^2.1.0"
