@@ -354,12 +354,6 @@ const about2 = `I also writes articles and stories online, and as a tech enthusi
     animation: 'scale',
     plugins: [followCursor],
   })
-
-  // const aboutText = document.getElementById('aboutText')
-  // const aboutDesc = document.getElementById('aboutDesc')
-  // aboutText.addEventListener('mousehover', () => {
-  //   aboutDesc.innerHTML = 'about'
-  // })
 </script>
 
 <MainLayout title="Pat Alcala" pageDescription="Portfolio">
@@ -432,19 +426,11 @@ const about2 = `I also writes articles and stories online, and as a tech enthusi
     </section>
 
     <section class="grid2-body">
-      <p class="hidden-left showOnDesktop">
-        <span id="aboutDesc">{about}</span>
-      </p>
-      <p class="hidden-left showOnDesktop">
-        <span id="aboutDesc">{about2}</span>
-      </p>
+      <p class="hidden-left showOnDesktop">{about}</p>
+      <p class="hidden-left showOnDesktop">{about2}</p>
 
-      <p class="hidden-up showOnMobile delayed">
-        <span id="aboutDesc">{about}</span>
-      </p>
-      <p class="hidden-up showOnMobile delayed">
-        <span id="aboutDesc">{about2}</span>s
-      </p>
+      <p class="hidden-up showOnMobile delayed">{about}</p>
+      <p class="hidden-up showOnMobile delayed">{about2}</p>
     </section>
   </div>
 
@@ -1156,6 +1142,10 @@ const about2 = `I also writes articles and stories online, and as a tech enthusi
       text-align: center
       font-size: 0.9rem
       width: calc(100vw - 50%)
+      // magrin: 0 -2rem 0 -4rem
+      // display: flex
+      // justify-content: center
+      // align-items: center
 
     .grid3
       display: grid
