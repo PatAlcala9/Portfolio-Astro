@@ -27,6 +27,8 @@ import twentyone from '../assets/articles/21.webp'
 import twentytwo from '../assets/articles/22.webp'
 import twentythree from '../assets/articles/23.webp'
 import twentyfour from '../assets/articles/24.webp'
+import twentyfive from '../assets/articles/25.webp'
+import twentysix from '../assets/articles/26.webp'
 import background from '../assets/images/article_background.jpg'
 ---
 
@@ -160,6 +162,16 @@ import background from '../assets/images/article_background.jpg'
     openWebsite('https://medium.com/scrittura/opening-a-door-e15ac2e6a611')
   })
 
+  const twentyfive = document.getElementById('twentyfive')
+  twentyfour.addEventListener('click', () => {
+    openWebsite('https://medium.com/short-sweet-valuable/be-aware-of-poisoned-minds-70c62d07726a')
+  })
+
+  const twentysix = document.getElementById('twentysix')
+  twentyfour.addEventListener('click', () => {
+    openWebsite('https://levelup.gitconnected.com/finding-the-right-javascript-frontend-framework-for-you-c6a633e1bd1a')
+  })
+
   const articles = document.getElementById('articles')
   const value = document.getElementById('value')
   const articleCount = articles.childElementCount
@@ -275,7 +287,15 @@ import background from '../assets/images/article_background.jpg'
       </section>
 
       <section class="twentyfour" id="twentyfour">
-        <PArticle title="Opening A Door" subTitle="A poem about opening a door" image={twentyfour} imageAlt="Twentythree Article" />
+        <PArticle title="Opening A Door" subTitle="A poem about opening a door" image={twentyfour} imageAlt="Twentyfour Article" />
+      </section>
+
+      <section class="twentyfive" id="twentyfive">
+        <PArticle title="Be Aware Of Poisoned Minds" subTitle="It’s worse than toxic people" image={twentyfive} imageAlt="Twentyfive Article" />
+      </section>
+
+      <section class="twentysix" id="twentysix">
+        <PArticle title="Finding the Right JavaScript Frontend Framework For You" subTitle="Should you learn this or that?" image={twentysix} imageAlt="Twentysix Article" />
       </section>
     </div>
   </div>
@@ -381,9 +401,9 @@ import background from '../assets/images/article_background.jpg'
     grid-area: articles
     display: grid
     grid-template-columns: repeat(3, 1fr)
-    grid-template-rows: repeat(7, 1fr)
+    grid-template-rows: repeat(8, 1fr)
     gap: 3rem 2rem
-    grid-template-areas: "one two three" "four five six" "seven eight nine" "ten eleven twelve" "thirteen fourteen fifteen" "sixteen seventeen eighteen" "nineteen twenty twentyone" "twentytwo twentythree twentyfour"
+    grid-template-areas: "one two three" "four five six" "seven eight nine" "ten eleven twelve" "thirteen fourteen fifteen" "sixteen seventeen eighteen" "nineteen twenty twentyone" "twentytwo twentythree twentyfour" "twentyfive twentysix twentysix"
 
   .one
     grid-area: one
