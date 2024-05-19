@@ -29,6 +29,7 @@ import twentythree from '../assets/articles/23.webp'
 import twentyfour from '../assets/articles/24.webp'
 import twentyfive from '../assets/articles/25.webp'
 import twentysix from '../assets/articles/26.webp'
+import twentyseven from '../assets/articles/27.webp'
 import background from '../assets/images/article_background.jpg'
 ---
 
@@ -172,6 +173,11 @@ import background from '../assets/images/article_background.jpg'
     openWebsite('https://levelup.gitconnected.com/finding-the-right-javascript-frontend-framework-for-you-c6a633e1bd1a?sk=603bf61462db81b61edeb5978ebd0c08')
   })
 
+  const twentyseven = document.getElementById('twentyseven')
+  twentyseven.addEventListener('click', () => {
+    openWebsite('https://levelup.gitconnected.com/creating-backend-using-go-with-gin-framework-and-mysql-6ee021acc40c?sk=6096aecfc4d1255fcd7261d67234d70c')
+  })
+
   const articles = document.getElementById('articles')
   const value = document.getElementById('value')
   const articleCount = articles.childElementCount
@@ -297,6 +303,10 @@ import background from '../assets/images/article_background.jpg'
       <section class="twentysix" id="twentysix">
         <PArticle title="Finding the Right JavaScript Frontend Framework For You" subTitle="Should you learn this or that?" image={twentysix} imageAlt="Twentysix Article" />
       </section>
+
+      <section class="twentyseven" id="twentyseven">
+        <PArticle title="Creating Backend Using Go with Gin Framework and MySQL" subTitle="Go fetch that data" image={twentyseven} imageAlt="Twentyseven Article" />
+      </section>
     </div>
   </div>
 </SideLayout>
@@ -403,7 +413,7 @@ import background from '../assets/images/article_background.jpg'
     grid-template-columns: repeat(3, 1fr)
     grid-template-rows: repeat(8, 1fr)
     gap: 3rem 2rem
-    grid-template-areas: "one two three" "four five six" "seven eight nine" "ten eleven twelve" "thirteen fourteen fifteen" "sixteen seventeen eighteen" "nineteen twenty twentyone" "twentytwo twentythree twentyfour" "twentyfive twentysix twentysix"
+    grid-template-areas: "one two three" "four five six" "seven eight nine" "ten eleven twelve" "thirteen fourteen fifteen" "sixteen seventeen eighteen" "nineteen twenty twentyone" "twentytwo twentythree twentyfour" "twentyfive twentysix twentyseven"
 
   .one
     grid-area: one
