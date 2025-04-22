@@ -20,6 +20,7 @@
   },
   "devDependencies": {
     "@kindspells/astro-shield": "^1.7.1",
-    "astro-robots-txt": "^1.0.0"
+    "astro-robots-txt": "^1.0.0",
+    "http-server": "^14.1.1"
   }
 }
