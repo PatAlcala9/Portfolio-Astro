@@ -10,9 +10,11 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@astrojs/partytown": "^2.1.4",
     "astro": "5.4.2",
     "astro-compressor": "^0.4.1",
     "gsap": "^3.12.7",
+    "litlyx-js": "^1.0.5",
     "sass": "^1.85.1",
     "sharp": "^0.33.5",
     "tippy.js": "^6.3.7",
